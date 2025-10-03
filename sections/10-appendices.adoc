@@ -1,0 +1,17 @@
+== 10. Appendices
+
+=== 10.1 Glossary
+
+**CUSS**:: Common Use Self Service
+**DCS**:: Departure Control System
+**PSS**:: Passenger Service System
+**FIDS**:: Flight Information Display System
+**IATA**:: International Air Transport Association
+**ADA**:: Americans with Disabilities Act
+
+=== 10.2 References
+
+* IATA CUSS Standard 2.0
+* W3C Web Content Accessibility Guidelines
+* TSA Security Guidelines for Airport Technology
+* ISO/IEC 27001:2013 Information Security Standard

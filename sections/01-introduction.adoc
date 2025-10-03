@@ -1,0 +1,22 @@
+== 1. Introduction
+
+The CUSS application is designed to provide a standardized interface for airline passengers to check in, print boarding passes, and manage their travel experience at airport kiosks.
+
+=== 1.1 Purpose
+
+This document serves as the comprehensive design specification for the CUSS application, covering:
+
+* System architecture
+* User interface design
+* Security requirements
+* Integration specifications
+
+=== 1.2 Scope
+
+The CUSS application encompasses:
+
+* Passenger check-in functionality
+* Boarding pass printing
+* Baggage tag printing
+* Seat selection
+* Upgrade options

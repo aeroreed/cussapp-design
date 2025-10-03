@@ -1,0 +1,30 @@
+== 3. User Interface Design
+
+=== 3.1 Design Principles
+
+The CUSS interface is designed with the following principles:
+
+* **Accessibility**: ADA compliant with support for disabilities
+* **Simplicity**: Intuitive navigation with minimal steps
+* **Consistency**: Standardized across all airline implementations
+* **Performance**: Fast response times and minimal wait periods
+
+=== 3.2 Screen Flow
+
+The typical user journey includes:
+
+1. Welcome screen with language selection
+2. Identification (passport, confirmation code, or frequent flyer number)
+3. Flight selection (if multiple flights)
+4. Check-in confirmation
+5. Seat selection
+6. Baggage declaration
+7. Boarding pass printing
+8. Receipt and summary
+
+// Add your UI flow diagram here:
+// image::diagrams/user-journey-flow.png[User Journey Flow, 1000, 600]
+
+// Add individual screen mockups:
+// image::ui/welcome-screen.png[Welcome Screen, 400, 300]
+// image::ui/check-in-screen.png[Check-in Screen, 400, 300]

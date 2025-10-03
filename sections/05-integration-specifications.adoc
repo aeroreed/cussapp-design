@@ -1,0 +1,16 @@
+== 5. Integration Specifications
+
+=== 5.1 Airline Systems
+
+The CUSS application integrates with:
+
+* **DCS (Departure Control System)**: For flight and passenger data
+* **PSS (Passenger Service System)**: For booking modifications
+* **Payment Gateway**: For processing fees and upgrades
+* **Baggage Handling System**: For baggage tag printing
+
+=== 5.2 Airport Systems
+
+* **FIDS (Flight Information Display System)**: For real-time flight updates
+* **Security Systems**: For passenger screening integration
+* **Ground Handling**: For special service requests
