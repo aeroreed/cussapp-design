@@ -89,3 +89,19 @@ ul, ol {
   background-color: var(--toc-bg) !important;
   border: 1px solid var(--border-color) !important;
 }
+
+/* Header image styling */
+.text-center {
+  text-align: center !important;
+}
+
+.imageblock {
+  margin: 1.5rem 0 !important;
+}
+
+.imageblock .content img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}

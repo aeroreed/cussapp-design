@@ -2,7 +2,7 @@
 
 === 3.1 Design Principles
 
-The CUSS interface is designed with the following principles:
+The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:
 
 * **Accessibility**: ADA compliant with support for disabilities
 * **Simplicity**: Intuitive navigation with minimal steps
@@ -11,7 +11,7 @@ The CUSS interface is designed with the following principles:
 
 === 3.2 Screen Flow
 
-The typical user journey includes:
+A typical user journey might include:
 
 1. Welcome screen with language selection
 2. Identification (passport, confirmation code, or frequent flyer number)

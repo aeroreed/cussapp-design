@@ -1,0 +1,35 @@
+== 9. Appendices
+
+=== 9.1 Glossary
+
+[[glossary-ada]]
+**ADA**:: Americans with Disabilities Act
+
+[[glossary-cuss]]
+**CUSS**:: Common Use Self Service +
+<<introduction,↩ Return to Introduction>>
+
+[[glossary-dcs]]
+**DCS**:: Departure Control System
+
+[[glossary-dsl]]
+**DSL**:: Domain Specific Language
+[[glossary-fids]]
+**FIDS**:: Flight Information Display System
+
+[[glossary-iata]]
+**IATA**:: International Air Transport Association
+
+[[glossary-pss]]
+**PSS**:: Passenger Service System
+
+[[glossary-webview2]]
+**WebView2**:: Microsoft's embedded web browser control based on (Chromium). Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support. No hassles controlling browser chrome, menus, menu bars, address bars footer or managing separate processes.
+<<introduction,↩ Return to Introduction>>
+
+=== 9.2 References
+
+* IATA CUSS Standard 1.3 - 1.5, 2.0
+* W3C Web Content Accessibility Guidelines
+* TSA Security Guidelines for Airport Technology
+* ISO/IEC 27001:2013 Information Security Standard

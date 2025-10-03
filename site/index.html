@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Mark R. Reed">
 <title>CUSS App Design Documentation</title>
 <link rel="stylesheet" href="styles/dark-theme.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,94 +13,94 @@
 <body class="article toc2 toc-left">
 <div id="header">
 <h1>CUSS App Design Documentation</h1>
-<div class="details">
-<span id="author" class="author">Mark R. Reed</span><br>
-<span id="email" class="email"><a href="mailto:mark.reed@aerocloudsystems.com">mark.reed@aerocloudsystems.com</a></span><br>
-</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">1. Overview</a></li>
-<li><a href="#_1_introduction">2. 1. Introduction</a>
+<li><a href="#introduction">2. 1. Introduction</a></li>
+<li><a href="#_introduction">3. Introduction</a></li>
+<li><a href="#_legacy_vs_modern_models">4. Legacy vs. Modern Models</a></li>
+<li><a href="#_core_design_artifacts">5. Core Design Artifacts</a></li>
+<li><a href="#_deployment_and_updates">6. Deployment and Updates</a></li>
+<li><a href="#_security">7. Security</a></li>
+<li><a href="#_cloud_native_alignment_at_the_edge">8. Cloud-Native Alignment at the Edge</a></li>
+<li><a href="#_industry_precedent">9. Industry Precedent</a></li>
+<li><a href="#_independent_verification">10. Independent Verification</a></li>
+<li><a href="#_conclusion">11. Conclusion</a></li>
+<li><a href="#_2_system_architecture">12. 2. System Architecture</a>
 <ul class="sectlevel2">
-<li><a href="#_1_1_purpose">2.1. 1.1 Purpose</a></li>
-<li><a href="#_1_2_scope">2.2. 1.2 Scope</a></li>
-</ul>
-</li>
-<li><a href="#_2_system_architecture">3. 2. System Architecture</a>
-<ul class="sectlevel2">
-<li><a href="#_2_1_high_level_architecture">3.1. 2.1 High-Level Architecture</a></li>
-<li><a href="#_2_2_component_overview">3.2. 2.2 Component Overview</a>
+<li><a href="#_2_1_high_level_architecture">12.1. 2.1 High-Level Architecture</a></li>
+<li><a href="#_2_2_component_overview">12.2. 2.2 Component Overview</a>
 <ul class="sectlevel3">
-<li><a href="#_2_2_1_user_interface_components">3.2.1. 2.2.1 User Interface Components</a></li>
-<li><a href="#_2_2_2_backend_services">3.2.2. 2.2.2 Backend Services</a></li>
+<li><a href="#_2_2_1_user_interface_components">12.2.1. 2.2.1 User Interface Components</a></li>
+<li><a href="#_2_2_2_backend_services">12.2.2. 2.2.2 Backend Services</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_3_user_interface_design">4. 3. User Interface Design</a>
+<li><a href="#_3_user_interface_design">13. 3. User Interface Design</a>
 <ul class="sectlevel2">
-<li><a href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></li>
-<li><a href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></li>
+<li><a href="#_3_1_design_principles">13.1. 3.1 Design Principles</a></li>
+<li><a href="#_3_2_screen_flow">13.2. 3.2 Screen Flow</a></li>
 </ul>
 </li>
-<li><a href="#_4_security_requirements">5. 4. Security Requirements</a>
+<li><a href="#_4_security_requirements">14. 4. Security Requirements</a>
 <ul class="sectlevel2">
-<li><a href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></li>
-<li><a href="#_4_2_authentication">5.2. 4.2 Authentication</a></li>
+<li><a href="#_4_1_data_protection">14.1. 4.1 Data Protection</a></li>
 </ul>
 </li>
-<li><a href="#_5_integration_specifications">6. 5. Integration Specifications</a>
+<li><a href="#_5_integration_specifications">15. 5. Integration Specifications</a>
 <ul class="sectlevel2">
-<li><a href="#_5_1_airline_systems">6.1. 5.1 Airline Systems</a></li>
-<li><a href="#_5_2_airport_systems">6.2. 5.2 Airport Systems</a></li>
+<li><a href="#_5_1_airline_systems">15.1. 5.1 Airline Systems</a></li>
+<li><a href="#_5_2_airport_systems">15.2. 5.2 Airport Systems</a></li>
 </ul>
 </li>
-<li><a href="#_6_technical_specifications">7. 6. Technical Specifications</a>
+<li><a href="#_6_implementation_guidelines">16. 6. Implementation Guidelines</a>
 <ul class="sectlevel2">
-<li><a href="#_6_1_hardware_requirements">7.1. 6.1 Hardware Requirements</a></li>
-<li><a href="#_6_2_software_requirements">7.2. 6.2 Software Requirements</a></li>
+<li><a href="#_6_1_deployment_process">16.1. 6.1 Deployment Process</a></li>
+<li><a href="#_6_2_maintenance_and_support">16.2. 6.2 Maintenance and Support</a></li>
 </ul>
 </li>
-<li><a href="#_7_implementation_guidelines">8. 7. Implementation Guidelines</a>
+<li><a href="#_7_deployment_and_update_strategy_net_core_model">17. 7. Deployment and Update Strategy (.NET Core Model)</a>
 <ul class="sectlevel2">
-<li><a href="#_7_1_deployment_process">8.1. 7.1 Deployment Process</a></li>
-<li><a href="#_7_2_maintenance_and_support">8.2. 7.2 Maintenance and Support</a></li>
-</ul>
-</li>
-<li><a href="#_8_deployment_and_update_strategy_net_core_model">9. 8. Deployment and Update Strategy (.NET Core Model)</a>
-<ul class="sectlevel2">
-<li><a href="#_8_1_wide_open_update_palette">9.1. 8.1 Wide-Open Update Palette</a></li>
-<li><a href="#_8_2_supported_update_methods">9.2. 8.2 Supported Update Methods</a>
+<li><a href="#_7_1_wide_open_update_palette">17.1. 7.1 Wide-Open Update Palette</a></li>
+<li><a href="#_7_2_supported_update_methods">17.2. 7.2 Supported Update Methods</a>
 <ul class="sectlevel3">
-<li><a href="#_8_2_1_enterprise_distribution_sccm_intune_etc">9.2.1. 8.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></li>
-<li><a href="#_8_2_2_file_share_powershell">9.2.2. 8.2.2 File Share + PowerShell</a></li>
-<li><a href="#_8_2_3_auto_update_agent">9.2.3. 8.2.3 Auto-Update Agent</a></li>
-<li><a href="#_8_2_4_clickonce_optional">9.2.4. 8.2.4 ClickOnce (Optional)</a></li>
+<li><a href="#_7_2_1_enterprise_distribution_sccm_intune_etc">17.2.1. 7.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></li>
+<li><a href="#_7_2_2_file_share_powershell">17.2.2. 7.2.2 File Share + PowerShell</a></li>
+<li><a href="#_7_2_3_auto_update_agent">17.2.3. 7.2.3 Auto-Update Agent</a></li>
+<li><a href="#_7_2_4_clickonce_optional">17.2.4. 7.2.4 ClickOnce (Optional)</a></li>
 </ul>
 </li>
-<li><a href="#_8_3_benefits_over_legacy_iis_model">9.3. 8.3 Benefits Over Legacy IIS Model</a></li>
-<li><a href="#_8_4_key_rebuttals_to_concerns">9.4. 8.4 Key Rebuttals to Concerns</a></li>
-<li><a href="#_8_5_deployment_workflow_example">9.5. 8.5 Deployment Workflow Example</a></li>
-<li><a href="#_8_6_summary">9.6. 8.6 Summary</a></li>
+<li><a href="#_7_3_benefits_over_legacy_iis_model">17.3. 7.3 Benefits Over Legacy IIS Model</a></li>
+<li><a href="#_7_4_key_rebuttals_to_concerns">17.4. 7.4 Key Rebuttals to Concerns</a></li>
+<li><a href="#_7_5_deployment_workflow_example">17.5. 7.5 Deployment Workflow Example</a></li>
+<li><a href="#_7_6_summary">17.6. 7.6 Summary</a></li>
 </ul>
 </li>
-<li><a href="#_9_compliance_and_standards">10. 9. Compliance and Standards</a>
+<li><a href="#_8_compliance_and_standards">18. 8. Compliance and Standards</a>
 <ul class="sectlevel2">
-<li><a href="#_9_1_industry_standards">10.1. 9.1 Industry Standards</a></li>
-<li><a href="#_9_2_regulatory_requirements">10.2. 9.2 Regulatory Requirements</a></li>
+<li><a href="#_8_1_industry_standards">18.1. 8.1 Industry Standards</a></li>
+<li><a href="#_8_2_regulatory_requirements">18.2. 8.2 Regulatory Requirements</a></li>
 </ul>
 </li>
-<li><a href="#_10_appendices">11. 10. Appendices</a>
+<li><a href="#_9_appendices">19. 9. Appendices</a>
 <ul class="sectlevel2">
-<li><a href="#_10_1_glossary">11.1. 10.1 Glossary</a></li>
-<li><a href="#_10_2_references">11.2. 10.2 References</a></li>
+<li><a href="#_9_1_glossary">19.1. 9.1 Glossary</a></li>
+<li><a href="#_9_2_references">19.2. 9.2 References</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mark R. Reed &lt;<a href="mailto:mark.reed@aerocloudsystems.com">mark.reed@aerocloudsystems.com</a>&gt;</p>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a><a class="link" href="#_overview">1. Overview</a></h2>
 <div class="sectionbody">
@@ -111,65 +110,226 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_1_introduction"><a class="anchor" href="#_1_introduction"></a><a class="link" href="#_1_introduction">2. 1. Introduction</a></h2>
+<h2 id="introduction"><a class="anchor" href="#introduction"></a><a class="link" href="#introduction">2. 1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The CUSS application is designed to provide a standardized interface for airline passengers to check in, print boarding passes, and manage their travel experience at airport kiosks.</p>
+<p>The Common Use Self Service (CUSS) application is a standards-compliant, multi-tenant passenger processing solution designed to run on top of any IATA CUSS-compliant platform. It provides airlines and airports with a flexible framework to deliver core workflows(modes) such as passenger check-in, baggage drop,and other service flows that can be created, cached, and customized without requiring a re-compile and release cycle.</p>
 </div>
-<div class="sect2">
-<h3 id="_1_1_purpose"><a class="anchor" href="#_1_1_purpose"></a><a class="link" href="#_1_1_purpose">2.1. 1.1 Purpose</a></h3>
 <div class="paragraph">
-<p>This document serves as the comprehensive design specification for the CUSS application, covering:</p>
+<p>This CUSS app is intentionally built as a <strong>generic core application</strong> rather than a “white-label” in the narrow sense. It supports multiple airlines through configuration, workflow definition, and UI customization, while still conforming to IATA CUSS specifications for device interaction and platform integration. Each instance of the application runs within a kiosk’s CUSS platform runtime, with one physical kiosk typically hosting one CUSS platform instance and one or more airline applications.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>System architecture</p>
-</li>
-<li>
-<p>User interface design</p>
-</li>
-<li>
-<p>Security requirements</p>
-</li>
-<li>
-<p>Integration specifications</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_1_2_scope"><a class="anchor" href="#_1_2_scope"></a><a class="link" href="#_1_2_scope">2.2. 1.2 Scope</a></h3>
 <div class="paragraph">
-<p>The CUSS application encompasses:</p>
+<p>The design emphasizes:
+- <strong>Embedded Kestrel hosting</strong>: modern .NET Core architecture where the app self-hosts its web server and serves workflows directly to a thin client browser (<a href="#glossary-webview2">WebView2</a>). This eliminates dependence on legacy centralized IIS hosting models.
+- <strong>Workflow flexibility</strong>: workflows are defined as a sequence of views and steps, described in JSON and linked to business logic through a domain-specific language (DSL). This enables airline-specific flows like bag drop or check-in without rewriting the core application.
+- <strong>Extensible device access</strong>: the app communicates with the <a href="#glossary-cuss">CUSS</a> platform for device access through standardized Device Component Interfaces (DCIs). CUSS 1.5 CORBA plugin design that considers future CUSS 2.0 plugin for JSON-based CUSS 2.0 specifications.
+- <strong>Multi-airline operation</strong>: a single deployment can support different airline instances, each with their own workflows, branding, and availability states tied to their host systems.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Passenger check-in functionality</p>
-</li>
-<li>
-<p>Boarding pass printing</p>
-</li>
-<li>
-<p>Baggage tag printing</p>
-</li>
-<li>
-<p>Seat selection</p>
-</li>
-<li>
-<p>Upgrade options</p>
-</li>
-</ul>
-</div>
+<div class="paragraph">
+<p>By using modern application design and implementation practices, latest LTS .NET frameworks, and cloud-native principles into the CUSS model, this design ensures the app can scale across kiosks, adapt to future standards, and provide a maintainable path forward for passenger-facing services in airports worldwide.
+= CUSS App Design Overview
+:toc:</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_system_architecture"><a class="anchor" href="#_2_system_architecture"></a><a class="link" href="#_2_system_architecture">3. 2. System Architecture</a></h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a><a class="link" href="#_introduction">3. Introduction</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Why this document exists: clarify design choices, provide neutral facts, and resolve confusion about IIS vs. Kestrel.</p>
+</li>
+<li>
+<p>Acknowledge: kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_legacy_vs_modern_models"><a class="anchor" href="#_legacy_vs_modern_models"></a><a class="link" href="#_legacy_vs_modern_models">4. Legacy vs. Modern Models</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Why IIS central model is legacy</p>
+</li>
+<li>
+<p>Why embedded Kestrel is the default for .NET Core and aligns with other stacks (Spring Boot/Tomcat, Node/Express, Go, etc.)</p>
+</li>
+<li>
+<p>Thin client vs. fat client misconceptions</p>
+</li>
+<li>
+<p>Summary statement: embedded server ≠ fat client</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_core_design_artifacts"><a class="anchor" href="#_core_design_artifacts"></a><a class="link" href="#_core_design_artifacts">5. Core Design Artifacts</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Component diagram of the CUSS App (PlantUML/PNG)</p>
+</li>
+<li>
+<p>Internal components:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Embedded Kestrel</p>
+</li>
+<li>
+<p>Workflow Engine</p>
+</li>
+<li>
+<p>Workflow Builder (Admin Console)</p>
+</li>
+<li>
+<p>Web Apps (Vue3, Workflow Runner)</p>
+</li>
+<li>
+<p>Event Bus</p>
+</li>
+<li>
+<p>Sidecar (CORBA / JSON adapter)</p>
+</li>
+<li>
+<p>DI / Service Provider</p>
+</li>
+<li>
+<p>Ports (HTTP/2, device APIs)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>File deployment model: workflows and apps installed as JSON + Vue3 web apps</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deployment_and_updates"><a class="anchor" href="#_deployment_and_updates"></a><a class="link" href="#_deployment_and_updates">6. Deployment and Updates</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Self-contained deployments vs. central IIS push</p>
+</li>
+<li>
+<p>How CI/CD and PowerShell/admin console can handle updates</p>
+</li>
+<li>
+<p>dotnet publish creates versioned build artifacts</p>
+</li>
+<li>
+<p>Build pipeline signs and packages into MSI</p>
+</li>
+<li>
+<p>Granular kiosk or fleet-wide update options</p>
+</li>
+<li>
+<p>BYOB/Bring Your Own Java precedents in CUSS addendum</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security"><a class="anchor" href="#_security"></a><a class="link" href="#_security">7. Security</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Risks of IIS (shared DLLs, app pools, patching)</p>
+</li>
+<li>
+<p>Benefits of self-contained deployments with embedded Kestrel</p>
+</li>
+<li>
+<p>PCI DSS alignment and isolation per kiosk</p>
+</li>
+<li>
+<p>Neutral fact: modern shops avoid GAC gymnastics</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cloud_native_alignment_at_the_edge"><a class="anchor" href="#_cloud_native_alignment_at_the_edge"></a><a class="link" href="#_cloud_native_alignment_at_the_edge">8. Cloud-Native Alignment at the Edge</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Mapping 12-factor attributes to the design</p>
+</li>
+<li>
+<p>How this edge device model applies cloud-native principles</p>
+</li>
+<li>
+<p>Sets foundation for hybrid or future cloud-integrated models</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_industry_precedent"><a class="anchor" href="#_industry_precedent"></a><a class="link" href="#_industry_precedent">9. Industry Precedent</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>How other modern platforms (Spring Boot, Node.js, Go, .NET Core) all follow embedded-server models</p>
+</li>
+<li>
+<p>Airlines and CUSS BYOB/edge install precedents</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_independent_verification"><a class="anchor" href="#_independent_verification"></a><a class="link" href="#_independent_verification">10. Independent Verification</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>AI prompts provided to verify these facts independently</p>
+</li>
+<li>
+<p>Note: prompts can be Googled, but AI gives more accurate, concise responses without manual collation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a><a class="link" href="#_conclusion">11. Conclusion</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Restate: this design is aligned with modern practice, neutral facts support it, and concerns about delivery are met</p>
+</li>
+<li>
+<p>Next step: treat this as common ground for future design reviews</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_system_architecture"><a class="anchor" href="#_2_system_architecture"></a><a class="link" href="#_2_system_architecture">12. 2. System Architecture</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_2_1_high_level_architecture"><a class="anchor" href="#_2_1_high_level_architecture"></a><a class="link" href="#_2_1_high_level_architecture">3.1. 2.1 High-Level Architecture</a></h3>
+<h3 id="_2_1_high_level_architecture"><a class="anchor" href="#_2_1_high_level_architecture"></a><a class="link" href="#_2_1_high_level_architecture">12.1. 2.1 High-Level Architecture</a></h3>
 <div class="paragraph">
 <p>The CUSS application follows a layered architecture pattern:</p>
 </div>
@@ -191,9 +351,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_2_component_overview"><a class="anchor" href="#_2_2_component_overview"></a><a class="link" href="#_2_2_component_overview">3.2. 2.2 Component Overview</a></h3>
+<h3 id="_2_2_component_overview"><a class="anchor" href="#_2_2_component_overview"></a><a class="link" href="#_2_2_component_overview">12.2. 2.2 Component Overview</a></h3>
 <div class="sect3">
-<h4 id="_2_2_1_user_interface_components"><a class="anchor" href="#_2_2_1_user_interface_components"></a><a class="link" href="#_2_2_1_user_interface_components">3.2.1. 2.2.1 User Interface Components</a></h4>
+<h4 id="_2_2_1_user_interface_components"><a class="anchor" href="#_2_2_1_user_interface_components"></a><a class="link" href="#_2_2_1_user_interface_components">12.2.1. 2.2.1 User Interface Components</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -212,7 +372,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_2_2_2_backend_services"><a class="anchor" href="#_2_2_2_backend_services"></a><a class="link" href="#_2_2_2_backend_services">3.2.2. 2.2.2 Backend Services</a></h4>
+<h4 id="_2_2_2_backend_services"><a class="anchor" href="#_2_2_2_backend_services"></a><a class="link" href="#_2_2_2_backend_services">12.2.2. 2.2.2 Backend Services</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -234,12 +394,12 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">4. 3. User Interface Design</a></h2>
+<h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">13. 3. User Interface Design</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_3_1_design_principles"><a class="anchor" href="#_3_1_design_principles"></a><a class="link" href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></h3>
+<h3 id="_3_1_design_principles"><a class="anchor" href="#_3_1_design_principles"></a><a class="link" href="#_3_1_design_principles">13.1. 3.1 Design Principles</a></h3>
 <div class="paragraph">
-<p>The CUSS interface is designed with the following principles:</p>
+<p>The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -259,9 +419,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_2_screen_flow"><a class="anchor" href="#_3_2_screen_flow"></a><a class="link" href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></h3>
+<h3 id="_3_2_screen_flow"><a class="anchor" href="#_3_2_screen_flow"></a><a class="link" href="#_3_2_screen_flow">13.2. 3.2 Screen Flow</a></h3>
 <div class="paragraph">
-<p>The typical user journey includes:</p>
+<p>A typical user journey might include:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -295,20 +455,20 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_4_security_requirements"><a class="anchor" href="#_4_security_requirements"></a><a class="link" href="#_4_security_requirements">5. 4. Security Requirements</a></h2>
+<h2 id="_4_security_requirements"><a class="anchor" href="#_4_security_requirements"></a><a class="link" href="#_4_security_requirements">14. 4. Security Requirements</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_4_1_data_protection"><a class="anchor" href="#_4_1_data_protection"></a><a class="link" href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></h3>
+<h3 id="_4_1_data_protection"><a class="anchor" href="#_4_1_data_protection"></a><a class="link" href="#_4_1_data_protection">14.1. 4.1 Data Protection</a></h3>
 <div class="ulist">
 <ul>
 <li>
 <p>All passenger data encrypted in transit and at rest</p>
 </li>
 <li>
-<p>PCI DSS compliance for payment processing</p>
+<p>PCI DSS compliance</p>
 </li>
 <li>
-<p>GDPR compliance for European operations</p>
+<p>GDPR compliance</p>
 </li>
 <li>
 <p>Automatic data purging after transaction completion</p>
@@ -316,32 +476,13 @@
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_4_2_authentication"><a class="anchor" href="#_4_2_authentication"></a><a class="link" href="#_4_2_authentication">5.2. 4.2 Authentication</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Multi-factor authentication options</p>
-</li>
-<li>
-<p>Biometric verification (where available)</p>
-</li>
-<li>
-<p>Time-based session management</p>
-</li>
-<li>
-<p>Audit logging for all transactions</p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_integration_specifications"><a class="anchor" href="#_5_integration_specifications"></a><a class="link" href="#_5_integration_specifications">6. 5. Integration Specifications</a></h2>
+<h2 id="_5_integration_specifications"><a class="anchor" href="#_5_integration_specifications"></a><a class="link" href="#_5_integration_specifications">15. 5. Integration Specifications</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_5_1_airline_systems"><a class="anchor" href="#_5_1_airline_systems"></a><a class="link" href="#_5_1_airline_systems">6.1. 5.1 Airline Systems</a></h3>
+<h3 id="_5_1_airline_systems"><a class="anchor" href="#_5_1_airline_systems"></a><a class="link" href="#_5_1_airline_systems">15.1. 5.1 Airline Systems</a></h3>
 <div class="paragraph">
 <p>The CUSS application integrates with:</p>
 </div>
@@ -363,7 +504,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_5_2_airport_systems"><a class="anchor" href="#_5_2_airport_systems"></a><a class="link" href="#_5_2_airport_systems">6.2. 5.2 Airport Systems</a></h3>
+<h3 id="_5_2_airport_systems"><a class="anchor" href="#_5_2_airport_systems"></a><a class="link" href="#_5_2_airport_systems">15.2. 5.2 Airport Systems</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -381,56 +522,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_6_technical_specifications"><a class="anchor" href="#_6_technical_specifications"></a><a class="link" href="#_6_technical_specifications">7. 6. Technical Specifications</a></h2>
+<h2 id="_6_implementation_guidelines"><a class="anchor" href="#_6_implementation_guidelines"></a><a class="link" href="#_6_implementation_guidelines">16. 6. Implementation Guidelines</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_6_1_hardware_requirements"><a class="anchor" href="#_6_1_hardware_requirements"></a><a class="link" href="#_6_1_hardware_requirements">7.1. 6.1 Hardware Requirements</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Processor</strong>: Minimum Intel i5 or equivalent</p>
-</li>
-<li>
-<p><strong>Memory</strong>: 8GB RAM minimum</p>
-</li>
-<li>
-<p><strong>Storage</strong>: 256GB SSD</p>
-</li>
-<li>
-<p><strong>Display</strong>: 22" touch screen, minimum 1920x1080</p>
-</li>
-<li>
-<p><strong>Connectivity</strong>: Ethernet and WiFi capability</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_6_2_software_requirements"><a class="anchor" href="#_6_2_software_requirements"></a><a class="link" href="#_6_2_software_requirements">7.2. 6.2 Software Requirements</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Operating System</strong>: Windows 10 IoT Enterprise or Linux</p>
-</li>
-<li>
-<p><strong>Browser Engine</strong>: Chromium-based for web components</p>
-</li>
-<li>
-<p><strong>Print Drivers</strong>: Support for thermal and laser printers</p>
-</li>
-<li>
-<p><strong>Security Software</strong>: Endpoint protection and monitoring</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_7_implementation_guidelines"><a class="anchor" href="#_7_implementation_guidelines"></a><a class="link" href="#_7_implementation_guidelines">8. 7. Implementation Guidelines</a></h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_7_1_deployment_process"><a class="anchor" href="#_7_1_deployment_process"></a><a class="link" href="#_7_1_deployment_process">8.1. 7.1 Deployment Process</a></h3>
+<h3 id="_6_1_deployment_process"><a class="anchor" href="#_6_1_deployment_process"></a><a class="link" href="#_6_1_deployment_process">16.1. 6.1 Deployment Process</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -494,7 +589,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_2_maintenance_and_support"><a class="anchor" href="#_7_2_maintenance_and_support"></a><a class="link" href="#_7_2_maintenance_and_support">8.2. 7.2 Maintenance and Support</a></h3>
+<h3 id="_6_2_maintenance_and_support"><a class="anchor" href="#_6_2_maintenance_and_support"></a><a class="link" href="#_6_2_maintenance_and_support">16.2. 6.2 Maintenance and Support</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -515,10 +610,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_8_deployment_and_update_strategy_net_core_model"><a class="anchor" href="#_8_deployment_and_update_strategy_net_core_model"></a><a class="link" href="#_8_deployment_and_update_strategy_net_core_model">9. 8. Deployment and Update Strategy (.NET Core Model)</a></h2>
+<h2 id="_7_deployment_and_update_strategy_net_core_model"><a class="anchor" href="#_7_deployment_and_update_strategy_net_core_model"></a><a class="link" href="#_7_deployment_and_update_strategy_net_core_model">17. 7. Deployment and Update Strategy (.NET Core Model)</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_8_1_wide_open_update_palette"><a class="anchor" href="#_8_1_wide_open_update_palette"></a><a class="link" href="#_8_1_wide_open_update_palette">9.1. 8.1 Wide-Open Update Palette</a></h3>
+<h3 id="_7_1_wide_open_update_palette"><a class="anchor" href="#_7_1_wide_open_update_palette"></a><a class="link" href="#_7_1_wide_open_update_palette">17.1. 7.1 Wide-Open Update Palette</a></h3>
 <div class="paragraph">
 <p>Unlike the legacy IIS-centric model, .NET Core apps are <strong>not bound to a single central deployment point</strong>.</p>
 </div>
@@ -549,9 +644,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_2_supported_update_methods"><a class="anchor" href="#_8_2_supported_update_methods"></a><a class="link" href="#_8_2_supported_update_methods">9.2. 8.2 Supported Update Methods</a></h3>
+<h3 id="_7_2_supported_update_methods"><a class="anchor" href="#_7_2_supported_update_methods"></a><a class="link" href="#_7_2_supported_update_methods">17.2. 7.2 Supported Update Methods</a></h3>
 <div class="sect3">
-<h4 id="_8_2_1_enterprise_distribution_sccm_intune_etc"><a class="anchor" href="#_8_2_1_enterprise_distribution_sccm_intune_etc"></a><a class="link" href="#_8_2_1_enterprise_distribution_sccm_intune_etc">9.2.1. 8.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></h4>
+<h4 id="_7_2_1_enterprise_distribution_sccm_intune_etc"><a class="anchor" href="#_7_2_1_enterprise_distribution_sccm_intune_etc"></a><a class="link" href="#_7_2_1_enterprise_distribution_sccm_intune_etc">17.2.1. 7.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -567,7 +662,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_8_2_2_file_share_powershell"><a class="anchor" href="#_8_2_2_file_share_powershell"></a><a class="link" href="#_8_2_2_file_share_powershell">9.2.2. 8.2.2 File Share + PowerShell</a></h4>
+<h4 id="_7_2_2_file_share_powershell"><a class="anchor" href="#_7_2_2_file_share_powershell"></a><a class="link" href="#_7_2_2_file_share_powershell">17.2.2. 7.2.2 File Share + PowerShell</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -587,7 +682,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_8_2_3_auto_update_agent"><a class="anchor" href="#_8_2_3_auto_update_agent"></a><a class="link" href="#_8_2_3_auto_update_agent">9.2.3. 8.2.3 Auto-Update Agent</a></h4>
+<h4 id="_7_2_3_auto_update_agent"><a class="anchor" href="#_7_2_3_auto_update_agent"></a><a class="link" href="#_7_2_3_auto_update_agent">17.2.3. 7.2.3 Auto-Update Agent</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -603,7 +698,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_8_2_4_clickonce_optional"><a class="anchor" href="#_8_2_4_clickonce_optional"></a><a class="link" href="#_8_2_4_clickonce_optional">9.2.4. 8.2.4 ClickOnce (Optional)</a></h4>
+<h4 id="_7_2_4_clickonce_optional"><a class="anchor" href="#_7_2_4_clickonce_optional"></a><a class="link" href="#_7_2_4_clickonce_optional">17.2.4. 7.2.4 ClickOnce (Optional)</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -617,7 +712,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_3_benefits_over_legacy_iis_model"><a class="anchor" href="#_8_3_benefits_over_legacy_iis_model"></a><a class="link" href="#_8_3_benefits_over_legacy_iis_model">9.3. 8.3 Benefits Over Legacy IIS Model</a></h3>
+<h3 id="_7_3_benefits_over_legacy_iis_model"><a class="anchor" href="#_7_3_benefits_over_legacy_iis_model"></a><a class="link" href="#_7_3_benefits_over_legacy_iis_model">17.3. 7.3 Benefits Over Legacy IIS Model</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -642,7 +737,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_4_key_rebuttals_to_concerns"><a class="anchor" href="#_8_4_key_rebuttals_to_concerns"></a><a class="link" href="#_8_4_key_rebuttals_to_concerns">9.4. 8.4 Key Rebuttals to Concerns</a></h3>
+<h3 id="_7_4_key_rebuttals_to_concerns"><a class="anchor" href="#_7_4_key_rebuttals_to_concerns"></a><a class="link" href="#_7_4_key_rebuttals_to_concerns">17.4. 7.4 Key Rebuttals to Concerns</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -661,7 +756,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_5_deployment_workflow_example"><a class="anchor" href="#_8_5_deployment_workflow_example"></a><a class="link" href="#_8_5_deployment_workflow_example">9.5. 8.5 Deployment Workflow Example</a></h3>
+<h3 id="_7_5_deployment_workflow_example"><a class="anchor" href="#_7_5_deployment_workflow_example"></a><a class="link" href="#_7_5_deployment_workflow_example">17.5. 7.5 Deployment Workflow Example</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -683,7 +778,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_8_6_summary"><a class="anchor" href="#_8_6_summary"></a><a class="link" href="#_8_6_summary">9.6. 8.6 Summary</a></h3>
+<h3 id="_7_6_summary"><a class="anchor" href="#_7_6_summary"></a><a class="link" href="#_7_6_summary">17.6. 7.6 Summary</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -707,10 +802,10 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_9_compliance_and_standards"><a class="anchor" href="#_9_compliance_and_standards"></a><a class="link" href="#_9_compliance_and_standards">10. 9. Compliance and Standards</a></h2>
+<h2 id="_8_compliance_and_standards"><a class="anchor" href="#_8_compliance_and_standards"></a><a class="link" href="#_8_compliance_and_standards">18. 8. Compliance and Standards</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_9_1_industry_standards"><a class="anchor" href="#_9_1_industry_standards"></a><a class="link" href="#_9_1_industry_standards">10.1. 9.1 Industry Standards</a></h3>
+<h3 id="_8_1_industry_standards"><a class="anchor" href="#_8_1_industry_standards"></a><a class="link" href="#_8_1_industry_standards">18.1. 8.1 Industry Standards</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -729,7 +824,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_9_2_regulatory_requirements"><a class="anchor" href="#_9_2_regulatory_requirements"></a><a class="link" href="#_9_2_regulatory_requirements">10.2. 9.2 Regulatory Requirements</a></h3>
+<h3 id="_8_2_regulatory_requirements"><a class="anchor" href="#_8_2_regulatory_requirements"></a><a class="link" href="#_8_2_regulatory_requirements">18.2. 8.2 Regulatory Requirements</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -747,45 +842,83 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_10_appendices"><a class="anchor" href="#_10_appendices"></a><a class="link" href="#_10_appendices">11. 10. Appendices</a></h2>
+<h2 id="_9_appendices"><a class="anchor" href="#_9_appendices"></a><a class="link" href="#_9_appendices">19. 9. Appendices</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_10_1_glossary"><a class="anchor" href="#_10_1_glossary"></a><a class="link" href="#_10_1_glossary">11.1. 10.1 Glossary</a></h3>
-<div class="dlist">
+<h3 id="_9_1_glossary"><a class="anchor" href="#_9_1_glossary"></a><a class="link" href="#_9_1_glossary">19.1. 9.1 Glossary</a></h3>
+<div id="glossary-ada" class="dlist">
 <dl>
-<dt class="hdlist1"><strong>CUSS</strong></dt>
-<dd>
-<p>Common Use Self Service</p>
-</dd>
-<dt class="hdlist1"><strong>DCS</strong></dt>
-<dd>
-<p>Departure Control System</p>
-</dd>
-<dt class="hdlist1"><strong>PSS</strong></dt>
-<dd>
-<p>Passenger Service System</p>
-</dd>
-<dt class="hdlist1"><strong>FIDS</strong></dt>
-<dd>
-<p>Flight Information Display System</p>
-</dd>
-<dt class="hdlist1"><strong>IATA</strong></dt>
-<dd>
-<p>International Air Transport Association</p>
-</dd>
 <dt class="hdlist1"><strong>ADA</strong></dt>
 <dd>
 <p>Americans with Disabilities Act</p>
 </dd>
 </dl>
 </div>
+<div id="glossary-cuss" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>CUSS</strong></dt>
+<dd>
+<p>Common Use Self Service<br>
+<a href="#introduction">↩ Return to Introduction</a></p>
+</dd>
+</dl>
+</div>
+<div id="glossary-dcs" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>DCS</strong></dt>
+<dd>
+<p>Departure Control System</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-dsl" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>DSL</strong></dt>
+<dd>
+<p>Domain Specific Language</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-fids" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>FIDS</strong></dt>
+<dd>
+<p>Flight Information Display System</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-iata" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>IATA</strong></dt>
+<dd>
+<p>International Air Transport Association</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-pss" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>PSS</strong></dt>
+<dd>
+<p>Passenger Service System</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-webview2" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>WebView2</strong></dt>
+<dd>
+<p>Microsoft&#8217;s embedded web browser control based on (Chromium). Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support. No hassles controlling browser chrome, menus, menu bars, address bars footer or managing separate processes.
+<a href="#introduction">↩ Return to Introduction</a></p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_10_2_references"><a class="anchor" href="#_10_2_references"></a><a class="link" href="#_10_2_references">11.2. 10.2 References</a></h3>
+<h3 id="_9_2_references"><a class="anchor" href="#_9_2_references"></a><a class="link" href="#_9_2_references">19.2. 9.2 References</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>IATA CUSS Standard 2.0</p>
+<p>IATA CUSS Standard 1.3 - 1.5, 2.0</p>
 </li>
 <li>
 <p>W3C Web Content Accessibility Guidelines</p>
@@ -800,7 +933,7 @@ Start-Service CussApp</code></pre>
 </div>
 <hr>
 <div class="paragraph">
-<p><em>Last updated: 2025-10-02</em></p>
+<p><em>Last updated: 2025-10-03</em></p>
 </div>
 <div class="paragraph">
 <p><em>Version: 1.0</em></p>
@@ -811,7 +944,7 @@ Start-Service CussApp</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-02 23:42:59 -0500
+Last updated 2025-10-03 18:21:06 -0500
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

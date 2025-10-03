@@ -3,13 +3,7 @@
 === 4.1 Data Protection
 
 * All passenger data encrypted in transit and at rest
-* PCI DSS compliance for payment processing
-* GDPR compliance for European operations
+* PCI DSS compliance
+* GDPR compliance
 * Automatic data purging after transaction completion
 
-=== 4.2 Authentication
-
-* Multi-factor authentication options
-* Biometric verification (where available)
-* Time-based session management
-* Audit logging for all transactions

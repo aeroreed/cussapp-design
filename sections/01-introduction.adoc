@@ -1,22 +1,72 @@
+[[introduction]]
 == 1. Introduction
 
-The CUSS application is designed to provide a standardized interface for airline passengers to check in, print boarding passes, and manage their travel experience at airport kiosks.
+The Common Use Self Service (CUSS) application is a standards-compliant, multi-tenant passenger processing solution designed to run on top of any IATA CUSS-compliant platform. It provides airlines and airports with a flexible framework to deliver core workflows(modes) such as passenger check-in, baggage drop,and other service flows that can be created, cached, and customized without requiring a re-compile and release cycle.
 
-=== 1.1 Purpose
+This CUSS app is intentionally built as a *generic core application* rather than a “white-label” in the narrow sense. It supports multiple airlines through configuration, workflow definition, and UI customization, while still conforming to IATA CUSS specifications for device interaction and platform integration. Each instance of the application runs within a kiosk’s CUSS platform runtime, with one physical kiosk typically hosting one CUSS platform instance and one or more airline applications.
 
-This document serves as the comprehensive design specification for the CUSS application, covering:
+The design emphasizes:
+- **Embedded Kestrel hosting**: modern .NET Core architecture where the app self-hosts its web server and serves workflows directly to a thin client browser (<<glossary-webview2,WebView2>>). This eliminates dependence on legacy centralized IIS hosting models.
+- **Workflow flexibility**: workflows are defined as a sequence of views and steps, described in JSON and linked to business logic through a domain-specific language (DSL). This enables airline-specific flows like bag drop or check-in without rewriting the core application.
+- **Extensible device access**: the app communicates with the <<glossary-cuss,CUSS>> platform for device access through standardized Device Component Interfaces (DCIs). CUSS 1.5 CORBA plugin design that considers future CUSS 2.0 plugin for JSON-based CUSS 2.0 specifications.
+- **Multi-airline operation**: a single deployment can support different airline instances, each with their own workflows, branding, and availability states tied to their host systems.
 
-* System architecture
-* User interface design
-* Security requirements
-* Integration specifications
+By using modern application design and implementation practices, latest LTS .NET frameworks, and cloud-native principles into the CUSS model, this design ensures the app can scale across kiosks, adapt to future standards, and provide a maintainable path forward for passenger-facing services in airports worldwide.
+= CUSS App Design Overview
+:toc:
 
-=== 1.2 Scope
+== Introduction
+- Why this document exists: clarify design choices, provide neutral facts, and resolve confusion about IIS vs. Kestrel.
+- Acknowledge: kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.
 
-The CUSS application encompasses:
+== Legacy vs. Modern Models
+- Why IIS central model is legacy
+- Why embedded Kestrel is the default for .NET Core and aligns with other stacks (Spring Boot/Tomcat, Node/Express, Go, etc.)
+- Thin client vs. fat client misconceptions
+- Summary statement: embedded server ≠ fat client
 
-* Passenger check-in functionality
-* Boarding pass printing
-* Baggage tag printing
-* Seat selection
-* Upgrade options
+== Core Design Artifacts
+- Component diagram of the CUSS App (PlantUML/PNG)
+- Internal components:
+  * Embedded Kestrel
+  * Workflow Engine
+  * Workflow Builder (Admin Console)
+  * Web Apps (Vue3, Workflow Runner)
+  * Event Bus
+  * Sidecar (CORBA / JSON adapter)
+  * DI / Service Provider
+  * Ports (HTTP/2, device APIs)
+- File deployment model: workflows and apps installed as JSON + Vue3 web apps
+
+== Deployment and Updates
+- Self-contained deployments vs. central IIS push
+- How CI/CD and PowerShell/admin console can handle updates
+- dotnet publish creates versioned build artifacts
+- Build pipeline signs and packages into MSI
+- Granular kiosk or fleet-wide update options
+- BYOB/Bring Your Own Java precedents in CUSS addendum
+
+== Security
+- Risks of IIS (shared DLLs, app pools, patching)
+- Benefits of self-contained deployments with embedded Kestrel
+- PCI DSS alignment and isolation per kiosk
+- Neutral fact: modern shops avoid GAC gymnastics
+
+== Cloud-Native Alignment at the Edge
+- Mapping 12-factor attributes to the design
+- How this edge device model applies cloud-native principles
+- Sets foundation for hybrid or future cloud-integrated models
+
+== Industry Precedent
+- How other modern platforms (Spring Boot, Node.js, Go, .NET Core) all follow embedded-server models
+- Airlines and CUSS BYOB/edge install precedents
+
+== Independent Verification
+- AI prompts provided to verify these facts independently
+- Note: prompts can be Googled, but AI gives more accurate, concise responses without manual collation
+
+== Conclusion
+- Restate: this design is aligned with modern practice, neutral facts support it, and concerns about delivery are met
+- Next step: treat this as common ground for future design reviews
+
+
