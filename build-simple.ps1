@@ -7,27 +7,27 @@ if (!(Get-Command asciidoctor -ErrorAction SilentlyContinue)) {
 }
 
 # Create output directory
-if (!(Test-Path "docs")) {
-    New-Item -ItemType Directory -Path "docs"
+if (!(Test-Path "site")) {
+    New-Item -ItemType Directory -Path "site"
 }
 
-# Copy styles directory to docs if it exists
+# Copy styles directory to site if it exists
 if (Test-Path "styles") {
     Write-Host "📁 Copying styles directory..."
-    Copy-Item -Path "styles" -Destination "docs" -Recurse -Force
+    Copy-Item -Path "styles" -Destination "site" -Recurse -Force
 }
 
-# Copy images directory to docs if it exists
+# Copy images directory to site if it exists
 if (Test-Path "images") {
     Write-Host "🖼️ Copying images directory..."
-    Copy-Item -Path "images" -Destination "docs" -Recurse -Force
+    Copy-Item -Path "images" -Destination "site" -Recurse -Force
 }
 
 Write-Host "🔧 Converting AsciiDoc to HTML..."
 
 # Convert main documentation file
 asciidoctor `
-    --destination-dir docs `
+    --destination-dir site `
     --out-file index.html `
     --attribute toc=left `
     --attribute toclevels=3 `
@@ -40,13 +40,13 @@ asciidoctor `
 
 if ($?) {
     Write-Host "✅ Documentation built successfully!"
-    Write-Host "📁 Output: docs/index.html"
+    Write-Host "📁 Output: site/index.html"
     Write-Host "🌐 Ready for GitHub Pages!"
     Write-Host ""
     Write-Host "Next steps:"
     Write-Host "1. Commit and push to GitHub"
     Write-Host "2. Enable GitHub Pages in repository settings"
-    Write-Host "3. Set source to 'docs' folder"
+    Write-Host "3. Set source to 'site' folder"
 } else {
     Write-Host "❌ Build failed!"
     exit 1

@@ -53,7 +53,7 @@ gem install asciidoctor
 .\build-simple.ps1
 ```
 
-This creates `docs/index.html` ready for GitHub Pages.
+This creates `site/index.html` ready for GitHub Pages.
 
 ## 🌐 GitHub Pages Setup
 
@@ -62,7 +62,7 @@ This creates `docs/index.html` ready for GitHub Pages.
 3. **Configure Source**: 
    - Source: "Deploy from a branch"
    - Branch: `main` or `master`
-   - Folder: `/docs`
+   - Folder: `/site`
 
 Or use the included GitHub Actions workflow for automatic deployment.
 
@@ -70,9 +70,17 @@ Or use the included GitHub Actions workflow for automatic deployment.
 
 ```
 ├── index.adoc              # Main documentation source
+├── sections/               # Modular section files
+│   ├── 01-introduction.adoc
+│   ├── 02-system-architecture.adoc
+│   └── ...
+├── images/                 # Images and diagrams
+├── styles/                 # CSS stylesheets  
 ├── build-simple.ps1        # Local build script
-├── docs/                   # Generated HTML (for GitHub Pages)
-│   └── index.html
+├── site/                   # Generated HTML (build output)
+│   ├── index.html
+│   ├── images/             # Copied images
+│   └── styles/             # Copied stylesheets
 └── .github/workflows/      # Automatic GitHub Actions deployment
     └── deploy.yml
 ```

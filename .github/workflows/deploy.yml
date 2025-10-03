@@ -36,9 +36,13 @@ jobs:
         
     - name: Build Documentation
       run: |
-        mkdir -p docs
+        mkdir -p site
+        # Copy assets first
+        cp -r images site/ 2>/dev/null || echo "No images directory found"
+        cp -r styles site/ 2>/dev/null || echo "No styles directory found"
+        # Build HTML
         asciidoctor \
-          --destination-dir docs \
+          --destination-dir site \
           --out-file index.html \
           --attribute toc=left \
           --attribute toclevels=3 \
@@ -55,7 +59,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: './docs'
+        path: './site'
 
   deploy:
     environment:

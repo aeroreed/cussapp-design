@@ -1,5 +1,5 @@
 # AsciiDoc Build Output
-# docs/ - commented out to allow GitHub Pages
+# site/ - build output directory for GitHub Pages
 
 # OS Files
 .DS_Store
