@@ -23,12 +23,6 @@ if (Test-Path "images") {
     Copy-Item -Path "images" -Destination "docs" -Recurse -Force
 }
 
-# Copy sections directory to docs if it exists
-if (Test-Path "sections") {
-    Write-Host "📄 Copying sections directory..."
-    Copy-Item -Path "sections" -Destination "docs" -Recurse -Force
-}
-
 Write-Host "🔧 Converting AsciiDoc to HTML..."
 
 # Convert main documentation file
