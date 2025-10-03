@@ -49,6 +49,9 @@ The CUSS application follows a layered architecture pattern:
 . **Integration Layer**: Airline system interfaces
 . **Data Layer**: Local caching and logging
 
+// Add your system architecture diagram here:
+// image::architecture/cuss-system-overview.png[CUSS System Architecture, 800, 600]
+
 === 2.2 Component Overview
 
 ==== 2.2.1 User Interface Components
@@ -88,6 +91,13 @@ The typical user journey includes:
 6. Baggage declaration
 7. Boarding pass printing
 8. Receipt and summary
+
+// Add your UI flow diagram here:
+// image::diagrams/user-journey-flow.png[User Journey Flow, 1000, 600]
+
+// Add individual screen mockups:
+// image::ui/welcome-screen.png[Welcome Screen, 400, 300]
+// image::ui/check-in-screen.png[Check-in Screen, 400, 300]
 
 == 4. Security Requirements
 
