@@ -11,6 +11,12 @@ if (!(Test-Path "docs")) {
     New-Item -ItemType Directory -Path "docs"
 }
 
+# Copy styles directory to docs if it exists
+if (Test-Path "styles") {
+    Write-Host "📁 Copying styles directory..."
+    Copy-Item -Path "styles" -Destination "docs" -Recurse -Force
+}
+
 Write-Host "🔧 Converting AsciiDoc to HTML..."
 
 # Convert main documentation file
