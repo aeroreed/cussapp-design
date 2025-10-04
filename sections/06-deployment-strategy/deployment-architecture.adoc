@@ -1,0 +1,55 @@
+=== 6.1 Deployment Architecture
+
+==== 6.1.1 .NET Core Self-Contained Model
+
+===== Runtime Distribution
+* Each kiosk runs a self-contained .NET Core runtime
+* No dependency on centralized IIS or web server infrastructure
+* Eliminates "DLL hell" and Global Assembly Cache (GAC) conflicts
+* Consistent runtime environment across all deployment targets
+
+===== Application Packaging
+* Self-contained deployments include all required dependencies
+* Portable executable (PE) format for Windows kiosks
+* Version-specific deployment folders prevent conflicts
+* Digital signing for integrity and authenticity verification
+
+===== Infrastructure Requirements
+* Minimal server infrastructure requirements
+* Local file system storage for application binaries
+* Network connectivity for update distribution
+* Standard Windows service hosting capabilities
+
+==== 6.1.2 Deployment Flexibility
+
+===== Multi-Modal Distribution
+* Support for push-based enterprise distribution (SCCM, Intune)
+* Pull-based auto-update mechanisms
+* Manual deployment via file shares and scripts
+* Hybrid approaches combining multiple distribution methods
+
+===== Targeted Deployment Strategies
+* Granular deployment targeting (single kiosk, airline, terminal)
+* Staggered rollout capabilities for risk mitigation
+* Blue-green deployment support for zero-downtime updates
+* Rollback mechanisms for rapid recovery from failed deployments
+
+===== Environment Isolation
+* Development, staging, and production environment separation
+* Environment-specific configuration management
+* Isolated testing environments for validation
+* Quality gates between deployment stages
+
+==== 6.1.3 Scalability and Performance
+
+===== Horizontal Scaling
+* Stateless application design for easy scaling
+* Load balancing across multiple kiosk instances
+* Auto-scaling based on passenger volume and demand
+* Resource optimization for kiosk hardware constraints
+
+===== Performance Optimization
+* Application startup time optimization
+* Memory footprint minimization for kiosk environments
+* Network bandwidth optimization for updates
+* Caching strategies for improved responsiveness

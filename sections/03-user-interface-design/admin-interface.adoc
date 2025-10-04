@@ -1,0 +1,43 @@
+=== 3.4 Admin Interface Design
+
+==== 3.4.1 Workflow Builder Interface
+
+**Visual Editor:**
+- Drag-and-drop workflow designer
+- Component palette with UI elements
+- Properties panel for configuration
+- Real-time preview capability
+
+**Code Editor:**
+- Syntax highlighting for DSL
+- Auto-completion for commands
+- Validation and error highlighting
+- Import/export functionality
+
+==== 3.4.2 Management Dashboard
+
+**System Overview:**
+- Kiosk status monitoring
+- Real-time usage analytics
+- Error rate and performance metrics
+- Device health indicators
+
+**Configuration Management:**
+- Airline profile settings
+- Workflow version control
+- Device configuration
+- Security and access controls
+
+==== 3.4.3 Monitoring and Analytics
+
+**Usage Analytics:**
+- Transaction volume by time/airline
+- User journey completion rates
+- Error frequency and types
+- Device utilization metrics
+
+**Performance Monitoring:**
+- Response time tracking
+- System resource usage
+- Network connectivity status
+- Integration endpoint health

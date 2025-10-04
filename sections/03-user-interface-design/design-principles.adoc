@@ -1,0 +1,34 @@
+=== 3.1 Design Principles
+
+The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:
+
+==== 3.1.1 Core Accessibility Principles
+
+* **ADA Compliance**: Full compliance with Americans with Disabilities Act
+* **WCAG 2.1 AA**: Web Content Accessibility Guidelines compliance
+* **Screen Reader Support**: Compatible with assistive technologies
+* **Keyboard Navigation**: Full keyboard accessibility
+* **High Contrast**: Support for high contrast modes
+* **Text Scaling**: Responsive text sizing up to 200%
+
+==== 3.1.2 Usability Guidelines
+
+* **Simplicity**: Intuitive navigation with minimal steps
+* **Consistency**: Standardized across all airline implementations
+* **Performance**: Fast response times and minimal wait periods
+* **Error Prevention**: Clear validation and helpful error messages
+* **Recovery**: Easy way to correct mistakes and go back
+
+==== 3.1.3 Multi-Audience Design
+
+**Passenger-Facing UIs:**
+- Touch-optimized for kiosk interaction
+- Large, finger-friendly buttons and controls
+- Clear visual hierarchy and progress indicators
+- Multi-language support
+
+**Admin-Facing UIs:**
+- Desktop-optimized for mouse and keyboard
+- Dense information display for efficiency
+- Advanced configuration and management tools
+- Technical detail and diagnostic information

@@ -1,30 +1,34 @@
 == 3. User Interface Design
 
-=== 3.1 Design Principles
+The CUSS application provides multiple user interfaces designed for different audiences and use cases, from passenger-facing kiosk interactions to administrative management tools.
 
-The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:
+.UI Types Overview
+[cols="1,3,6"]
+|===
+| Interface Type | Target Users | Purpose
 
-* **Accessibility**: ADA compliant with support for disabilities
-* **Simplicity**: Intuitive navigation with minimal steps
-* **Consistency**: Standardized across all airline implementations
-* **Performance**: Fast response times and minimal wait periods
+| **Passenger Interface**
+| Airport passengers
+| Touch-optimized kiosk interface for check-in, baggage, and boarding
 
-=== 3.2 Screen Flow
+| **Admin Interface** 
+| IT administrators
+| Web-based management for workflows, monitoring, and configuration
 
-A typical user journey might include:
+| **Workflow Builder**
+| Business analysts
+| Visual tool for creating and editing passenger workflows
 
-1. Welcome screen with language selection
-2. Identification (passport, confirmation code, or frequent flyer number)
-3. Flight selection (if multiple flights)
-4. Check-in confirmation
-5. Seat selection
-6. Baggage declaration
-7. Boarding pass printing
-8. Receipt and summary
+| **Monitoring Dashboard**
+| Operations teams
+| Real-time system health, analytics, and troubleshooting
+|===
 
-// Add your UI flow diagram here:
-// image::diagrams/user-journey-flow.png[User Journey Flow, 1000, 600]
+// Include all UI design subsections
+include::03-user-interface-design/design-principles.adoc[]
 
-// Add individual screen mockups:
-// image::ui/welcome-screen.png[Welcome Screen, 400, 300]
-// image::ui/check-in-screen.png[Check-in Screen, 400, 300]
+include::03-user-interface-design/screen-flow.adoc[]
+
+include::03-user-interface-design/component-design.adoc[]
+
+include::03-user-interface-design/admin-interface.adoc[]

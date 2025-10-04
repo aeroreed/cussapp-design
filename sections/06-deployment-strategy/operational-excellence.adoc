@@ -1,0 +1,114 @@
+=== 6.4 Operational Excellence
+
+==== 6.4.1 Monitoring and Observability
+
+===== Application Performance Monitoring
+* Real-time performance metrics collection
+* Application health checks and status monitoring
+* Resource utilization tracking (CPU, memory, disk)
+* Custom business metrics and KPIs
+
+===== Centralized Logging
+* Structured logging with correlation IDs
+* Log aggregation across all kiosk instances
+* Real-time log analysis and alerting
+* Long-term log retention for compliance and analysis
+
+[source,csharp]
+----
+// Structured logging example
+public class DeploymentService
+{
+    private readonly ILogger<DeploymentService> _logger;
+    
+    public async Task<DeploymentResult> DeployAsync(string version, string target)
+    {
+        using var scope = _logger.BeginScope(new Dictionary<string, object>
+        {
+            ["Version"] = version,
+            ["Target"] = target,
+            ["OperationId"] = Guid.NewGuid()
+        });
+        
+        _logger.LogInformation("Starting deployment of version {Version} to {Target}", version, target);
+        
+        try
+        {
+            var result = await PerformDeploymentAsync(version, target);
+            _logger.LogInformation("Deployment completed successfully in {Duration}ms", result.Duration);
+            return result;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Deployment failed for version {Version} to {Target}", version, target);
+            throw;
+        }
+    }
+}
+----
+
+===== Distributed Tracing
+* Request tracing across service boundaries
+* Performance bottleneck identification
+* Dependency mapping and visualization
+* Error correlation and root cause analysis
+
+==== 6.4.2 Incident Management
+
+===== Automated Incident Detection
+* Anomaly detection using machine learning
+* Threshold-based alerting for key metrics
+* Pattern recognition for recurring issues
+* Integration with enterprise incident management systems
+
+===== Response Procedures
+* Escalation procedures for critical incidents
+* Automated rollback triggers for failed deployments
+* Communication protocols for stakeholder notification
+* Post-incident review and improvement processes
+
+===== Recovery Strategies
+* Database backup and restore procedures
+* Application state recovery mechanisms
+* Configuration rollback capabilities
+* Disaster recovery planning and testing
+
+==== 6.4.3 Capacity Planning and Optimization
+
+===== Resource Management
+* Capacity planning based on passenger volume forecasts
+* Resource allocation optimization
+* Cost optimization strategies
+* Performance tuning and optimization
+
+===== Scalability Planning
+* Horizontal scaling strategies for peak periods
+* Vertical scaling for resource-intensive operations
+* Auto-scaling policies and triggers
+* Load testing and capacity validation
+
+===== Maintenance Planning
+* Scheduled maintenance windows
+* Rolling update strategies for zero-downtime deployments
+* Preventive maintenance procedures
+* Hardware refresh and lifecycle management
+
+==== 6.4.4 Compliance and Governance
+
+===== Change Management
+* Formal change approval processes
+* Risk assessment for deployment changes
+* Documentation and audit trail requirements
+* Rollback procedures and approval workflows
+
+===== Security Compliance
+* Security patch management procedures
+* Vulnerability remediation timelines
+* Compliance reporting and auditing
+* Security incident response procedures
+
+===== Operational Documentation
+* Runbook maintenance and updates
+* Standard operating procedures (SOPs)
+* Knowledge base and troubleshooting guides
+* Training materials for operations teams

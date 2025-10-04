@@ -1,35 +1,32 @@
 == 7. Appendices
 
-=== 7.1 Glossary
+[NOTE]
+====
+This section provides comprehensive reference materials including glossary, standards, technical specifications, and sample configurations to support implementation and maintenance of the CUSS application.
+====
 
-[[glossary-ada]]
-**ADA**:: Americans with Disabilities Act
+.Appendices Overview
+[cols="1,3"]
+|===
+|Subsection |Description
 
-[[glossary-cuss]]
-**CUSS**:: Common Use Self Service +
-<<introduction,↩ Return to Introduction>>
+|7.1 Glossary
+|Definitions of industry terms, technical concepts, and Microsoft technologies
 
-[[glossary-dcs]]
-**DCS**:: Departure Control System
+|7.2 Standards and References
+|IATA standards, accessibility guidelines, security standards, and technical specifications
 
-[[glossary-dsl]]
-**DSL**:: Domain Specific Language
-[[glossary-fids]]
-**FIDS**:: Flight Information Display System
+|7.3 Technical Specifications
+|System requirements, network specifications, performance benchmarks, and integration details
 
-[[glossary-iata]]
-**IATA**:: International Air Transport Association
+|7.4 Sample Configurations
+|Application configuration examples, security settings, deployment configurations, and monitoring setup
+|===
 
-[[glossary-pss]]
-**PSS**:: Passenger Service System
+include::07-appendices/glossary.adoc[]
 
-[[glossary-webview2]]
-**WebView2**:: Microsoft's embedded web browser control based on (Chromium). Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support. No hassles controlling browser chrome, menus, menu bars, address bars footer or managing separate processes.
-<<introduction,↩ Return to Introduction>>
+include::07-appendices/standards-references.adoc[]
 
-=== 7.2 References
+include::07-appendices/technical-specifications.adoc[]
 
-* IATA CUSS Standard 1.3 - 1.5, 2.0
-* W3C Web Content Accessibility Guidelines
-* TSA Security Guidelines for Airport Technology
-* ISO/IEC 27001:2013 Information Security Standard
+include::07-appendices/sample-configurations.adoc[]

@@ -1,0 +1,64 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.1.2 Chrome/138.0.7204.243 Electron/37.4.0 Safari/537.36" version="28.1.2">
+  <diagram name="Page-1" id="p6uCi-K_zpWC21gcCGmq">
+    <mxGraphModel dx="1357" dy="1574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-5" value="CUSS App AOT Process" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry width="710" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-7" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;ServiceProvider&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Sub-classed for full control of&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;DI framework and component scope&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-8" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="bcD2Hr10kMB_pqMEJleT-7">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-9" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;WorkFlowEngine&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Core engine responsible for all aspects of running workflow, binding DSL, mode lifecycle,state, events,debug&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="210" y="10" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-10" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="bcD2Hr10kMB_pqMEJleT-9">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-11" value="&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;SideCar Plugin Interface&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;CUSS CORBA 1.5&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b&gt;CUSS JSON 2.0&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Future&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-12" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="bcD2Hr10kMB_pqMEJleT-11">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-13" value="Event BusInternal event distribution between components" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="110" width="670" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-14" value="Command Bus&amp;nbsp;Used for action/message dispatch across subsystems" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="155" width="670" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-15" value="&lt;p data-end=&quot;879&quot; data-start=&quot;838&quot;&gt;&lt;strong data-end=&quot;877&quot; data-start=&quot;838&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; .NET Core Server (Kestrel)&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-top:6px;text-align:center;&quot;&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-align: left;&quot;&gt;Serves Vue3 applications and workflow JSON.&lt;/span&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-align: left;&quot;&gt;Self-contained; replaces legacy centralized IIS.&lt;/span&gt;&lt;/p&gt;" style="align=left;overflow=fill;html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-16" value="" style="shape=component;jettyWidth=8;jettyHeight=4;" vertex="1" parent="bcD2Hr10kMB_pqMEJleT-15">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-24" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.138;entryY=0.949;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="28" y="250" as="sourcePoint" />
+            <mxPoint x="30.460000000000036" y="188.21499999999992" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-18" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;DB Persistence Local/Azure&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="50" y="410" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bcD2Hr10kMB_pqMEJleT-19" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;File/CUSS App Home&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="170" y="410" width="60" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

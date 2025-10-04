@@ -1,0 +1,132 @@
+=== 6.2 Update Mechanisms
+
+==== 6.2.1 Enterprise Distribution Methods
+
+===== SCCM/Intune Integration
+* Microsoft System Center Configuration Manager (SCCM) integration
+* Microsoft Intune support for cloud-based management
+* Group Policy deployment for domain-joined kiosks
+* Windows Update for Business integration
+
+[source,powershell]
+----
+# SCCM deployment script example
+$PackagePath = "\\sccm-server\packages\CussApp\1.2.0"
+$TargetPath = "C:\Program Files\CussApp"
+
+# Stop service gracefully
+Stop-Service -Name "CussApp" -Force
+Wait-Process -Name "CussApp" -Timeout 30
+
+# Deploy new version
+Copy-Item -Path "$PackagePath\*" -Destination $TargetPath -Recurse -Force
+
+# Start service
+Start-Service -Name "CussApp"
+----
+
+===== Package Management
+* MSI installer packages for enterprise deployment
+* Windows Package Manager (winget) support
+* Chocolatey package distribution
+* Custom package formats for specialized environments
+
+===== Scheduling and Orchestration
+* Maintenance window scheduling
+* Dependency management for coordinated updates
+* Update sequencing for multi-component deployments
+* Automatic retry mechanisms for failed installations
+
+==== 6.2.2 Auto-Update Mechanisms
+
+===== Pull-Based Updates
+* Lightweight background update agent on each kiosk
+* Version comparison against central manifest
+* Bandwidth-optimized delta updates
+* Cryptographic verification of update packages
+
+[source,json]
+----
+{
+  "version": "1.2.0",
+  "releaseDate": "2024-01-15T10:30:00Z",
+  "packages": [
+    {
+      "name": "CussApp.Core",
+      "version": "1.2.0",
+      "hash": "sha256:abc123...",
+      "size": 15728640,
+      "url": "https://updates.example.com/core-1.2.0.zip"
+    }
+  ],
+  "prerequisites": ["dotnet-core-8.0"],
+  "rollbackSupport": true
+}
+----
+
+===== ClickOnce Deployment
+* Self-updating ClickOnce applications
+* Automatic version checking and installation
+* User-initiated or scheduled update checks
+* Secure update delivery over HTTPS
+
+===== Custom Update Agents
+* Purpose-built update agents for specific requirements
+* Integration with existing enterprise update infrastructure
+* Custom business logic for update decisions
+* Advanced rollback and recovery capabilities
+
+==== 6.2.3 File Share and Script-Based Updates
+
+===== PowerShell Automation
+* Robust PowerShell scripts for update automation
+* Error handling and logging capabilities
+* Transaction-based updates with rollback support
+* Integration with enterprise monitoring systems
+
+[source,powershell]
+----
+function Update-CussApp {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$SourcePath,
+        
+        [Parameter(Mandatory=$true)]
+        [string]$TargetPath,
+        
+        [switch]$Rollback
+    )
+    
+    try {
+        # Create backup before update
+        $BackupPath = "$TargetPath.backup.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+        Copy-Item -Path $TargetPath -Destination $BackupPath -Recurse
+        
+        # Stop application
+        Stop-Service -Name "CussApp" -ErrorAction Stop
+        
+        # Apply update
+        Remove-Item -Path "$TargetPath\*" -Recurse -Force
+        Copy-Item -Path "$SourcePath\*" -Destination $TargetPath -Recurse
+        
+        # Start application
+        Start-Service -Name "CussApp" -ErrorAction Stop
+        
+        Write-Log "Update completed successfully"
+    }
+    catch {
+        Write-Log "Update failed: $_"
+        # Rollback if needed
+        if (Test-Path $BackupPath) {
+            Restore-CussApp -BackupPath $BackupPath -TargetPath $TargetPath
+        }
+        throw
+    }
+}
+----
+
+===== Batch and Task Scheduler Integration
+* Windows Task Scheduler for automated updates
+* Batch file automation for simple deployments
+* Integration with enterprise job scheduling systems
+* Maintenance window enforcement

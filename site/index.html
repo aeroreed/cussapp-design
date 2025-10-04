@@ -66,13 +66,66 @@
 </li>
 <li><a href="#_3_user_interface_design">4. 3. User Interface Design</a>
 <ul class="sectlevel2">
-<li><a href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></li>
-<li><a href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></li>
+<li><a href="#_3_1_design_principles">4.1. 3.1 Design Principles</a>
+<ul class="sectlevel3">
+<li><a href="#_3_1_1_core_accessibility_principles">4.1.1. 3.1.1 Core Accessibility Principles</a></li>
+<li><a href="#_3_1_2_usability_guidelines">4.1.2. 3.1.2 Usability Guidelines</a></li>
+<li><a href="#_3_1_3_multi_audience_design">4.1.3. 3.1.3 Multi-Audience Design</a></li>
+</ul>
+</li>
+<li><a href="#_3_2_passenger_screen_flow">4.2. 3.2 Passenger Screen Flow</a>
+<ul class="sectlevel3">
+<li><a href="#_3_2_1_standard_check_in_flow">4.2.1. 3.2.1 Standard Check-in Flow</a></li>
+<li><a href="#_3_2_2_alternative_flows">4.2.2. 3.2.2 Alternative Flows</a></li>
+<li><a href="#_3_2_3_error_and_exception_handling">4.2.3. 3.2.3 Error and Exception Handling</a></li>
+</ul>
+</li>
+<li><a href="#_3_3_component_design_system">4.3. 3.3 Component Design System</a>
+<ul class="sectlevel3">
+<li><a href="#_3_3_1_visual_components">4.3.1. 3.3.1 Visual Components</a></li>
+<li><a href="#_3_3_2_layout_patterns">4.3.2. 3.3.2 Layout Patterns</a></li>
+<li><a href="#_3_3_3_responsive_design">4.3.3. 3.3.3 Responsive Design</a></li>
+</ul>
+</li>
+<li><a href="#_3_4_admin_interface_design">4.4. 3.4 Admin Interface Design</a>
+<ul class="sectlevel3">
+<li><a href="#_3_4_1_workflow_builder_interface">4.4.1. 3.4.1 Workflow Builder Interface</a></li>
+<li><a href="#_3_4_2_management_dashboard">4.4.2. 3.4.2 Management Dashboard</a></li>
+<li><a href="#_3_4_3_monitoring_and_analytics">4.4.3. 3.4.3 Monitoring and Analytics</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_4_security_requirements">5. 4. Security Requirements</a>
 <ul class="sectlevel2">
-<li><a href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></li>
+<li><a href="#_4_1_data_protection">5.1. 4.1 Data Protection</a>
+<ul class="sectlevel3">
+<li><a href="#_4_1_1_data_encryption_standards">5.1.1. 4.1.1 Data Encryption Standards</a></li>
+<li><a href="#_4_1_2_compliance_requirements">5.1.2. 4.1.2 Compliance Requirements</a></li>
+<li><a href="#_4_1_3_data_lifecycle_management">5.1.3. 4.1.3 Data Lifecycle Management</a></li>
+</ul>
+</li>
+<li><a href="#_4_2_authentication_and_authorization">5.2. 4.2 Authentication and Authorization</a>
+<ul class="sectlevel3">
+<li><a href="#_4_2_1_user_authentication">5.2.1. 4.2.1 User Authentication</a></li>
+<li><a href="#_4_2_2_authorization_framework">5.2.2. 4.2.2 Authorization Framework</a></li>
+<li><a href="#_4_2_3_api_security">5.2.3. 4.2.3 API Security</a></li>
+</ul>
+</li>
+<li><a href="#_4_3_application_security">5.3. 4.3 Application Security</a>
+<ul class="sectlevel3">
+<li><a href="#_4_3_1_secure_development_lifecycle">5.3.1. 4.3.1 Secure Development Lifecycle</a></li>
+<li><a href="#_4_3_2_runtime_protection">5.3.2. 4.3.2 Runtime Protection</a></li>
+<li><a href="#_4_3_3_infrastructure_security">5.3.3. 4.3.3 Infrastructure Security</a></li>
+</ul>
+</li>
+<li><a href="#_4_4_incident_response_and_security_operations">5.4. 4.4 Incident Response and Security Operations</a>
+<ul class="sectlevel3">
+<li><a href="#_4_4_1_security_monitoring">5.4.1. 4.4.1 Security Monitoring</a></li>
+<li><a href="#_4_4_2_incident_response">5.4.2. 4.4.2 Incident Response</a></li>
+<li><a href="#_4_4_3_security_governance">5.4.3. 4.4.3 Security Governance</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_5_core_components">6. 5. Core Components</a>
@@ -121,27 +174,74 @@
 </li>
 </ul>
 </li>
-<li><a href="#_6_deployment_and_update_strategy_net_core_model">7. 6. Deployment and Update Strategy (.NET Core Model)</a>
+<li><a href="#_6_deployment_and_update_strategy">7. 6. Deployment and Update Strategy</a>
 <ul class="sectlevel2">
-<li><a href="#_6_1_wide_open_update_palette">7.1. 6.1 Wide-Open Update Palette</a></li>
-<li><a href="#_6_2_supported_update_methods">7.2. 6.2 Supported Update Methods</a>
+<li><a href="#_key_advantages_of_net_core_deployment_model">7.1. Key Advantages of .NET Core Deployment Model</a></li>
+<li><a href="#_6_1_deployment_architecture">7.2. 6.1 Deployment Architecture</a>
 <ul class="sectlevel3">
-<li><a href="#_6_2_1_enterprise_distribution_sccm_intune_etc">7.2.1. 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></li>
-<li><a href="#_6_2_2_file_share_powershell">7.2.2. 6.2.2 File Share + PowerShell</a></li>
-<li><a href="#_6_2_3_auto_update_agent">7.2.3. 6.2.3 Auto-Update Agent</a></li>
-<li><a href="#_6_2_4_clickonce_optional">7.2.4. 6.2.4 ClickOnce (Optional)</a></li>
+<li><a href="#_6_1_1_net_core_self_contained_model">7.2.1. 6.1.1 .NET Core Self-Contained Model</a></li>
+<li><a href="#_6_1_2_deployment_flexibility">7.2.2. 6.1.2 Deployment Flexibility</a></li>
+<li><a href="#_6_1_3_scalability_and_performance">7.2.3. 6.1.3 Scalability and Performance</a></li>
 </ul>
 </li>
-<li><a href="#_6_3_benefits_over_legacy_iis_model">7.3. 6.3 Benefits Over Legacy IIS Model</a></li>
-<li><a href="#_6_4_key_rebuttals_to_concerns">7.4. 6.4 Key Rebuttals to Concerns</a></li>
-<li><a href="#_6_5_deployment_workflow_example">7.5. 6.5 Deployment Workflow Example</a></li>
-<li><a href="#_6_6_summary">7.6. 6.6 Summary</a></li>
+<li><a href="#_6_2_update_mechanisms">7.3. 6.2 Update Mechanisms</a>
+<ul class="sectlevel3">
+<li><a href="#_6_2_1_enterprise_distribution_methods">7.3.1. 6.2.1 Enterprise Distribution Methods</a></li>
+<li><a href="#_6_2_2_auto_update_mechanisms">7.3.2. 6.2.2 Auto-Update Mechanisms</a></li>
+<li><a href="#_6_2_3_file_share_and_script_based_updates">7.3.3. 6.2.3 File Share and Script-Based Updates</a></li>
+</ul>
+</li>
+<li><a href="#_6_3_cicd_integration">7.4. 6.3 CI/CD Integration</a>
+<ul class="sectlevel3">
+<li><a href="#_6_3_1_build_pipeline_integration">7.4.1. 6.3.1 Build Pipeline Integration</a></li>
+<li><a href="#_6_3_2_deployment_automation">7.4.2. 6.3.2 Deployment Automation</a></li>
+<li><a href="#_6_3_3_quality_assurance_integration">7.4.3. 6.3.3 Quality Assurance Integration</a></li>
+</ul>
+</li>
+<li><a href="#_6_4_operational_excellence">7.5. 6.4 Operational Excellence</a>
+<ul class="sectlevel3">
+<li><a href="#_6_4_1_monitoring_and_observability">7.5.1. 6.4.1 Monitoring and Observability</a></li>
+<li><a href="#_6_4_2_incident_management">7.5.2. 6.4.2 Incident Management</a></li>
+<li><a href="#_6_4_3_capacity_planning_and_optimization">7.5.3. 6.4.3 Capacity Planning and Optimization</a></li>
+<li><a href="#_6_4_4_compliance_and_governance">7.5.4. 6.4.4 Compliance and Governance</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_7_appendices">8. 7. Appendices</a>
 <ul class="sectlevel2">
-<li><a href="#_7_1_glossary">8.1. 7.1 Glossary</a></li>
-<li><a href="#_7_2_references">8.2. 7.2 References</a></li>
+<li><a href="#_7_1_glossary">8.1. 7.1 Glossary</a>
+<ul class="sectlevel3">
+<li><a href="#_7_1_1_industry_terms">8.1.1. 7.1.1 Industry Terms</a></li>
+<li><a href="#_7_1_2_technical_terms">8.1.2. 7.1.2 Technical Terms</a></li>
+<li><a href="#_7_1_3_microsoft_technologies">8.1.3. 7.1.3 Microsoft Technologies</a></li>
+<li><a href="#_7_1_4_security_and_compliance_terms">8.1.4. 7.1.4 Security and Compliance Terms</a></li>
+</ul>
+</li>
+<li><a href="#_7_2_standards_and_references">8.2. 7.2 Standards and References</a>
+<ul class="sectlevel3">
+<li><a href="#_7_2_1_iata_standards">8.2.1. 7.2.1 IATA Standards</a></li>
+<li><a href="#_7_2_2_accessibility_standards">8.2.2. 7.2.2 Accessibility Standards</a></li>
+<li><a href="#_7_2_3_security_standards">8.2.3. 7.2.3 Security Standards</a></li>
+<li><a href="#_7_2_4_technical_standards">8.2.4. 7.2.4 Technical Standards</a></li>
+</ul>
+</li>
+<li><a href="#_7_3_technical_specifications">8.3. 7.3 Technical Specifications</a>
+<ul class="sectlevel3">
+<li><a href="#_7_3_1_system_requirements">8.3.1. 7.3.1 System Requirements</a></li>
+<li><a href="#_7_3_2_network_specifications">8.3.2. 7.3.2 Network Specifications</a></li>
+<li><a href="#_7_3_3_performance_benchmarks">8.3.3. 7.3.3 Performance Benchmarks</a></li>
+<li><a href="#_7_3_4_integration_specifications">8.3.4. 7.3.4 Integration Specifications</a></li>
+</ul>
+</li>
+<li><a href="#_7_4_sample_configurations">8.4. 7.4 Sample Configurations</a>
+<ul class="sectlevel3">
+<li><a href="#_7_4_1_application_configuration">8.4.1. 7.4.1 Application Configuration</a></li>
+<li><a href="#_7_4_2_security_configuration">8.4.2. 7.4.2 Security Configuration</a></li>
+<li><a href="#_7_4_3_deployment_configuration">8.4.3. 7.4.3 Deployment Configuration</a></li>
+<li><a href="#_7_4_4_monitoring_configuration">8.4.4. 7.4.4 Monitoring Configuration</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -517,16 +617,80 @@
 <div class="sect1">
 <h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">4. 3. User Interface Design</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The CUSS application provides multiple user interfaces designed for different audiences and use cases, from passenger-facing kiosk interactions to administrative management tools.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. UI Types Overview</caption>
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Interface Type</th>
+<th class="tableblock halign-left valign-top">Target Users</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Passenger Interface</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Airport passengers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Touch-optimized kiosk interface for check-in, baggage, and boarding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Admin Interface</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IT administrators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web-based management for workflows, monitoring, and configuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Builder</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business analysts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visual tool for creating and editing passenger workflows</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Monitoring Dashboard</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operations teams</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Real-time system health, analytics, and troubleshooting</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect2">
 <h3 id="_3_1_design_principles"><a class="anchor" href="#_3_1_design_principles"></a><a class="link" href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></h3>
 <div class="paragraph">
 <p>The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:</p>
 </div>
+<div class="sect3">
+<h4 id="_3_1_1_core_accessibility_principles"><a class="anchor" href="#_3_1_1_core_accessibility_principles"></a><a class="link" href="#_3_1_1_core_accessibility_principles">4.1.1. 3.1.1 Core Accessibility Principles</a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Accessibility</strong>: ADA compliant with support for disabilities</p>
+<p><strong>ADA Compliance</strong>: Full compliance with Americans with Disabilities Act</p>
 </li>
+<li>
+<p><strong>WCAG 2.1 AA</strong>: Web Content Accessibility Guidelines compliance</p>
+</li>
+<li>
+<p><strong>Screen Reader Support</strong>: Compatible with assistive technologies</p>
+</li>
+<li>
+<p><strong>Keyboard Navigation</strong>: Full keyboard accessibility</p>
+</li>
+<li>
+<p><strong>High Contrast</strong>: Support for high contrast modes</p>
+</li>
+<li>
+<p><strong>Text Scaling</strong>: Responsive text sizing up to 200%</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_2_usability_guidelines"><a class="anchor" href="#_3_1_2_usability_guidelines"></a><a class="link" href="#_3_1_2_usability_guidelines">4.1.2. 3.1.2 Usability Guidelines</a></h4>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Simplicity</strong>: Intuitive navigation with minimal steps</p>
 </li>
@@ -536,41 +700,209 @@
 <li>
 <p><strong>Performance</strong>: Fast response times and minimal wait periods</p>
 </li>
+<li>
+<p><strong>Error Prevention</strong>: Clear validation and helpful error messages</p>
+</li>
+<li>
+<p><strong>Recovery</strong>: Easy way to correct mistakes and go back</p>
+</li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_3_2_screen_flow"><a class="anchor" href="#_3_2_screen_flow"></a><a class="link" href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></h3>
+<div class="sect3">
+<h4 id="_3_1_3_multi_audience_design"><a class="anchor" href="#_3_1_3_multi_audience_design"></a><a class="link" href="#_3_1_3_multi_audience_design">4.1.3. 3.1.3 Multi-Audience Design</a></h4>
 <div class="paragraph">
-<p>A typical user journey might include:</p>
+<p><strong>Passenger-Facing UIs:</strong>
+- Touch-optimized for kiosk interaction
+- Large, finger-friendly buttons and controls
+- Clear visual hierarchy and progress indicators
+- Multi-language support</p>
 </div>
+<div class="paragraph">
+<p><strong>Admin-Facing UIs:</strong>
+- Desktop-optimized for mouse and keyboard
+- Dense information display for efficiency
+- Advanced configuration and management tools
+- Technical detail and diagnostic information</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_passenger_screen_flow"><a class="anchor" href="#_3_2_passenger_screen_flow"></a><a class="link" href="#_3_2_passenger_screen_flow">4.2. 3.2 Passenger Screen Flow</a></h3>
+<div class="paragraph">
+<p>A typical passenger user journey includes:</p>
+</div>
+<div class="sect3">
+<h4 id="_3_2_1_standard_check_in_flow"><a class="anchor" href="#_3_2_1_standard_check_in_flow"></a><a class="link" href="#_3_2_1_standard_check_in_flow">4.2.1. 3.2.1 Standard Check-in Flow</a></h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Welcome screen with language selection</p>
+<p><strong>Welcome screen</strong> with language selection</p>
 </li>
 <li>
-<p>Identification (passport, confirmation code, or frequent flyer number)</p>
+<p><strong>Identification</strong> (passport, confirmation code, or frequent flyer number)</p>
 </li>
 <li>
-<p>Flight selection (if multiple flights)</p>
+<p><strong>Flight selection</strong> (if multiple flights)</p>
 </li>
 <li>
-<p>Check-in confirmation</p>
+<p><strong>Check-in confirmation</strong> with flight details</p>
 </li>
 <li>
-<p>Seat selection</p>
+<p><strong>Seat selection</strong> (if available)</p>
 </li>
 <li>
-<p>Baggage declaration</p>
+<p><strong>Baggage declaration</strong> and tag printing</p>
 </li>
 <li>
-<p>Boarding pass printing</p>
+<p><strong>Boarding pass printing</strong></p>
 </li>
 <li>
-<p>Receipt and summary</p>
+<p><strong>Receipt and summary</strong></p>
 </li>
 </ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_2_alternative_flows"><a class="anchor" href="#_3_2_2_alternative_flows"></a><a class="link" href="#_3_2_2_alternative_flows">4.2.2. 3.2.2 Alternative Flows</a></h4>
+<div class="paragraph">
+<p><strong>Express Check-in:</strong>
+- Skip seat selection for pre-assigned seats
+- Automatic baggage handling for frequent flyers
+- Single-step confirmation and printing</p>
+</div>
+<div class="paragraph">
+<p><strong>Assisted Check-in:</strong>
+- Special assistance requirements
+- Unaccompanied minor processing
+- Medical equipment declarations</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_2_3_error_and_exception_handling"><a class="anchor" href="#_3_2_3_error_and_exception_handling"></a><a class="link" href="#_3_2_3_error_and_exception_handling">4.2.3. 3.2.3 Error and Exception Handling</a></h4>
+<div class="paragraph">
+<p><strong>Common Error Scenarios:</strong>
+- Passenger not found
+- Flight already departed
+- Seat selection unavailable
+- Printer offline
+- Network connectivity issues</p>
+</div>
+<div class="paragraph">
+<p><strong>Recovery Strategies:</strong>
+- Clear error messages with next steps
+- Alternative identification methods
+- Graceful degradation during outages
+- Agent assistance call options</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_3_component_design_system"><a class="anchor" href="#_3_3_component_design_system"></a><a class="link" href="#_3_3_component_design_system">4.3. 3.3 Component Design System</a></h3>
+<div class="sect3">
+<h4 id="_3_3_1_visual_components"><a class="anchor" href="#_3_3_1_visual_components"></a><a class="link" href="#_3_3_1_visual_components">4.3.1. 3.3.1 Visual Components</a></h4>
+<div class="paragraph">
+<p><strong>Buttons:</strong>
+- Primary actions: High contrast, large touch targets
+- Secondary actions: Lower contrast, standard sizing
+- Destructive actions: Red accent, confirmation required
+- Disabled state: Grayed out with clear indication</p>
+</div>
+<div class="paragraph">
+<p><strong>Form Controls:</strong>
+- Input fields: Large, clear labels, validation feedback
+- Dropdowns: Touch-friendly with search capability
+- Checkboxes/Radio: Oversized for touch accuracy
+- Progress indicators: Clear steps and completion status</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_2_layout_patterns"><a class="anchor" href="#_3_3_2_layout_patterns"></a><a class="link" href="#_3_3_2_layout_patterns">4.3.2. 3.3.2 Layout Patterns</a></h4>
+<div class="paragraph">
+<p><strong>Kiosk Layout:</strong>
+- Single-column layout for focus
+- Large header with airline branding
+- Progress indicator at top
+- Primary action at bottom right
+- Secondary actions at bottom left</p>
+</div>
+<div class="paragraph">
+<p><strong>Admin Layout:</strong>
+- Multi-column dashboard design
+- Sidebar navigation
+- Tabbed content areas
+- Status panels and widgets</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_3_3_responsive_design"><a class="anchor" href="#_3_3_3_responsive_design"></a><a class="link" href="#_3_3_3_responsive_design">4.3.3. 3.3.3 Responsive Design</a></h4>
+<div class="paragraph">
+<p><strong>Breakpoints:</strong>
+- Kiosk: 1920x1080 (primary target)
+- Tablet: 1366x768 (admin interface)
+- Mobile: 768x1024 (backup/testing)</p>
+</div>
+<div class="paragraph">
+<p><strong>Scaling Strategy:</strong>
+- Component-based responsive units
+- Proportional font and spacing scales
+- Touch target minimum sizes maintained
+- Readable text at all scales</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_4_admin_interface_design"><a class="anchor" href="#_3_4_admin_interface_design"></a><a class="link" href="#_3_4_admin_interface_design">4.4. 3.4 Admin Interface Design</a></h3>
+<div class="sect3">
+<h4 id="_3_4_1_workflow_builder_interface"><a class="anchor" href="#_3_4_1_workflow_builder_interface"></a><a class="link" href="#_3_4_1_workflow_builder_interface">4.4.1. 3.4.1 Workflow Builder Interface</a></h4>
+<div class="paragraph">
+<p><strong>Visual Editor:</strong>
+- Drag-and-drop workflow designer
+- Component palette with UI elements
+- Properties panel for configuration
+- Real-time preview capability</p>
+</div>
+<div class="paragraph">
+<p><strong>Code Editor:</strong>
+- Syntax highlighting for DSL
+- Auto-completion for commands
+- Validation and error highlighting
+- Import/export functionality</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_4_2_management_dashboard"><a class="anchor" href="#_3_4_2_management_dashboard"></a><a class="link" href="#_3_4_2_management_dashboard">4.4.2. 3.4.2 Management Dashboard</a></h4>
+<div class="paragraph">
+<p><strong>System Overview:</strong>
+- Kiosk status monitoring
+- Real-time usage analytics
+- Error rate and performance metrics
+- Device health indicators</p>
+</div>
+<div class="paragraph">
+<p><strong>Configuration Management:</strong>
+- Airline profile settings
+- Workflow version control
+- Device configuration
+- Security and access controls</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_4_3_monitoring_and_analytics"><a class="anchor" href="#_3_4_3_monitoring_and_analytics"></a><a class="link" href="#_3_4_3_monitoring_and_analytics">4.4.3. 3.4.3 Monitoring and Analytics</a></h4>
+<div class="paragraph">
+<p><strong>Usage Analytics:</strong>
+- Transaction volume by time/airline
+- User journey completion rates
+- Error frequency and types
+- Device utilization metrics</p>
+</div>
+<div class="paragraph">
+<p><strong>Performance Monitoring:</strong>
+- Response time tracking
+- System resource usage
+- Network connectivity status
+- Integration endpoint health</p>
+</div>
 </div>
 </div>
 </div>
@@ -578,23 +910,765 @@
 <div class="sect1">
 <h2 id="_4_security_requirements"><a class="anchor" href="#_4_security_requirements"></a><a class="link" href="#_4_security_requirements">5. 4. Security Requirements</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This section covers comprehensive security requirements for the CUSS application, including data protection, authentication mechanisms, application security, and incident response procedures.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Security Requirements Overview</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subsection</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1 Data Protection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encryption standards, compliance requirements, and data lifecycle management</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.2 Authentication and Authorization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User authentication, authorization framework, and API security</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.3 Application Security</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Secure development lifecycle, runtime protection, and infrastructure security</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.4 Incident Response and Security Operations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security monitoring, incident response, and security governance</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect2">
 <h3 id="_4_1_data_protection"><a class="anchor" href="#_4_1_data_protection"></a><a class="link" href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></h3>
+<div class="sect3">
+<h4 id="_4_1_1_data_encryption_standards"><a class="anchor" href="#_4_1_1_data_encryption_standards"></a><a class="link" href="#_4_1_1_data_encryption_standards">5.1.1. 4.1.1 Data Encryption Standards</a></h4>
+<div class="sect4">
+<h5 id="_encryption_in_transit"><a class="anchor" href="#_encryption_in_transit"></a><a class="link" href="#_encryption_in_transit">Encryption in Transit</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>All passenger data encrypted in transit and at rest</p>
+<p>All communication channels secured with TLS 1.3</p>
 </li>
 <li>
-<p>PCI DSS compliance</p>
+<p>Certificate-based authentication for API endpoints</p>
 </li>
 <li>
-<p>GDPR compliance</p>
+<p>End-to-end encryption for payment transactions</p>
 </li>
+<li>
+<p>Secure WebSocket connections for real-time updates</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_encryption_at_rest"><a class="anchor" href="#_encryption_at_rest"></a><a class="link" href="#_encryption_at_rest">Encryption at Rest</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>AES-256 encryption for all stored data</p>
+</li>
+<li>
+<p>Database-level encryption with rotating keys</p>
+</li>
+<li>
+<p>Encrypted backup storage with geographic distribution</p>
+</li>
+<li>
+<p>Hardware Security Module (HSM) integration for key management</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_1_2_compliance_requirements"><a class="anchor" href="#_4_1_2_compliance_requirements"></a><a class="link" href="#_4_1_2_compliance_requirements">5.1.2. 4.1.2 Compliance Requirements</a></h4>
+<div class="sect4">
+<h5 id="_pci_dss_compliance"><a class="anchor" href="#_pci_dss_compliance"></a><a class="link" href="#_pci_dss_compliance">PCI DSS Compliance</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Level 1 PCI DSS certification requirements</p>
+</li>
+<li>
+<p>Secure card data handling and storage</p>
+</li>
+<li>
+<p>Network segmentation for payment processing</p>
+</li>
+<li>
+<p>Regular vulnerability assessments and penetration testing</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_gdpr_compliance"><a class="anchor" href="#_gdpr_compliance"></a><a class="link" href="#_gdpr_compliance">GDPR Compliance</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Data minimization principles</p>
+</li>
+<li>
+<p>Explicit consent mechanisms</p>
+</li>
+<li>
+<p>Right to be forgotten implementation</p>
+</li>
+<li>
+<p>Data portability features</p>
+</li>
+<li>
+<p>Privacy by design architecture</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_additional_regulatory_requirements"><a class="anchor" href="#_additional_regulatory_requirements"></a><a class="link" href="#_additional_regulatory_requirements">Additional Regulatory Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>SOX compliance for financial reporting</p>
+</li>
+<li>
+<p>HIPAA considerations for medical information</p>
+</li>
+<li>
+<p>Local aviation authority data requirements</p>
+</li>
+<li>
+<p>Cross-border data transfer compliance</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_1_3_data_lifecycle_management"><a class="anchor" href="#_4_1_3_data_lifecycle_management"></a><a class="link" href="#_4_1_3_data_lifecycle_management">5.1.3. 4.1.3 Data Lifecycle Management</a></h4>
+<div class="sect4">
+<h5 id="_data_collection_and_consent"><a class="anchor" href="#_data_collection_and_consent"></a><a class="link" href="#_data_collection_and_consent">Data Collection and Consent</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Granular consent management</p>
+</li>
+<li>
+<p>Clear data usage notifications</p>
+</li>
+<li>
+<p>Opt-in/opt-out mechanisms</p>
+</li>
+<li>
+<p>Consent audit trails</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_data_retention_and_purging"><a class="anchor" href="#_data_retention_and_purging"></a><a class="link" href="#_data_retention_and_purging">Data Retention and Purging</a></h5>
+<div class="ulist">
+<ul>
 <li>
 <p>Automatic data purging after transaction completion</p>
 </li>
+<li>
+<p>Configurable retention periods by data type</p>
+</li>
+<li>
+<p>Secure data deletion procedures</p>
+</li>
+<li>
+<p>Audit logs for data lifecycle events</p>
+</li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_data_access_controls"><a class="anchor" href="#_data_access_controls"></a><a class="link" href="#_data_access_controls">Data Access Controls</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Role-based access control (RBAC)</p>
+</li>
+<li>
+<p>Principle of least privilege</p>
+</li>
+<li>
+<p>Multi-factor authentication requirements</p>
+</li>
+<li>
+<p>Session management and timeout policies</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_2_authentication_and_authorization"><a class="anchor" href="#_4_2_authentication_and_authorization"></a><a class="link" href="#_4_2_authentication_and_authorization">5.2. 4.2 Authentication and Authorization</a></h3>
+<div class="sect3">
+<h4 id="_4_2_1_user_authentication"><a class="anchor" href="#_4_2_1_user_authentication"></a><a class="link" href="#_4_2_1_user_authentication">5.2.1. 4.2.1 User Authentication</a></h4>
+<div class="sect4">
+<h5 id="_multi_factor_authentication_mfa"><a class="anchor" href="#_multi_factor_authentication_mfa"></a><a class="link" href="#_multi_factor_authentication_mfa">Multi-Factor Authentication (MFA)</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Mandatory MFA for administrative accounts</p>
+</li>
+<li>
+<p>Biometric authentication options (fingerprint, facial recognition)</p>
+</li>
+<li>
+<p>Smart card and token-based authentication</p>
+</li>
+<li>
+<p>Risk-based adaptive authentication</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_identity_management"><a class="anchor" href="#_identity_management"></a><a class="link" href="#_identity_management">Identity Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Integration with airport Active Directory systems</p>
+</li>
+<li>
+<p>Single Sign-On (SSO) capabilities</p>
+</li>
+<li>
+<p>Federated identity management</p>
+</li>
+<li>
+<p>Guest access controls for temporary users</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_session_management"><a class="anchor" href="#_session_management"></a><a class="link" href="#_session_management">Session Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Secure session token generation</p>
+</li>
+<li>
+<p>Configurable session timeouts</p>
+</li>
+<li>
+<p>Concurrent session limits</p>
+</li>
+<li>
+<p>Session hijacking prevention measures</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_2_2_authorization_framework"><a class="anchor" href="#_4_2_2_authorization_framework"></a><a class="link" href="#_4_2_2_authorization_framework">5.2.2. 4.2.2 Authorization Framework</a></h4>
+<div class="sect4">
+<h5 id="_role_based_access_control_rbac"><a class="anchor" href="#_role_based_access_control_rbac"></a><a class="link" href="#_role_based_access_control_rbac">Role-Based Access Control (RBAC)</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Hierarchical role definitions</p>
+</li>
+<li>
+<p>Granular permission management</p>
+</li>
+<li>
+<p>Role inheritance and delegation</p>
+</li>
+<li>
+<p>Dynamic role assignment based on context</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_resource_level_security"><a class="anchor" href="#_resource_level_security"></a><a class="link" href="#_resource_level_security">Resource-Level Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>API endpoint protection</p>
+</li>
+<li>
+<p>Database access controls</p>
+</li>
+<li>
+<p>File system permissions</p>
+</li>
+<li>
+<p>Network resource restrictions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_audit_and_monitoring"><a class="anchor" href="#_audit_and_monitoring"></a><a class="link" href="#_audit_and_monitoring">Audit and Monitoring</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Real-time access monitoring</p>
+</li>
+<li>
+<p>Failed authentication alerts</p>
+</li>
+<li>
+<p>Privilege escalation detection</p>
+</li>
+<li>
+<p>Comprehensive audit logging</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_2_3_api_security"><a class="anchor" href="#_4_2_3_api_security"></a><a class="link" href="#_4_2_3_api_security">5.2.3. 4.2.3 API Security</a></h4>
+<div class="sect4">
+<h5 id="_authentication_mechanisms"><a class="anchor" href="#_authentication_mechanisms"></a><a class="link" href="#_authentication_mechanisms">Authentication Mechanisms</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>OAuth 2.0 / OpenID Connect implementation</p>
+</li>
+<li>
+<p>JWT token management</p>
+</li>
+<li>
+<p>API key management and rotation</p>
+</li>
+<li>
+<p>Client certificate authentication</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_rate_limiting_and_throttling"><a class="anchor" href="#_rate_limiting_and_throttling"></a><a class="link" href="#_rate_limiting_and_throttling">Rate Limiting and Throttling</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Per-user and per-endpoint rate limits</p>
+</li>
+<li>
+<p>Dynamic throttling based on load</p>
+</li>
+<li>
+<p>DDoS protection mechanisms</p>
+</li>
+<li>
+<p>API abuse detection and prevention</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_api_gateway_security"><a class="anchor" href="#_api_gateway_security"></a><a class="link" href="#_api_gateway_security">API Gateway Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Centralized authentication and authorization</p>
+</li>
+<li>
+<p>Request/response validation</p>
+</li>
+<li>
+<p>Security policy enforcement</p>
+</li>
+<li>
+<p>API versioning and deprecation controls</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_3_application_security"><a class="anchor" href="#_4_3_application_security"></a><a class="link" href="#_4_3_application_security">5.3. 4.3 Application Security</a></h3>
+<div class="sect3">
+<h4 id="_4_3_1_secure_development_lifecycle"><a class="anchor" href="#_4_3_1_secure_development_lifecycle"></a><a class="link" href="#_4_3_1_secure_development_lifecycle">5.3.1. 4.3.1 Secure Development Lifecycle</a></h4>
+<div class="sect4">
+<h5 id="_security_by_design"><a class="anchor" href="#_security_by_design"></a><a class="link" href="#_security_by_design">Security by Design</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Threat modeling during design phase</p>
+</li>
+<li>
+<p>Security architecture reviews</p>
+</li>
+<li>
+<p>Secure coding standards and guidelines</p>
+</li>
+<li>
+<p>Security requirements validation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_code_security"><a class="anchor" href="#_code_security"></a><a class="link" href="#_code_security">Code Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Static Application Security Testing (SAST)</p>
+</li>
+<li>
+<p>Dynamic Application Security Testing (DAST)</p>
+</li>
+<li>
+<p>Interactive Application Security Testing (IAST)</p>
+</li>
+<li>
+<p>Software Composition Analysis (SCA)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_testing"><a class="anchor" href="#_security_testing"></a><a class="link" href="#_security_testing">Security Testing</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Automated security testing in CI/CD pipeline</p>
+</li>
+<li>
+<p>Penetration testing by third-party security firms</p>
+</li>
+<li>
+<p>Vulnerability assessment and management</p>
+</li>
+<li>
+<p>Security regression testing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_3_2_runtime_protection"><a class="anchor" href="#_4_3_2_runtime_protection"></a><a class="link" href="#_4_3_2_runtime_protection">5.3.2. 4.3.2 Runtime Protection</a></h4>
+<div class="sect4">
+<h5 id="_application_firewall"><a class="anchor" href="#_application_firewall"></a><a class="link" href="#_application_firewall">Application Firewall</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Web Application Firewall (WAF) implementation</p>
+</li>
+<li>
+<p>SQL injection prevention</p>
+</li>
+<li>
+<p>Cross-site scripting (XSS) protection</p>
+</li>
+<li>
+<p>CSRF token validation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_input_validation_and_sanitization"><a class="anchor" href="#_input_validation_and_sanitization"></a><a class="link" href="#_input_validation_and_sanitization">Input Validation and Sanitization</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Server-side input validation</p>
+</li>
+<li>
+<p>Parameter tampering prevention</p>
+</li>
+<li>
+<p>File upload security controls</p>
+</li>
+<li>
+<p>Command injection prevention</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_error_handling_and_logging"><a class="anchor" href="#_error_handling_and_logging"></a><a class="link" href="#_error_handling_and_logging">Error Handling and Logging</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Secure error message handling</p>
+</li>
+<li>
+<p>Comprehensive security event logging</p>
+</li>
+<li>
+<p>Log tampering prevention</p>
+</li>
+<li>
+<p>Real-time security monitoring</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_3_3_infrastructure_security"><a class="anchor" href="#_4_3_3_infrastructure_security"></a><a class="link" href="#_4_3_3_infrastructure_security">5.3.3. 4.3.3 Infrastructure Security</a></h4>
+<div class="sect4">
+<h5 id="_network_security"><a class="anchor" href="#_network_security"></a><a class="link" href="#_network_security">Network Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Network segmentation and isolation</p>
+</li>
+<li>
+<p>Intrusion Detection and Prevention Systems (IDS/IPS)</p>
+</li>
+<li>
+<p>VPN requirements for remote access</p>
+</li>
+<li>
+<p>Firewall configuration and management</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_container_and_orchestration_security"><a class="anchor" href="#_container_and_orchestration_security"></a><a class="link" href="#_container_and_orchestration_security">Container and Orchestration Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Container image vulnerability scanning</p>
+</li>
+<li>
+<p>Runtime container protection</p>
+</li>
+<li>
+<p>Kubernetes security policies</p>
+</li>
+<li>
+<p>Secret management for containers</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cloud_security_if_applicable"><a class="anchor" href="#_cloud_security_if_applicable"></a><a class="link" href="#_cloud_security_if_applicable">Cloud Security (if applicable)</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Cloud Security Posture Management (CSPM)</p>
+</li>
+<li>
+<p>Cloud Access Security Broker (CASB)</p>
+</li>
+<li>
+<p>Identity and Access Management (IAM) policies</p>
+</li>
+<li>
+<p>Data loss prevention (DLP) controls</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_4_incident_response_and_security_operations"><a class="anchor" href="#_4_4_incident_response_and_security_operations"></a><a class="link" href="#_4_4_incident_response_and_security_operations">5.4. 4.4 Incident Response and Security Operations</a></h3>
+<div class="sect3">
+<h4 id="_4_4_1_security_monitoring"><a class="anchor" href="#_4_4_1_security_monitoring"></a><a class="link" href="#_4_4_1_security_monitoring">5.4.1. 4.4.1 Security Monitoring</a></h4>
+<div class="sect4">
+<h5 id="_security_information_and_event_management_siem"><a class="anchor" href="#_security_information_and_event_management_siem"></a><a class="link" href="#_security_information_and_event_management_siem">Security Information and Event Management (SIEM)</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Real-time security event correlation</p>
+</li>
+<li>
+<p>Automated threat detection</p>
+</li>
+<li>
+<p>Security dashboard and reporting</p>
+</li>
+<li>
+<p>Integration with threat intelligence feeds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_continuous_monitoring"><a class="anchor" href="#_continuous_monitoring"></a><a class="link" href="#_continuous_monitoring">Continuous Monitoring</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>24/7 security operations center (SOC)</p>
+</li>
+<li>
+<p>Automated security scanning</p>
+</li>
+<li>
+<p>Performance and security metrics</p>
+</li>
+<li>
+<p>Compliance monitoring and reporting</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_alerting_and_notification"><a class="anchor" href="#_alerting_and_notification"></a><a class="link" href="#_alerting_and_notification">Alerting and Notification</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Real-time security alert system</p>
+</li>
+<li>
+<p>Escalation procedures for critical incidents</p>
+</li>
+<li>
+<p>Integration with incident management systems</p>
+</li>
+<li>
+<p>Multi-channel notification capabilities</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_4_2_incident_response"><a class="anchor" href="#_4_4_2_incident_response"></a><a class="link" href="#_4_4_2_incident_response">5.4.2. 4.4.2 Incident Response</a></h4>
+<div class="sect4">
+<h5 id="_incident_response_plan"><a class="anchor" href="#_incident_response_plan"></a><a class="link" href="#_incident_response_plan">Incident Response Plan</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Documented incident response procedures</p>
+</li>
+<li>
+<p>Role and responsibility definitions</p>
+</li>
+<li>
+<p>Communication protocols</p>
+</li>
+<li>
+<p>Business continuity considerations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_forensic_capabilities"><a class="anchor" href="#_forensic_capabilities"></a><a class="link" href="#_forensic_capabilities">Forensic Capabilities</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Digital forensics tools and procedures</p>
+</li>
+<li>
+<p>Evidence collection and preservation</p>
+</li>
+<li>
+<p>Chain of custody management</p>
+</li>
+<li>
+<p>Legal and regulatory reporting requirements</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_recovery_and_lessons_learned"><a class="anchor" href="#_recovery_and_lessons_learned"></a><a class="link" href="#_recovery_and_lessons_learned">Recovery and Lessons Learned</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Incident recovery procedures</p>
+</li>
+<li>
+<p>Post-incident analysis and reporting</p>
+</li>
+<li>
+<p>Security improvement recommendations</p>
+</li>
+<li>
+<p>Process refinement and updates</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_4_4_3_security_governance"><a class="anchor" href="#_4_4_3_security_governance"></a><a class="link" href="#_4_4_3_security_governance">5.4.3. 4.4.3 Security Governance</a></h4>
+<div class="sect4">
+<h5 id="_security_policies_and_procedures"><a class="anchor" href="#_security_policies_and_procedures"></a><a class="link" href="#_security_policies_and_procedures">Security Policies and Procedures</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Information security policy framework</p>
+</li>
+<li>
+<p>Security standards and guidelines</p>
+</li>
+<li>
+<p>Regular policy review and updates</p>
+</li>
+<li>
+<p>Employee security training and awareness</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risk_management"><a class="anchor" href="#_risk_management"></a><a class="link" href="#_risk_management">Risk Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Security risk assessment procedures</p>
+</li>
+<li>
+<p>Risk mitigation strategies</p>
+</li>
+<li>
+<p>Third-party security assessments</p>
+</li>
+<li>
+<p>Vendor security requirements</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_compliance_management"><a class="anchor" href="#_compliance_management"></a><a class="link" href="#_compliance_management">Compliance Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Regular compliance audits</p>
+</li>
+<li>
+<p>Compliance gap analysis</p>
+</li>
+<li>
+<p>Remediation tracking and reporting</p>
+</li>
+<li>
+<p>Regulatory liaison and communication</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -606,7 +1680,7 @@
 <p>The CUSS application is built around four core components that work together to provide a flexible, configurable workflow execution environment.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Component Overview</caption>
+<caption class="title">Table 3. Component Overview</caption>
 <colgroup>
 <col style="width: 10%;">
 <col style="width: 30%;">
@@ -1551,10 +2625,55 @@ onButtonClick(event) {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_6_deployment_and_update_strategy_net_core_model"><a class="anchor" href="#_6_deployment_and_update_strategy_net_core_model"></a><a class="link" href="#_6_deployment_and_update_strategy_net_core_model">7. 6. Deployment and Update Strategy (.NET Core Model)</a></h2>
+<h2 id="_6_deployment_and_update_strategy"><a class="anchor" href="#_6_deployment_and_update_strategy"></a><a class="link" href="#_6_deployment_and_update_strategy">7. 6. Deployment and Update Strategy</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This section outlines the comprehensive deployment strategy for the CUSS application, leveraging .NET Core&#8217;s flexibility to support multiple deployment models while ensuring operational excellence and security.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Deployment Strategy Overview</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subsection</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1 Deployment Architecture</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Self-contained .NET Core model, deployment flexibility, and scalability considerations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2 Update Mechanisms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise distribution methods, auto-update mechanisms, and script-based automation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.3 CI/CD Integration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Build pipeline integration, deployment automation, and quality assurance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.4 Operational Excellence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Monitoring and observability, incident management, and compliance governance</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect2">
-<h3 id="_6_1_wide_open_update_palette"><a class="anchor" href="#_6_1_wide_open_update_palette"></a><a class="link" href="#_6_1_wide_open_update_palette">7.1. 6.1 Wide-Open Update Palette</a></h3>
+<h3 id="_key_advantages_of_net_core_deployment_model"><a class="anchor" href="#_key_advantages_of_net_core_deployment_model"></a><a class="link" href="#_key_advantages_of_net_core_deployment_model">7.1. Key Advantages of .NET Core Deployment Model</a></h3>
 <div class="paragraph">
 <p>Unlike the legacy IIS-centric model, .NET Core apps are <strong>not bound to a single central deployment point</strong>.</p>
 </div>
@@ -1585,159 +2704,938 @@ onButtonClick(event) {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_2_supported_update_methods"><a class="anchor" href="#_6_2_supported_update_methods"></a><a class="link" href="#_6_2_supported_update_methods">7.2. 6.2 Supported Update Methods</a></h3>
+<h3 id="_6_1_deployment_architecture"><a class="anchor" href="#_6_1_deployment_architecture"></a><a class="link" href="#_6_1_deployment_architecture">7.2. 6.1 Deployment Architecture</a></h3>
 <div class="sect3">
-<h4 id="_6_2_1_enterprise_distribution_sccm_intune_etc"><a class="anchor" href="#_6_2_1_enterprise_distribution_sccm_intune_etc"></a><a class="link" href="#_6_2_1_enterprise_distribution_sccm_intune_etc">7.2.1. 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></h4>
+<h4 id="_6_1_1_net_core_self_contained_model"><a class="anchor" href="#_6_1_1_net_core_self_contained_model"></a><a class="link" href="#_6_1_1_net_core_self_contained_model">7.2.1. 6.1.1 .NET Core Self-Contained Model</a></h4>
+<div class="sect4">
+<h5 id="_runtime_distribution"><a class="anchor" href="#_runtime_distribution"></a><a class="link" href="#_runtime_distribution">Runtime Distribution</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Package the .NET Core app as MSI or EXE</p>
+<p>Each kiosk runs a self-contained .NET Core runtime</p>
 </li>
 <li>
-<p>Push to all kiosks or target a subset</p>
+<p>No dependency on centralized IIS or web server infrastructure</p>
 </li>
 <li>
-<p>Supports staggered rollout (one terminal, one airline, or one group at a time)</p>
+<p>Eliminates "DLL hell" and Global Assembly Cache (GAC) conflicts</p>
+</li>
+<li>
+<p>Consistent runtime environment across all deployment targets</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_6_2_2_file_share_powershell"><a class="anchor" href="#_6_2_2_file_share_powershell"></a><a class="link" href="#_6_2_2_file_share_powershell">7.2.2. 6.2.2 File Share + PowerShell</a></h4>
+<div class="sect4">
+<h5 id="_application_packaging"><a class="anchor" href="#_application_packaging"></a><a class="link" href="#_application_packaging">Application Packaging</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Store the latest version in a secured share</p>
+<p>Self-contained deployments include all required dependencies</p>
 </li>
 <li>
-<p>PowerShell script (or Scheduled Task) copies binaries to kiosks</p>
+<p>Portable executable (PE) format for Windows kiosks</p>
+</li>
+<li>
+<p>Version-specific deployment folders prevent conflicts</p>
+</li>
+<li>
+<p>Digital signing for integrity and authenticity verification</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_infrastructure_requirements"><a class="anchor" href="#_infrastructure_requirements"></a><a class="link" href="#_infrastructure_requirements">Infrastructure Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Minimal server infrastructure requirements</p>
+</li>
+<li>
+<p>Local file system storage for application binaries</p>
+</li>
+<li>
+<p>Network connectivity for update distribution</p>
+</li>
+<li>
+<p>Standard Windows service hosting capabilities</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_1_2_deployment_flexibility"><a class="anchor" href="#_6_1_2_deployment_flexibility"></a><a class="link" href="#_6_1_2_deployment_flexibility">7.2.2. 6.1.2 Deployment Flexibility</a></h4>
+<div class="sect4">
+<h5 id="_multi_modal_distribution"><a class="anchor" href="#_multi_modal_distribution"></a><a class="link" href="#_multi_modal_distribution">Multi-Modal Distribution</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for push-based enterprise distribution (SCCM, Intune)</p>
+</li>
+<li>
+<p>Pull-based auto-update mechanisms</p>
+</li>
+<li>
+<p>Manual deployment via file shares and scripts</p>
+</li>
+<li>
+<p>Hybrid approaches combining multiple distribution methods</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_targeted_deployment_strategies"><a class="anchor" href="#_targeted_deployment_strategies"></a><a class="link" href="#_targeted_deployment_strategies">Targeted Deployment Strategies</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Granular deployment targeting (single kiosk, airline, terminal)</p>
+</li>
+<li>
+<p>Staggered rollout capabilities for risk mitigation</p>
+</li>
+<li>
+<p>Blue-green deployment support for zero-downtime updates</p>
+</li>
+<li>
+<p>Rollback mechanisms for rapid recovery from failed deployments</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_environment_isolation"><a class="anchor" href="#_environment_isolation"></a><a class="link" href="#_environment_isolation">Environment Isolation</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Development, staging, and production environment separation</p>
+</li>
+<li>
+<p>Environment-specific configuration management</p>
+</li>
+<li>
+<p>Isolated testing environments for validation</p>
+</li>
+<li>
+<p>Quality gates between deployment stages</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_1_3_scalability_and_performance"><a class="anchor" href="#_6_1_3_scalability_and_performance"></a><a class="link" href="#_6_1_3_scalability_and_performance">7.2.3. 6.1.3 Scalability and Performance</a></h4>
+<div class="sect4">
+<h5 id="_horizontal_scaling"><a class="anchor" href="#_horizontal_scaling"></a><a class="link" href="#_horizontal_scaling">Horizontal Scaling</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Stateless application design for easy scaling</p>
+</li>
+<li>
+<p>Load balancing across multiple kiosk instances</p>
+</li>
+<li>
+<p>Auto-scaling based on passenger volume and demand</p>
+</li>
+<li>
+<p>Resource optimization for kiosk hardware constraints</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_performance_optimization"><a class="anchor" href="#_performance_optimization"></a><a class="link" href="#_performance_optimization">Performance Optimization</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Application startup time optimization</p>
+</li>
+<li>
+<p>Memory footprint minimization for kiosk environments</p>
+</li>
+<li>
+<p>Network bandwidth optimization for updates</p>
+</li>
+<li>
+<p>Caching strategies for improved responsiveness</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_2_update_mechanisms"><a class="anchor" href="#_6_2_update_mechanisms"></a><a class="link" href="#_6_2_update_mechanisms">7.3. 6.2 Update Mechanisms</a></h3>
+<div class="sect3">
+<h4 id="_6_2_1_enterprise_distribution_methods"><a class="anchor" href="#_6_2_1_enterprise_distribution_methods"></a><a class="link" href="#_6_2_1_enterprise_distribution_methods">7.3.1. 6.2.1 Enterprise Distribution Methods</a></h4>
+<div class="sect4">
+<h5 id="_sccmintune_integration"><a class="anchor" href="#_sccmintune_integration"></a><a class="link" href="#_sccmintune_integration">SCCM/Intune Integration</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Microsoft System Center Configuration Manager (SCCM) integration</p>
+</li>
+<li>
+<p>Microsoft Intune support for cloud-based management</p>
+</li>
+<li>
+<p>Group Policy deployment for domain-joined kiosks</p>
+</li>
+<li>
+<p>Windows Update for Business integration</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">Stop-Service CussApp
-Copy-Item "\\share\cussapp\1.2.0\*" "C:\Program Files\CussApp\" -Recurse -Force
-Start-Service CussApp</code></pre>
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell"># SCCM deployment script example
+$PackagePath = "\\sccm-server\packages\CussApp\1.2.0"
+$TargetPath = "C:\Program Files\CussApp"
+
+# Stop service gracefully
+Stop-Service -Name "CussApp" -Force
+Wait-Process -Name "CussApp" -Timeout 30
+
+# Deploy new version
+Copy-Item -Path "$PackagePath\*" -Destination $TargetPath -Recurse -Force
+
+# Start service
+Start-Service -Name "CussApp"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_package_management"><a class="anchor" href="#_package_management"></a><a class="link" href="#_package_management">Package Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>MSI installer packages for enterprise deployment</p>
+</li>
+<li>
+<p>Windows Package Manager (winget) support</p>
+</li>
+<li>
+<p>Chocolatey package distribution</p>
+</li>
+<li>
+<p>Custom package formats for specialized environments</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_scheduling_and_orchestration"><a class="anchor" href="#_scheduling_and_orchestration"></a><a class="link" href="#_scheduling_and_orchestration">Scheduling and Orchestration</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintenance window scheduling</p>
+</li>
+<li>
+<p>Dependency management for coordinated updates</p>
+</li>
+<li>
+<p>Update sequencing for multi-component deployments</p>
+</li>
+<li>
+<p>Automatic retry mechanisms for failed installations</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_6_2_3_auto_update_agent"><a class="anchor" href="#_6_2_3_auto_update_agent"></a><a class="link" href="#_6_2_3_auto_update_agent">7.2.3. 6.2.3 Auto-Update Agent</a></h4>
+<h4 id="_6_2_2_auto_update_mechanisms"><a class="anchor" href="#_6_2_2_auto_update_mechanisms"></a><a class="link" href="#_6_2_2_auto_update_mechanisms">7.3.2. 6.2.2 Auto-Update Mechanisms</a></h4>
+<div class="sect4">
+<h5 id="_pull_based_updates"><a class="anchor" href="#_pull_based_updates"></a><a class="link" href="#_pull_based_updates">Pull-Based Updates</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Lightweight background process on each kiosk</p>
+<p>Lightweight background update agent on each kiosk</p>
 </li>
 <li>
-<p>Compares local <code>version.json</code> with central manifest</p>
+<p>Version comparison against central manifest</p>
 </li>
 <li>
-<p>Downloads and applies updates automatically</p>
+<p>Bandwidth-optimized delta updates</p>
+</li>
+<li>
+<p>Cryptographic verification of update packages</p>
 </li>
 </ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "version": "1.2.0",
+  "releaseDate": "2024-01-15T10:30:00Z",
+  "packages": [
+    {
+      "name": "CussApp.Core",
+      "version": "1.2.0",
+      "hash": "sha256:abc123...",
+      "size": 15728640,
+      "url": "https://updates.example.com/core-1.2.0.zip"
+    }
+  ],
+  "prerequisites": ["dotnet-core-8.0"],
+  "rollbackSupport": true
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_clickonce_deployment"><a class="anchor" href="#_clickonce_deployment"></a><a class="link" href="#_clickonce_deployment">ClickOnce Deployment</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Self-updating ClickOnce applications</p>
+</li>
+<li>
+<p>Automatic version checking and installation</p>
+</li>
+<li>
+<p>User-initiated or scheduled update checks</p>
+</li>
+<li>
+<p>Secure update delivery over HTTPS</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_custom_update_agents"><a class="anchor" href="#_custom_update_agents"></a><a class="link" href="#_custom_update_agents">Custom Update Agents</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Purpose-built update agents for specific requirements</p>
+</li>
+<li>
+<p>Integration with existing enterprise update infrastructure</p>
+</li>
+<li>
+<p>Custom business logic for update decisions</p>
+</li>
+<li>
+<p>Advanced rollback and recovery capabilities</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_6_2_4_clickonce_optional"><a class="anchor" href="#_6_2_4_clickonce_optional"></a><a class="link" href="#_6_2_4_clickonce_optional">7.2.4. 6.2.4 ClickOnce (Optional)</a></h4>
+<h4 id="_6_2_3_file_share_and_script_based_updates"><a class="anchor" href="#_6_2_3_file_share_and_script_based_updates"></a><a class="link" href="#_6_2_3_file_share_and_script_based_updates">7.3.3. 6.2.3 File Share and Script-Based Updates</a></h4>
+<div class="sect4">
+<h5 id="_powershell_automation"><a class="anchor" href="#_powershell_automation"></a><a class="link" href="#_powershell_automation">PowerShell Automation</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Provides pull-based, self-updating deployment</p>
+<p>Robust PowerShell scripts for update automation</p>
 </li>
 <li>
-<p>Kiosks fetch updates at login or restart</p>
+<p>Error handling and logging capabilities</p>
+</li>
+<li>
+<p>Transaction-based updates with rollback support</p>
+</li>
+<li>
+<p>Integration with enterprise monitoring systems</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell">function Update-CussApp {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$SourcePath,
+
+        [Parameter(Mandatory=$true)]
+        [string]$TargetPath,
+
+        [switch]$Rollback
+    )
+
+    try {
+        # Create backup before update
+        $BackupPath = "$TargetPath.backup.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+        Copy-Item -Path $TargetPath -Destination $BackupPath -Recurse
+
+        # Stop application
+        Stop-Service -Name "CussApp" -ErrorAction Stop
+
+        # Apply update
+        Remove-Item -Path "$TargetPath\*" -Recurse -Force
+        Copy-Item -Path "$SourcePath\*" -Destination $TargetPath -Recurse
+
+        # Start application
+        Start-Service -Name "CussApp" -ErrorAction Stop
+
+        Write-Log "Update completed successfully"
+    }
+    catch {
+        Write-Log "Update failed: $_"
+        # Rollback if needed
+        if (Test-Path $BackupPath) {
+            Restore-CussApp -BackupPath $BackupPath -TargetPath $TargetPath
+        }
+        throw
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_batch_and_task_scheduler_integration"><a class="anchor" href="#_batch_and_task_scheduler_integration"></a><a class="link" href="#_batch_and_task_scheduler_integration">Batch and Task Scheduler Integration</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows Task Scheduler for automated updates</p>
+</li>
+<li>
+<p>Batch file automation for simple deployments</p>
+</li>
+<li>
+<p>Integration with enterprise job scheduling systems</p>
+</li>
+<li>
+<p>Maintenance window enforcement</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_6_3_benefits_over_legacy_iis_model"><a class="anchor" href="#_6_3_benefits_over_legacy_iis_model"></a><a class="link" href="#_6_3_benefits_over_legacy_iis_model">7.3. 6.3 Benefits Over Legacy IIS Model</a></h3>
+<h3 id="_6_3_cicd_integration"><a class="anchor" href="#_6_3_cicd_integration"></a><a class="link" href="#_6_3_cicd_integration">7.4. 6.3 CI/CD Integration</a></h3>
+<div class="sect3">
+<h4 id="_6_3_1_build_pipeline_integration"><a class="anchor" href="#_6_3_1_build_pipeline_integration"></a><a class="link" href="#_6_3_1_build_pipeline_integration">7.4.1. 6.3.1 Build Pipeline Integration</a></h4>
+<div class="sect4">
+<h5 id="_continuous_integration"><a class="anchor" href="#_continuous_integration"></a><a class="link" href="#_continuous_integration">Continuous Integration</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>No bottleneck</strong>: Updates aren&#8217;t limited to what&#8217;s hosted centrally on IIS</p>
+<p>Automated builds triggered by source code changes</p>
 </li>
 <li>
-<p><strong>Targeted rollouts</strong>: Update one kiosk, one airline, or one workflow segment at a time</p>
+<p>Multi-stage build pipelines with quality gates</p>
 </li>
 <li>
-<p><strong>Resilience</strong>: If a kiosk is offline during rollout, it updates next time it checks in</p>
+<p>Parallel builds for different deployment targets</p>
 </li>
 <li>
-<p><strong>Consistency</strong>: Self-contained .NET Core deployments avoid "DLL hell" and GAC conflicts</p>
-</li>
-<li>
-<p><strong>Flexibility</strong>: Our admin console can orchestrate updates as efficiently and cleanly as any legacy central IIS model</p>
-</li>
-<li>
-<p><strong>Modernization</strong>: Fits into today&#8217;s CI/CD pipelines and leverages proven enterprise tools without reinventing the wheel</p>
+<p>Integration with version control systems (Git, Azure DevOps)</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_6_4_key_rebuttals_to_concerns"><a class="anchor" href="#_6_4_key_rebuttals_to_concerns"></a><a class="link" href="#_6_4_key_rebuttals_to_concerns">7.4. 6.4 Key Rebuttals to Concerns</a></h3>
+<div class="sect4">
+<h5 id="_build_automation"><a class="anchor" href="#_build_automation"></a><a class="link" href="#_build_automation">Build Automation</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Claim:</strong> "You can&#8217;t update kiosks if you don&#8217;t use IIS."<br>
-<strong>Answer:</strong> In .NET Core, kiosks are updated the same as any Windows app: via MSI, EXE, script, or agent. IT already has these tools.</p>
+<p>MSBuild and dotnet CLI integration</p>
 </li>
 <li>
-<p><strong>Claim:</strong> "Thin clients can&#8217;t have a local runtime."<br>
-<strong>Answer:</strong> All kiosk apps today (Java, BYOB) already install local artifacts (JRE, browser, DLLs). A .NET Core runtime is no different.</p>
+<p>Automated testing and code quality checks</p>
 </li>
 <li>
-<p><strong>Claim:</strong> "Central IIS is required for consistency."<br>
-<strong>Answer:</strong> Consistency is handled by packaging/versioning. Central IIS is actually a single point of failure — distributed apps are more resilient.</p>
+<p>Security scanning and vulnerability assessment</p>
+</li>
+<li>
+<p>Performance testing and benchmarking</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"># Azure DevOps Pipeline Example
+trigger:
+  branches:
+    include:
+    - main
+    - release/*
+
+pool:
+  vmImage: 'windows-latest'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildApp
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore packages'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Build application'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration Release'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Run tests'
+      inputs:
+        command: 'test'
+        projects: '**/*Tests.csproj'
+        arguments: '--configuration Release --collect "Code coverage"'
+
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish application'
+      inputs:
+        command: 'publish'
+        projects: '**/CussApp.csproj'
+        arguments: '--configuration Release --output $(Build.ArtifactStagingDirectory)'</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_artifact_management"><a class="anchor" href="#_artifact_management"></a><a class="link" href="#_artifact_management">Artifact Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Versioned artifact storage and retrieval</p>
+</li>
+<li>
+<p>Binary repository integration (Azure Artifacts, Artifactory)</p>
+</li>
+<li>
+<p>Metadata tracking for deployments</p>
+</li>
+<li>
+<p>Retention policies for artifact cleanup</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_6_5_deployment_workflow_example"><a class="anchor" href="#_6_5_deployment_workflow_example"></a><a class="link" href="#_6_5_deployment_workflow_example">7.5. 6.5 Deployment Workflow Example</a></h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><code>dotnet publish</code> creates versioned build artifacts</p>
-</li>
-<li>
-<p>Build pipeline signs and packages into MSI</p>
-</li>
-<li>
-<p>Package staged on secure share</p>
-</li>
-<li>
-<p>IT pushes or kiosks pull updates</p>
-</li>
-<li>
-<p>Kiosk restarts app and runs the new version</p>
-</li>
-</ol>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_6_6_summary"><a class="anchor" href="#_6_6_summary"></a><a class="link" href="#_6_6_summary">7.6. 6.6 Summary</a></h3>
+<div class="sect3">
+<h4 id="_6_3_2_deployment_automation"><a class="anchor" href="#_6_3_2_deployment_automation"></a><a class="link" href="#_6_3_2_deployment_automation">7.4.2. 6.3.2 Deployment Automation</a></h4>
+<div class="sect4">
+<h5 id="_infrastructure_as_code"><a class="anchor" href="#_infrastructure_as_code"></a><a class="link" href="#_infrastructure_as_code">Infrastructure as Code</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>.NET Core gives us a <strong>wide-open palette</strong> of update strategies</p>
+<p>ARM templates for Azure resource provisioning</p>
 </li>
 <li>
-<p>Updates are as simple as publishing new artifacts and distributing them with standard IT tools</p>
+<p>Terraform modules for multi-cloud deployments</p>
 </li>
 <li>
-<p>Our admin console can <strong>provision and update</strong> as effectively as any legacy IIS model, but with more flexibility and resilience</p>
+<p>PowerShell DSC for configuration management</p>
 </li>
 <li>
-<p>These updates fit into <strong>any CI/CD toolchain</strong> or <strong>update console</strong> — whether custom-designed or based on off-the-shelf tools like PowerShell and SCCM</p>
-</li>
-<li>
-<p>The result is a <strong>better, cleaner, and more future-proof</strong> system for updating both the CUSS App runtime and the web application workflows</p>
+<p>Ansible playbooks for Linux environments (if applicable)</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_release_management"><a class="anchor" href="#_release_management"></a><a class="link" href="#_release_management">Release Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Multi-environment promotion pipelines</p>
+</li>
+<li>
+<p>Approval workflows for production deployments</p>
+</li>
+<li>
+<p>Automated rollback triggers and procedures</p>
+</li>
+<li>
+<p>Deployment scheduling and maintenance windows</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-powershell hljs" data-lang="powershell"># Deployment script with environment promotion
+param(
+    [Parameter(Mandatory=$true)]
+    [ValidateSet("Development", "Staging", "Production")]
+    [string]$Environment,
+
+    [Parameter(Mandatory=$true)]
+    [string]$Version
+)
+
+$Config = Get-EnvironmentConfig -Environment $Environment
+
+# Pre-deployment validation
+Test-DeploymentReadiness -Config $Config -Version $Version
+
+# Deploy to target environment
+Deploy-CussApp -Config $Config -Version $Version -Verbose
+
+# Post-deployment validation
+Test-ApplicationHealth -Config $Config -TimeoutMinutes 10
+
+Write-Output "Deployment of version $Version to $Environment completed successfully"</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_monitoring_and_observability"><a class="anchor" href="#_monitoring_and_observability"></a><a class="link" href="#_monitoring_and_observability">Monitoring and Observability</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Deployment metrics and KPIs tracking</p>
+</li>
+<li>
+<p>Real-time deployment monitoring</p>
+</li>
+<li>
+<p>Integration with application performance monitoring (APM)</p>
+</li>
+<li>
+<p>Alerting and notification systems</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_3_3_quality_assurance_integration"><a class="anchor" href="#_6_3_3_quality_assurance_integration"></a><a class="link" href="#_6_3_3_quality_assurance_integration">7.4.3. 6.3.3 Quality Assurance Integration</a></h4>
+<div class="sect4">
+<h5 id="_automated_testing"><a class="anchor" href="#_automated_testing"></a><a class="link" href="#_automated_testing">Automated Testing</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Unit test execution in build pipeline</p>
+</li>
+<li>
+<p>Integration testing with test databases</p>
+</li>
+<li>
+<p>End-to-end testing automation</p>
+</li>
+<li>
+<p>Performance and load testing</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_integration"><a class="anchor" href="#_security_integration"></a><a class="link" href="#_security_integration">Security Integration</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Static Application Security Testing (SAST) in pipeline</p>
+</li>
+<li>
+<p>Dynamic Application Security Testing (DAST)</p>
+</li>
+<li>
+<p>Dependency vulnerability scanning</p>
+</li>
+<li>
+<p>Compliance validation and reporting</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_quality_gates"><a class="anchor" href="#_quality_gates"></a><a class="link" href="#_quality_gates">Quality Gates</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Code coverage thresholds</p>
+</li>
+<li>
+<p>Security vulnerability limits</p>
+</li>
+<li>
+<p>Performance benchmarks</p>
+</li>
+<li>
+<p>Manual approval requirements for sensitive environments</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_6_4_operational_excellence"><a class="anchor" href="#_6_4_operational_excellence"></a><a class="link" href="#_6_4_operational_excellence">7.5. 6.4 Operational Excellence</a></h3>
+<div class="sect3">
+<h4 id="_6_4_1_monitoring_and_observability"><a class="anchor" href="#_6_4_1_monitoring_and_observability"></a><a class="link" href="#_6_4_1_monitoring_and_observability">7.5.1. 6.4.1 Monitoring and Observability</a></h4>
+<div class="sect4">
+<h5 id="_application_performance_monitoring"><a class="anchor" href="#_application_performance_monitoring"></a><a class="link" href="#_application_performance_monitoring">Application Performance Monitoring</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Real-time performance metrics collection</p>
+</li>
+<li>
+<p>Application health checks and status monitoring</p>
+</li>
+<li>
+<p>Resource utilization tracking (CPU, memory, disk)</p>
+</li>
+<li>
+<p>Custom business metrics and KPIs</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_centralized_logging"><a class="anchor" href="#_centralized_logging"></a><a class="link" href="#_centralized_logging">Centralized Logging</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Structured logging with correlation IDs</p>
+</li>
+<li>
+<p>Log aggregation across all kiosk instances</p>
+</li>
+<li>
+<p>Real-time log analysis and alerting</p>
+</li>
+<li>
+<p>Long-term log retention for compliance and analysis</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-csharp hljs" data-lang="csharp">// Structured logging example
+public class DeploymentService
+{
+    private readonly ILogger&lt;DeploymentService&gt; _logger;
+
+    public async Task&lt;DeploymentResult&gt; DeployAsync(string version, string target)
+    {
+        using var scope = _logger.BeginScope(new Dictionary&lt;string, object&gt;
+        {
+            ["Version"] = version,
+            ["Target"] = target,
+            ["OperationId"] = Guid.NewGuid()
+        });
+
+        _logger.LogInformation("Starting deployment of version {Version} to {Target}", version, target);
+
+        try
+        {
+            var result = await PerformDeploymentAsync(version, target);
+            _logger.LogInformation("Deployment completed successfully in {Duration}ms", result.Duration);
+            return result;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Deployment failed for version {Version} to {Target}", version, target);
+            throw;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_distributed_tracing"><a class="anchor" href="#_distributed_tracing"></a><a class="link" href="#_distributed_tracing">Distributed Tracing</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Request tracing across service boundaries</p>
+</li>
+<li>
+<p>Performance bottleneck identification</p>
+</li>
+<li>
+<p>Dependency mapping and visualization</p>
+</li>
+<li>
+<p>Error correlation and root cause analysis</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_4_2_incident_management"><a class="anchor" href="#_6_4_2_incident_management"></a><a class="link" href="#_6_4_2_incident_management">7.5.2. 6.4.2 Incident Management</a></h4>
+<div class="sect4">
+<h5 id="_automated_incident_detection"><a class="anchor" href="#_automated_incident_detection"></a><a class="link" href="#_automated_incident_detection">Automated Incident Detection</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Anomaly detection using machine learning</p>
+</li>
+<li>
+<p>Threshold-based alerting for key metrics</p>
+</li>
+<li>
+<p>Pattern recognition for recurring issues</p>
+</li>
+<li>
+<p>Integration with enterprise incident management systems</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_response_procedures"><a class="anchor" href="#_response_procedures"></a><a class="link" href="#_response_procedures">Response Procedures</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Escalation procedures for critical incidents</p>
+</li>
+<li>
+<p>Automated rollback triggers for failed deployments</p>
+</li>
+<li>
+<p>Communication protocols for stakeholder notification</p>
+</li>
+<li>
+<p>Post-incident review and improvement processes</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_recovery_strategies"><a class="anchor" href="#_recovery_strategies"></a><a class="link" href="#_recovery_strategies">Recovery Strategies</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Database backup and restore procedures</p>
+</li>
+<li>
+<p>Application state recovery mechanisms</p>
+</li>
+<li>
+<p>Configuration rollback capabilities</p>
+</li>
+<li>
+<p>Disaster recovery planning and testing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_4_3_capacity_planning_and_optimization"><a class="anchor" href="#_6_4_3_capacity_planning_and_optimization"></a><a class="link" href="#_6_4_3_capacity_planning_and_optimization">7.5.3. 6.4.3 Capacity Planning and Optimization</a></h4>
+<div class="sect4">
+<h5 id="_resource_management"><a class="anchor" href="#_resource_management"></a><a class="link" href="#_resource_management">Resource Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Capacity planning based on passenger volume forecasts</p>
+</li>
+<li>
+<p>Resource allocation optimization</p>
+</li>
+<li>
+<p>Cost optimization strategies</p>
+</li>
+<li>
+<p>Performance tuning and optimization</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_scalability_planning"><a class="anchor" href="#_scalability_planning"></a><a class="link" href="#_scalability_planning">Scalability Planning</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Horizontal scaling strategies for peak periods</p>
+</li>
+<li>
+<p>Vertical scaling for resource-intensive operations</p>
+</li>
+<li>
+<p>Auto-scaling policies and triggers</p>
+</li>
+<li>
+<p>Load testing and capacity validation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_maintenance_planning"><a class="anchor" href="#_maintenance_planning"></a><a class="link" href="#_maintenance_planning">Maintenance Planning</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Scheduled maintenance windows</p>
+</li>
+<li>
+<p>Rolling update strategies for zero-downtime deployments</p>
+</li>
+<li>
+<p>Preventive maintenance procedures</p>
+</li>
+<li>
+<p>Hardware refresh and lifecycle management</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_4_4_compliance_and_governance"><a class="anchor" href="#_6_4_4_compliance_and_governance"></a><a class="link" href="#_6_4_4_compliance_and_governance">7.5.4. 6.4.4 Compliance and Governance</a></h4>
+<div class="sect4">
+<h5 id="_change_management"><a class="anchor" href="#_change_management"></a><a class="link" href="#_change_management">Change Management</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Formal change approval processes</p>
+</li>
+<li>
+<p>Risk assessment for deployment changes</p>
+</li>
+<li>
+<p>Documentation and audit trail requirements</p>
+</li>
+<li>
+<p>Rollback procedures and approval workflows</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_compliance"><a class="anchor" href="#_security_compliance"></a><a class="link" href="#_security_compliance">Security Compliance</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Security patch management procedures</p>
+</li>
+<li>
+<p>Vulnerability remediation timelines</p>
+</li>
+<li>
+<p>Compliance reporting and auditing</p>
+</li>
+<li>
+<p>Security incident response procedures</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_operational_documentation"><a class="anchor" href="#_operational_documentation"></a><a class="link" href="#_operational_documentation">Operational Documentation</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Runbook maintenance and updates</p>
+</li>
+<li>
+<p>Standard operating procedures (SOPs)</p>
+</li>
+<li>
+<p>Knowledge base and troubleshooting guides</p>
+</li>
+<li>
+<p>Training materials for operations teams</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1745,13 +3643,60 @@ Start-Service CussApp</code></pre>
 <div class="sect1">
 <h2 id="_7_appendices"><a class="anchor" href="#_7_appendices"></a><a class="link" href="#_7_appendices">8. 7. Appendices</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This section provides comprehensive reference materials including glossary, standards, technical specifications, and sample configurations to support implementation and maintenance of the CUSS application.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. Appendices Overview</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subsection</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.1 Glossary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definitions of industry terms, technical concepts, and Microsoft technologies</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.2 Standards and References</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IATA standards, accessibility guidelines, security standards, and technical specifications</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.3 Technical Specifications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System requirements, network specifications, performance benchmarks, and integration details</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.4 Sample Configurations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application configuration examples, security settings, deployment configurations, and monitoring setup</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect2">
 <h3 id="_7_1_glossary"><a class="anchor" href="#_7_1_glossary"></a><a class="link" href="#_7_1_glossary">8.1. 7.1 Glossary</a></h3>
+<div class="sect3">
+<h4 id="_7_1_1_industry_terms"><a class="anchor" href="#_7_1_1_industry_terms"></a><a class="link" href="#_7_1_1_industry_terms">8.1.1. 7.1.1 Industry Terms</a></h4>
 <div id="glossary-ada" class="dlist">
 <dl>
 <dt class="hdlist1"><strong>ADA</strong></dt>
 <dd>
-<p>Americans with Disabilities Act</p>
+<p>Americans with Disabilities Act - Federal civil rights law that prohibits discrimination based on disability, requiring accessible design in public accommodations including airport kiosks.</p>
 </dd>
 </dl>
 </div>
@@ -1759,7 +3704,7 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>CUSS</strong></dt>
 <dd>
-<p>Common Use Self Service<br>
+<p>Common Use Self Service - IATA standard enabling passengers to use self-service check-in and bag drop facilities regardless of airline, providing a unified interface across different carriers.
 <a href="#introduction">↩ Return to Introduction</a></p>
 </dd>
 </dl>
@@ -1768,15 +3713,7 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>DCS</strong></dt>
 <dd>
-<p>Departure Control System</p>
-</dd>
-</dl>
-</div>
-<div id="glossary-dsl" class="dlist">
-<dl>
-<dt class="hdlist1"><strong>DSL</strong></dt>
-<dd>
-<p>Domain Specific Language</p>
+<p>Departure Control System - Airline system managing passenger check-in, seat assignments, boarding passes, and baggage handling for departing flights.</p>
 </dd>
 </dl>
 </div>
@@ -1784,7 +3721,7 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>FIDS</strong></dt>
 <dd>
-<p>Flight Information Display System</p>
+<p>Flight Information Display System - Airport system displaying real-time flight schedules, gate information, delays, and other passenger announcements.</p>
 </dd>
 </dl>
 </div>
@@ -1792,7 +3729,7 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>IATA</strong></dt>
 <dd>
-<p>International Air Transport Association</p>
+<p>International Air Transport Association - Trade association of the world&#8217;s airlines, setting industry standards including CUSS specifications.</p>
 </dd>
 </dl>
 </div>
@@ -1800,7 +3737,101 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>PSS</strong></dt>
 <dd>
-<p>Passenger Service System</p>
+<p>Passenger Service System - Comprehensive airline system managing reservations, inventory, departure control, and customer service functions.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_1_2_technical_terms"><a class="anchor" href="#_7_1_2_technical_terms"></a><a class="link" href="#_7_1_2_technical_terms">8.1.2. 7.1.2 Technical Terms</a></h4>
+<div id="glossary-api" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>API</strong></dt>
+<dd>
+<p>Application Programming Interface - Set of protocols and tools for building software applications, enabling communication between different systems.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-dsl" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>DSL</strong></dt>
+<dd>
+<p>Domain Specific Language - Programming language designed for a specific application domain, in this context referring to workflow definition languages.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-json" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>JSON</strong></dt>
+<dd>
+<p>JavaScript Object Notation - Lightweight data interchange format that is easy for humans to read and write, commonly used for API communications.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-oauth" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>OAuth</strong></dt>
+<dd>
+<p>Open Authorization - Industry-standard protocol for authorization, allowing third-party services to exchange information without exposing passwords.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-rest" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>REST</strong></dt>
+<dd>
+<p>Representational State Transfer - Architectural style for designing networked applications, commonly used for web service APIs.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-saml" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SAML</strong></dt>
+<dd>
+<p>Security Assertion Markup Language - XML-based standard for exchanging authentication and authorization data between parties.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-soap" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SOAP</strong></dt>
+<dd>
+<p>Simple Object Access Protocol - Messaging protocol specification for exchanging structured information in web services.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-ssl-tls" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SSL/TLS</strong></dt>
+<dd>
+<p>Secure Sockets Layer/Transport Layer Security - Cryptographic protocols providing secure communication over a computer network.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_1_3_microsoft_technologies"><a class="anchor" href="#_7_1_3_microsoft_technologies"></a><a class="link" href="#_7_1_3_microsoft_technologies">8.1.3. 7.1.3 Microsoft Technologies</a></h4>
+<div id="glossary-dotnet" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>.NET Core</strong></dt>
+<dd>
+<p>Cross-platform, open-source framework for building modern applications, providing the runtime environment for the CUSS application.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-blazor" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Blazor</strong></dt>
+<dd>
+<p>Web framework allowing developers to create interactive web UIs using C# instead of JavaScript, enabling code sharing between client and server.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-signalr" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SignalR</strong></dt>
+<dd>
+<p>Library for adding real-time web functionality to applications, enabling server code to push content to clients instantly.</p>
 </dd>
 </dl>
 </div>
@@ -1808,29 +3839,811 @@ Start-Service CussApp</code></pre>
 <dl>
 <dt class="hdlist1"><strong>WebView2</strong></dt>
 <dd>
-<p>Microsoft&#8217;s embedded web browser control based on (Chromium). Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support. No hassles controlling browser chrome, menus, menu bars, address bars footer or managing separate processes.
+<p>Microsoft&#8217;s embedded web browser control based on Chromium. Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support.
 <a href="#introduction">↩ Return to Introduction</a></p>
 </dd>
 </dl>
 </div>
+<div id="glossary-winui" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>WinUI</strong></dt>
+<dd>
+<p>Modern native UI platform for Windows applications, providing the latest user interface controls and styling capabilities.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_1_4_security_and_compliance_terms"><a class="anchor" href="#_7_1_4_security_and_compliance_terms"></a><a class="link" href="#_7_1_4_security_and_compliance_terms">8.1.4. 7.1.4 Security and Compliance Terms</a></h4>
+<div id="glossary-gdpr" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>GDPR</strong></dt>
+<dd>
+<p>General Data Protection Regulation - European Union regulation on data protection and privacy for individuals within the EU and European Economic Area.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-pci-dss" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>PCI DSS</strong></dt>
+<dd>
+<p>Payment Card Industry Data Security Standard - Information security standard for organizations that handle branded credit cards.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-soc" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SOC</strong></dt>
+<dd>
+<p>Security Operations Center - Centralized unit that deals with security issues on an organizational and technical level.</p>
+</dd>
+</dl>
+</div>
+<div id="glossary-siem" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>SIEM</strong></dt>
+<dd>
+<p>Security Information and Event Management - Software that provides real-time analysis of security alerts generated by applications and network hardware.</p>
+</dd>
+</dl>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_7_2_references"><a class="anchor" href="#_7_2_references"></a><a class="link" href="#_7_2_references">8.2. 7.2 References</a></h3>
+<h3 id="_7_2_standards_and_references"><a class="anchor" href="#_7_2_standards_and_references"></a><a class="link" href="#_7_2_standards_and_references">8.2. 7.2 Standards and References</a></h3>
+<div class="sect3">
+<h4 id="_7_2_1_iata_standards"><a class="anchor" href="#_7_2_1_iata_standards"></a><a class="link" href="#_7_2_1_iata_standards">8.2.1. 7.2.1 IATA Standards</a></h4>
+<div class="sect4">
+<h5 id="_cuss_standards"><a class="anchor" href="#_cuss_standards"></a><a class="link" href="#_cuss_standards">CUSS Standards</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p>IATA CUSS Standard 1.3 - 1.5, 2.0</p>
+<p><strong>IATA CUSS Standard 1.3</strong> - Foundation specification for common use self-service systems</p>
 </li>
 <li>
-<p>W3C Web Content Accessibility Guidelines</p>
+<p><strong>IATA CUSS Standard 1.4</strong> - Enhanced features and security requirements</p>
 </li>
 <li>
-<p>TSA Security Guidelines for Airport Technology</p>
+<p><strong>IATA CUSS Standard 1.5</strong> - Latest improvements and modernization updates</p>
 </li>
 <li>
-<p>ISO/IEC 27001:2013 Information Security Standard</p>
+<p><strong>IATA CUSS Standard 2.0</strong> - Next-generation specification with cloud-native architecture support</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_related_iata_standards"><a class="anchor" href="#_related_iata_standards"></a><a class="link" href="#_related_iata_standards">Related IATA Standards</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IATA PSS Standard</strong> - Passenger Service System specifications</p>
+</li>
+<li>
+<p><strong>IATA DCS Standard</strong> - Departure Control System requirements</p>
+</li>
+<li>
+<p><strong>IATA Baggage Reconciliation Standard</strong> - Baggage handling and tracking specifications</p>
+</li>
+<li>
+<p><strong>IATA New Distribution Capability (NDC)</strong> - Modern airline distribution standard</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_2_2_accessibility_standards"><a class="anchor" href="#_7_2_2_accessibility_standards"></a><a class="link" href="#_7_2_2_accessibility_standards">8.2.2. 7.2.2 Accessibility Standards</a></h4>
+<div class="sect4">
+<h5 id="_web_content_accessibility_guidelines"><a class="anchor" href="#_web_content_accessibility_guidelines"></a><a class="link" href="#_web_content_accessibility_guidelines">Web Content Accessibility Guidelines</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>WCAG 2.1 Level AA</strong> - Current standard for web accessibility compliance</p>
+</li>
+<li>
+<p><strong>WCAG 2.2</strong> - Latest updates with additional success criteria</p>
+</li>
+<li>
+<p><strong>Section 508</strong> - U.S. federal accessibility requirements</p>
+</li>
+<li>
+<p><strong>EN 301 549</strong> - European accessibility standard for ICT products and services</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_accessibility_best_practices"><a class="anchor" href="#_accessibility_best_practices"></a><a class="link" href="#_accessibility_best_practices">Accessibility Best Practices</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Microsoft Accessibility Guidelines</strong> - Platform-specific accessibility requirements for Windows applications</p>
+</li>
+<li>
+<p><strong>ARIA Authoring Practices Guide</strong> - Best practices for implementing ARIA in web applications</p>
+</li>
+<li>
+<p><strong>Inclusive Design Principles</strong> - Microsoft&#8217;s guidelines for inclusive design</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_2_3_security_standards"><a class="anchor" href="#_7_2_3_security_standards"></a><a class="link" href="#_7_2_3_security_standards">8.2.3. 7.2.3 Security Standards</a></h4>
+<div class="sect4">
+<h5 id="_information_security"><a class="anchor" href="#_information_security"></a><a class="link" href="#_information_security">Information Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ISO/IEC 27001:2013</strong> - Information Security Management Systems standard</p>
+</li>
+<li>
+<p><strong>ISO/IEC 27002:2013</strong> - Code of practice for information security controls</p>
+</li>
+<li>
+<p><strong>NIST Cybersecurity Framework</strong> - Framework for improving critical infrastructure cybersecurity</p>
+</li>
+<li>
+<p><strong>OWASP Top 10</strong> - Most critical web application security risks</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_payment_security"><a class="anchor" href="#_payment_security"></a><a class="link" href="#_payment_security">Payment Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>PCI DSS v4.0</strong> - Payment Card Industry Data Security Standard</p>
+</li>
+<li>
+<p><strong>PA-DSS</strong> - Payment Application Data Security Standard</p>
+</li>
+<li>
+<p><strong>ISO 20022</strong> - International standard for electronic data interchange between financial institutions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_aviation_security"><a class="anchor" href="#_aviation_security"></a><a class="link" href="#_aviation_security">Aviation Security</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>TSA Security Guidelines</strong> - Transportation Security Administration guidelines for airport technology</p>
+</li>
+<li>
+<p><strong>ICAO Annex 17</strong> - International Civil Aviation Organization security standards</p>
+</li>
+<li>
+<p><strong>EU Aviation Security Regulation</strong> - European Union aviation security requirements</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_2_4_technical_standards"><a class="anchor" href="#_7_2_4_technical_standards"></a><a class="link" href="#_7_2_4_technical_standards">8.2.4. 7.2.4 Technical Standards</a></h4>
+<div class="sect4">
+<h5 id="_web_technologies"><a class="anchor" href="#_web_technologies"></a><a class="link" href="#_web_technologies">Web Technologies</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>HTML5 Specification</strong> - Latest web markup language standard</p>
+</li>
+<li>
+<p><strong>CSS3 Specifications</strong> - Cascading Style Sheets level 3 modules</p>
+</li>
+<li>
+<p><strong>ECMAScript 2023</strong> - JavaScript language specification</p>
+</li>
+<li>
+<p><strong>WebAssembly Specification</strong> - Binary instruction format for web applications</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_api_standards"><a class="anchor" href="#_api_standards"></a><a class="link" href="#_api_standards">API Standards</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>OpenAPI Specification 3.0</strong> - API documentation and development standard</p>
+</li>
+<li>
+<p><strong>JSON Schema</strong> - Vocabulary for validating JSON documents</p>
+</li>
+<li>
+<p><strong>OAuth 2.1</strong> - Authorization framework specification</p>
+</li>
+<li>
+<p><strong>OpenID Connect</strong> - Simple identity layer on top of OAuth 2.0</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_microsoft_platform_standards"><a class="anchor" href="#_microsoft_platform_standards"></a><a class="link" href="#_microsoft_platform_standards">Microsoft Platform Standards</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>.NET Standard 2.1</strong> - Specification for .NET APIs available across implementations</p>
+</li>
+<li>
+<p><strong>C# Language Specification</strong> - Programming language standard</p>
+</li>
+<li>
+<p><strong>ASP.NET Core Documentation</strong> - Web framework specifications and best practices</p>
+</li>
+<li>
+<p><strong>Azure Architecture Guidelines</strong> - Cloud platform architecture recommendations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_3_technical_specifications"><a class="anchor" href="#_7_3_technical_specifications"></a><a class="link" href="#_7_3_technical_specifications">8.3. 7.3 Technical Specifications</a></h3>
+<div class="sect3">
+<h4 id="_7_3_1_system_requirements"><a class="anchor" href="#_7_3_1_system_requirements"></a><a class="link" href="#_7_3_1_system_requirements">8.3.1. 7.3.1 System Requirements</a></h4>
+<div class="sect4">
+<h5 id="_minimum_hardware_requirements"><a class="anchor" href="#_minimum_hardware_requirements"></a><a class="link" href="#_minimum_hardware_requirements">Minimum Hardware Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Processor</strong>: Intel Core i5 or AMD Ryzen 5 (4 cores, 2.4 GHz)</p>
+</li>
+<li>
+<p><strong>Memory</strong>: 8 GB RAM minimum, 16 GB recommended</p>
+</li>
+<li>
+<p><strong>Storage</strong>: 500 GB SSD with at least 100 GB free space</p>
+</li>
+<li>
+<p><strong>Graphics</strong>: DirectX 11 compatible with hardware acceleration</p>
+</li>
+<li>
+<p><strong>Network</strong>: Gigabit Ethernet connection</p>
+</li>
+<li>
+<p><strong>Display</strong>: 1920x1080 minimum resolution, touch-enabled</p>
+</li>
+<li>
+<p><strong>USB</strong>: Multiple USB 3.0 ports for peripheral devices</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_recommended_hardware_specifications"><a class="anchor" href="#_recommended_hardware_specifications"></a><a class="link" href="#_recommended_hardware_specifications">Recommended Hardware Specifications</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Processor</strong>: Intel Core i7 or AMD Ryzen 7 (8 cores, 3.2 GHz)</p>
+</li>
+<li>
+<p><strong>Memory</strong>: 32 GB RAM for optimal performance</p>
+</li>
+<li>
+<p><strong>Storage</strong>: 1 TB NVMe SSD with enterprise-grade reliability</p>
+</li>
+<li>
+<p><strong>Graphics</strong>: Dedicated GPU with 4 GB VRAM for enhanced UI performance</p>
+</li>
+<li>
+<p><strong>Network</strong>: Redundant network connections for high availability</p>
+</li>
+<li>
+<p><strong>Display</strong>: 4K resolution support with multi-touch capabilities</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_software_requirements"><a class="anchor" href="#_software_requirements"></a><a class="link" href="#_software_requirements">Software Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Operating System</strong>: Windows 10 (version 1909 or later) or Windows 11</p>
+</li>
+<li>
+<p><strong>.NET Runtime</strong>: .NET 8.0 or later</p>
+</li>
+<li>
+<p><strong>Web Browser</strong>: Microsoft Edge WebView2 Runtime</p>
+</li>
+<li>
+<p><strong>Database</strong>: SQL Server 2019 or later, PostgreSQL 13+, or Azure SQL Database</p>
+</li>
+<li>
+<p><strong>Security</strong>: Windows Defender or enterprise antivirus solution</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_3_2_network_specifications"><a class="anchor" href="#_7_3_2_network_specifications"></a><a class="link" href="#_7_3_2_network_specifications">8.3.2. 7.3.2 Network Specifications</a></h4>
+<div class="sect4">
+<h5 id="_bandwidth_requirements"><a class="anchor" href="#_bandwidth_requirements"></a><a class="link" href="#_bandwidth_requirements">Bandwidth Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Minimum</strong>: 10 Mbps dedicated bandwidth per kiosk</p>
+</li>
+<li>
+<p><strong>Recommended</strong>: 50 Mbps dedicated bandwidth per kiosk</p>
+</li>
+<li>
+<p><strong>Peak Usage</strong>: 100 Mbps burst capacity for software updates</p>
+</li>
+<li>
+<p><strong>Latency</strong>: Maximum 100ms RTT to airline systems</p>
+</li>
+<li>
+<p><strong>Availability</strong>: 99.9% uptime requirement</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_network_architecture"><a class="anchor" href="#_network_architecture"></a><a class="link" href="#_network_architecture">Network Architecture</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>VLAN Segmentation</strong>: Isolated network segments for kiosk traffic</p>
+</li>
+<li>
+<p><strong>Firewall Configuration</strong>: Stateful firewall with application-layer inspection</p>
+</li>
+<li>
+<p><strong>Load Balancing</strong>: Redundant connections with automatic failover</p>
+</li>
+<li>
+<p><strong>Quality of Service</strong>: Traffic prioritization for real-time operations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_requirements"><a class="anchor" href="#_security_requirements"></a><a class="link" href="#_security_requirements">Security Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Encryption</strong>: WPA3 for wireless, IPSec for VPN connections</p>
+</li>
+<li>
+<p><strong>Certificate Management</strong>: PKI infrastructure for device authentication</p>
+</li>
+<li>
+<p><strong>Network Monitoring</strong>: Continuous monitoring with intrusion detection</p>
+</li>
+<li>
+<p><strong>Access Control</strong>: MAC address filtering and port security</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_3_3_performance_benchmarks"><a class="anchor" href="#_7_3_3_performance_benchmarks"></a><a class="link" href="#_7_3_3_performance_benchmarks">8.3.3. 7.3.3 Performance Benchmarks</a></h4>
+<div class="sect4">
+<h5 id="_response_time_requirements"><a class="anchor" href="#_response_time_requirements"></a><a class="link" href="#_response_time_requirements">Response Time Requirements</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Application Startup</strong>: Less than 10 seconds from power-on</p>
+</li>
+<li>
+<p><strong>Page Load Times</strong>: Maximum 2 seconds for standard workflows</p>
+</li>
+<li>
+<p><strong>API Response Times</strong>: 95th percentile under 500ms</p>
+</li>
+<li>
+<p><strong>Database Queries</strong>: Average response time under 100ms</p>
+</li>
+<li>
+<p><strong>File Operations</strong>: Document generation under 3 seconds</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_throughput_specifications"><a class="anchor" href="#_throughput_specifications"></a><a class="link" href="#_throughput_specifications">Throughput Specifications</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Concurrent Users</strong>: Support for 1000+ simultaneous sessions</p>
+</li>
+<li>
+<p><strong>Transaction Rate</strong>: 10,000 transactions per hour per kiosk</p>
+</li>
+<li>
+<p><strong>Print Queue</strong>: 50 boarding passes per minute processing capacity</p>
+</li>
+<li>
+<p><strong>Backup Operations</strong>: Incremental backups within 15-minute windows</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_scalability_metrics"><a class="anchor" href="#_scalability_metrics"></a><a class="link" href="#_scalability_metrics">Scalability Metrics</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Horizontal Scaling</strong>: Linear performance scaling up to 100 kiosks</p>
+</li>
+<li>
+<p><strong>Vertical Scaling</strong>: Efficient resource utilization up to 32 CPU cores</p>
+</li>
+<li>
+<p><strong>Storage Scaling</strong>: Support for multi-terabyte databases</p>
+</li>
+<li>
+<p><strong>Network Scaling</strong>: Bandwidth scaling without performance degradation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_3_4_integration_specifications"><a class="anchor" href="#_7_3_4_integration_specifications"></a><a class="link" href="#_7_3_4_integration_specifications">8.3.4. 7.3.4 Integration Specifications</a></h4>
+<div class="sect4">
+<h5 id="_api_compatibility"><a class="anchor" href="#_api_compatibility"></a><a class="link" href="#_api_compatibility">API Compatibility</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>REST API</strong>: OpenAPI 3.0 compliant with JSON responses</p>
+</li>
+<li>
+<p><strong>SOAP Services</strong>: WS-* standards compliance for legacy systems</p>
+</li>
+<li>
+<p><strong>Message Queuing</strong>: AMQP and MQTT protocol support</p>
+</li>
+<li>
+<p><strong>Real-time Communication</strong>: WebSocket and SignalR protocols</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_data_format_standards"><a class="anchor" href="#_data_format_standards"></a><a class="link" href="#_data_format_standards">Data Format Standards</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>XML</strong>: Schema validation with XSD definitions</p>
+</li>
+<li>
+<p><strong>JSON</strong>: Schema validation with JSON Schema</p>
+</li>
+<li>
+<p><strong>CSV</strong>: RFC 4180 compliant for data export/import</p>
+</li>
+<li>
+<p><strong>PDF</strong>: PDF/A compliance for archival documents</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_authentication_protocols"><a class="anchor" href="#_authentication_protocols"></a><a class="link" href="#_authentication_protocols">Authentication Protocols</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>SAML 2.0</strong>: Enterprise single sign-on integration</p>
+</li>
+<li>
+<p><strong>OAuth 2.1</strong>: Modern authorization for API access</p>
+</li>
+<li>
+<p><strong>Kerberos</strong>: Windows domain authentication support</p>
+</li>
+<li>
+<p><strong>LDAP</strong>: Directory service integration capabilities</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_7_4_sample_configurations"><a class="anchor" href="#_7_4_sample_configurations"></a><a class="link" href="#_7_4_sample_configurations">8.4. 7.4 Sample Configurations</a></h3>
+<div class="sect3">
+<h4 id="_7_4_1_application_configuration"><a class="anchor" href="#_7_4_1_application_configuration"></a><a class="link" href="#_7_4_1_application_configuration">8.4.1. 7.4.1 Application Configuration</a></h4>
+<div class="sect4">
+<h5 id="_appsettings_json_example"><a class="anchor" href="#_appsettings_json_example"></a><a class="link" href="#_appsettings_json_example">appsettings.json Example</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=CussApp;Trusted_Connection=true;MultipleActiveResultSets=true",
+    "RedisCache": "localhost:6379"
+  },
+  "CussSettings": {
+    "KioskId": "KIOSK-001",
+    "TerminalCode": "T1",
+    "AirportCode": "LAX",
+    "DefaultLanguage": "en-US",
+    "SupportedLanguages": ["en-US", "es-ES", "fr-FR", "de-DE", "ja-JP"],
+    "SessionTimeout": "00:15:00",
+    "MaxConcurrentSessions": 10
+  },
+  "SecuritySettings": {
+    "RequireHttps": true,
+    "EnableMfa": true,
+    "JwtSecretKey": "your-256-bit-secret",
+    "JwtExpirationHours": 8,
+    "PasswordPolicy": {
+      "MinLength": 12,
+      "RequireUppercase": true,
+      "RequireLowercase": true,
+      "RequireNumbers": true,
+      "RequireSpecialCharacters": true
+    }
+  },
+  "IntegrationSettings": {
+    "AirlineAPIs": {
+      "Timeout": "00:00:30",
+      "RetryCount": 3,
+      "CircuitBreakerThreshold": 5
+    },
+    "PaymentGateway": {
+      "BaseUrl": "https://api.payment-provider.com",
+      "ApiKey": "encrypted-api-key",
+      "Timeout": "00:01:00"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_database_connection_configuration"><a class="anchor" href="#_database_connection_configuration"></a><a class="link" href="#_database_connection_configuration">Database Connection Configuration</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "DatabaseSettings": {
+    "Provider": "SqlServer", // Options: SqlServer, PostgreSQL, Oracle
+    "ConnectionString": "Server=db-server;Database=CussApp;Integrated Security=true;",
+    "CommandTimeout": 30,
+    "MaxRetryCount": 3,
+    "EnableSensitiveDataLogging": false,
+    "ConnectionPooling": {
+      "MaxPoolSize": 100,
+      "MinPoolSize": 5,
+      "ConnectionIdleTimeout": "00:10:00"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_4_2_security_configuration"><a class="anchor" href="#_7_4_2_security_configuration"></a><a class="link" href="#_7_4_2_security_configuration">8.4.2. 7.4.2 Security Configuration</a></h4>
+<div class="sect4">
+<h5 id="_authentication_configuration"><a class="anchor" href="#_authentication_configuration"></a><a class="link" href="#_authentication_configuration">Authentication Configuration</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "Authentication": {
+    "DefaultScheme": "JWT",
+    "Schemes": {
+      "JWT": {
+        "Authority": "https://auth.airport.com",
+        "Audience": "cuss-api",
+        "ValidateIssuer": true,
+        "ValidateAudience": true,
+        "ValidateLifetime": true,
+        "ClockSkew": "00:05:00"
+      },
+      "SAML": {
+        "EntityId": "urn:cuss:app",
+        "SigningCertificate": "path/to/certificate.pfx",
+        "IdentityProviderUrl": "https://idp.airport.com/saml",
+        "AssertionConsumerServiceUrl": "https://cuss.airport.com/saml/acs"
+      }
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cors_and_security_headers"><a class="anchor" href="#_cors_and_security_headers"></a><a class="link" href="#_cors_and_security_headers">CORS and Security Headers</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "SecurityHeaders": {
+    "CORS": {
+      "AllowedOrigins": ["https://admin.airport.com", "https://monitoring.airport.com"],
+      "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+      "AllowedHeaders": ["Content-Type", "Authorization", "X-Requested-With"],
+      "AllowCredentials": true,
+      "MaxAge": 86400
+    },
+    "ContentSecurityPolicy": {
+      "DefaultSrc": "'self'",
+      "ScriptSrc": "'self' 'unsafe-inline' https://cdnjs.cloudflare.com",
+      "StyleSrc": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "FontSrc": "'self' https://fonts.gstatic.com",
+      "ImgSrc": "'self' data: https:",
+      "ConnectSrc": "'self' https://api.airport.com"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_4_3_deployment_configuration"><a class="anchor" href="#_7_4_3_deployment_configuration"></a><a class="link" href="#_7_4_3_deployment_configuration">8.4.3. 7.4.3 Deployment Configuration</a></h4>
+<div class="sect4">
+<h5 id="_docker_configuration"><a class="anchor" href="#_docker_configuration"></a><a class="link" href="#_docker_configuration">Docker Configuration</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-dockerfile hljs" data-lang="dockerfile"># Dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["CussApp/CussApp.csproj", "CussApp/"]
+RUN dotnet restore "CussApp/CussApp.csproj"
+COPY . .
+WORKDIR "/src/CussApp"
+RUN dotnet build "CussApp.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "CussApp.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "CussApp.dll"]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_kubernetes_deployment"><a class="anchor" href="#_kubernetes_deployment"></a><a class="link" href="#_kubernetes_deployment">Kubernetes Deployment</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cuss-app
+  labels:
+    app: cuss-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cuss-app
+  template:
+    metadata:
+      labels:
+        app: cuss-app
+    spec:
+      containers:
+      - name: cuss-app
+        image: cussapp:latest
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
+            secretKeyRef:
+              name: cuss-secrets
+              key: database-connection
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_7_4_4_monitoring_configuration"><a class="anchor" href="#_7_4_4_monitoring_configuration"></a><a class="link" href="#_7_4_4_monitoring_configuration">8.4.4. 7.4.4 Monitoring Configuration</a></h4>
+<div class="sect4">
+<h5 id="_application_insights_configuration"><a class="anchor" href="#_application_insights_configuration"></a><a class="link" href="#_application_insights_configuration">Application Insights Configuration</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "ApplicationInsights": {
+    "InstrumentationKey": "your-instrumentation-key",
+    "TelemetryInitializers": {
+      "CloudRoleNameInitializer": "CussApp",
+      "CloudRoleInstanceInitializer": "${COMPUTERNAME}"
+    },
+    "Sampling": {
+      "MaxTelemetryItemsPerSecond": 20,
+      "SamplingPercentage": 100.0
+    },
+    "LiveMetrics": {
+      "QuickPulseServiceEndpoint": "https://rt.services.visualstudio.com/"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_logging_configuration"><a class="anchor" href="#_logging_configuration"></a><a class="link" href="#_logging_configuration">Logging Configuration</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "Serilog": {
+    "Using": ["Serilog.Sinks.Console", "Serilog.Sinks.File", "Serilog.Sinks.ApplicationInsights"],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} &lt;s:{SourceContext}&gt;{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "logs/cuss-app-.txt",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 30,
+          "fileSizeLimitBytes": 104857600,
+          "rollOnFileSizeLimit": true
+        }
+      },
+      {
+        "Name": "ApplicationInsights",
+        "Args": {
+          "instrumentationKey": "your-instrumentation-key",
+          "telemetryConverter": "Serilog.Sinks.ApplicationInsights.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter, Serilog.Sinks.ApplicationInsights"
+        }
+      }
+    ],
+    "Enrich": ["FromLogContext", "WithMachineName", "WithThreadId"]
+  }
+}</code></pre>
+</div>
 </div>
 <hr>
 <div class="paragraph">
@@ -1838,6 +4651,8 @@ Start-Service CussApp</code></pre>
 </div>
 <div class="paragraph">
 <p><em>Version: 1.0</em></p>
+</div>
+</div>
 </div>
 </div>
 </div>

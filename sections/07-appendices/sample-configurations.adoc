@@ -1,0 +1,274 @@
+=== 7.4 Sample Configurations
+
+==== 7.4.1 Application Configuration
+
+===== appsettings.json Example
+[source,json]
+----
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=CussApp;Trusted_Connection=true;MultipleActiveResultSets=true",
+    "RedisCache": "localhost:6379"
+  },
+  "CussSettings": {
+    "KioskId": "KIOSK-001",
+    "TerminalCode": "T1",
+    "AirportCode": "LAX",
+    "DefaultLanguage": "en-US",
+    "SupportedLanguages": ["en-US", "es-ES", "fr-FR", "de-DE", "ja-JP"],
+    "SessionTimeout": "00:15:00",
+    "MaxConcurrentSessions": 10
+  },
+  "SecuritySettings": {
+    "RequireHttps": true,
+    "EnableMfa": true,
+    "JwtSecretKey": "your-256-bit-secret",
+    "JwtExpirationHours": 8,
+    "PasswordPolicy": {
+      "MinLength": 12,
+      "RequireUppercase": true,
+      "RequireLowercase": true,
+      "RequireNumbers": true,
+      "RequireSpecialCharacters": true
+    }
+  },
+  "IntegrationSettings": {
+    "AirlineAPIs": {
+      "Timeout": "00:00:30",
+      "RetryCount": 3,
+      "CircuitBreakerThreshold": 5
+    },
+    "PaymentGateway": {
+      "BaseUrl": "https://api.payment-provider.com",
+      "ApiKey": "encrypted-api-key",
+      "Timeout": "00:01:00"
+    }
+  }
+}
+----
+
+===== Database Connection Configuration
+[source,json]
+----
+{
+  "DatabaseSettings": {
+    "Provider": "SqlServer", // Options: SqlServer, PostgreSQL, Oracle
+    "ConnectionString": "Server=db-server;Database=CussApp;Integrated Security=true;",
+    "CommandTimeout": 30,
+    "MaxRetryCount": 3,
+    "EnableSensitiveDataLogging": false,
+    "ConnectionPooling": {
+      "MaxPoolSize": 100,
+      "MinPoolSize": 5,
+      "ConnectionIdleTimeout": "00:10:00"
+    }
+  }
+}
+----
+
+==== 7.4.2 Security Configuration
+
+===== Authentication Configuration
+[source,json]
+----
+{
+  "Authentication": {
+    "DefaultScheme": "JWT",
+    "Schemes": {
+      "JWT": {
+        "Authority": "https://auth.airport.com",
+        "Audience": "cuss-api",
+        "ValidateIssuer": true,
+        "ValidateAudience": true,
+        "ValidateLifetime": true,
+        "ClockSkew": "00:05:00"
+      },
+      "SAML": {
+        "EntityId": "urn:cuss:app",
+        "SigningCertificate": "path/to/certificate.pfx",
+        "IdentityProviderUrl": "https://idp.airport.com/saml",
+        "AssertionConsumerServiceUrl": "https://cuss.airport.com/saml/acs"
+      }
+    }
+  }
+}
+----
+
+===== CORS and Security Headers
+[source,json]
+----
+{
+  "SecurityHeaders": {
+    "CORS": {
+      "AllowedOrigins": ["https://admin.airport.com", "https://monitoring.airport.com"],
+      "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+      "AllowedHeaders": ["Content-Type", "Authorization", "X-Requested-With"],
+      "AllowCredentials": true,
+      "MaxAge": 86400
+    },
+    "ContentSecurityPolicy": {
+      "DefaultSrc": "'self'",
+      "ScriptSrc": "'self' 'unsafe-inline' https://cdnjs.cloudflare.com",
+      "StyleSrc": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "FontSrc": "'self' https://fonts.gstatic.com",
+      "ImgSrc": "'self' data: https:",
+      "ConnectSrc": "'self' https://api.airport.com"
+    }
+  }
+}
+----
+
+==== 7.4.3 Deployment Configuration
+
+===== Docker Configuration
+[source,dockerfile]
+----
+# Dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["CussApp/CussApp.csproj", "CussApp/"]
+RUN dotnet restore "CussApp/CussApp.csproj"
+COPY . .
+WORKDIR "/src/CussApp"
+RUN dotnet build "CussApp.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "CussApp.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "CussApp.dll"]
+----
+
+===== Kubernetes Deployment
+[source,yaml]
+----
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cuss-app
+  labels:
+    app: cuss-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cuss-app
+  template:
+    metadata:
+      labels:
+        app: cuss-app
+    spec:
+      containers:
+      - name: cuss-app
+        image: cussapp:latest
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
+            secretKeyRef:
+              name: cuss-secrets
+              key: database-connection
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+----
+
+==== 7.4.4 Monitoring Configuration
+
+===== Application Insights Configuration
+[source,json]
+----
+{
+  "ApplicationInsights": {
+    "InstrumentationKey": "your-instrumentation-key",
+    "TelemetryInitializers": {
+      "CloudRoleNameInitializer": "CussApp",
+      "CloudRoleInstanceInitializer": "${COMPUTERNAME}"
+    },
+    "Sampling": {
+      "MaxTelemetryItemsPerSecond": 20,
+      "SamplingPercentage": 100.0
+    },
+    "LiveMetrics": {
+      "QuickPulseServiceEndpoint": "https://rt.services.visualstudio.com/"
+    }
+  }
+}
+----
+
+===== Logging Configuration
+[source,json]
+----
+{
+  "Serilog": {
+    "Using": ["Serilog.Sinks.Console", "Serilog.Sinks.File", "Serilog.Sinks.ApplicationInsights"],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} <s:{SourceContext}>{NewLine}{Exception}"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "logs/cuss-app-.txt",
+          "rollingInterval": "Day",
+          "retainedFileCountLimit": 30,
+          "fileSizeLimitBytes": 104857600,
+          "rollOnFileSizeLimit": true
+        }
+      },
+      {
+        "Name": "ApplicationInsights",
+        "Args": {
+          "instrumentationKey": "your-instrumentation-key",
+          "telemetryConverter": "Serilog.Sinks.ApplicationInsights.Sinks.ApplicationInsights.TelemetryConverters.TraceTelemetryConverter, Serilog.Sinks.ApplicationInsights"
+        }
+      }
+    ],
+    "Enrich": ["FromLogContext", "WithMachineName", "WithThreadId"]
+  }
+}
+----

@@ -1,6 +1,29 @@
-== 6. Deployment and Update Strategy (.NET Core Model)
+== 6. Deployment and Update Strategy
 
-=== 6.1 Wide-Open Update Palette
+[NOTE]
+====
+This section outlines the comprehensive deployment strategy for the CUSS application, leveraging .NET Core's flexibility to support multiple deployment models while ensuring operational excellence and security.
+====
+
+.Deployment Strategy Overview
+[cols="1,3"]
+|===
+|Subsection |Description
+
+|6.1 Deployment Architecture
+|Self-contained .NET Core model, deployment flexibility, and scalability considerations
+
+|6.2 Update Mechanisms
+|Enterprise distribution methods, auto-update mechanisms, and script-based automation
+
+|6.3 CI/CD Integration
+|Build pipeline integration, deployment automation, and quality assurance
+
+|6.4 Operational Excellence
+|Monitoring and observability, incident management, and compliance governance
+|===
+
+=== Key Advantages of .NET Core Deployment Model
 
 Unlike the legacy IIS-centric model, .NET Core apps are *not bound to a single central deployment point*.
 
@@ -13,65 +36,10 @@ Unlike the legacy IIS-centric model, .NET Core apps are *not bound to a single c
 
 In short: *any model of updates you want is supported.*
 
-=== 6.2 Supported Update Methods
+include::06-deployment-strategy/deployment-architecture.adoc[]
 
-==== 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)
-* Package the .NET Core app as MSI or EXE
-* Push to all kiosks or target a subset
-* Supports staggered rollout (one terminal, one airline, or one group at a time)
+include::06-deployment-strategy/update-mechanisms.adoc[]
 
-==== 6.2.2 File Share + PowerShell
-* Store the latest version in a secured share
-* PowerShell script (or Scheduled Task) copies binaries to kiosks
+include::06-deployment-strategy/cicd-integration.adoc[]
 
-[source,powershell]
-----
-Stop-Service CussApp
-Copy-Item "\\share\cussapp\1.2.0\*" "C:\Program Files\CussApp\" -Recurse -Force
-Start-Service CussApp
-----
-
-==== 6.2.3 Auto-Update Agent
-* Lightweight background process on each kiosk
-* Compares local `version.json` with central manifest
-* Downloads and applies updates automatically
-
-==== 6.2.4 ClickOnce (Optional)
-* Provides pull-based, self-updating deployment
-* Kiosks fetch updates at login or restart
-
-=== 6.3 Benefits Over Legacy IIS Model
-
-* *No bottleneck*: Updates aren't limited to what's hosted centrally on IIS
-* *Targeted rollouts*: Update one kiosk, one airline, or one workflow segment at a time
-* *Resilience*: If a kiosk is offline during rollout, it updates next time it checks in
-* *Consistency*: Self-contained .NET Core deployments avoid "DLL hell" and GAC conflicts
-* *Flexibility*: Our admin console can orchestrate updates as efficiently and cleanly as any legacy central IIS model
-* *Modernization*: Fits into today's CI/CD pipelines and leverages proven enterprise tools without reinventing the wheel
-
-=== 6.4 Key Rebuttals to Concerns
-
-* *Claim:* "You can't update kiosks if you don't use IIS." +
-  *Answer:* In .NET Core, kiosks are updated the same as any Windows app: via MSI, EXE, script, or agent. IT already has these tools.
-
-* *Claim:* "Thin clients can't have a local runtime." +
-  *Answer:* All kiosk apps today (Java, BYOB) already install local artifacts (JRE, browser, DLLs). A .NET Core runtime is no different.
-
-* *Claim:* "Central IIS is required for consistency." +
-  *Answer:* Consistency is handled by packaging/versioning. Central IIS is actually a single point of failure — distributed apps are more resilient.
-
-=== 6.5 Deployment Workflow Example
-
-1. `dotnet publish` creates versioned build artifacts
-2. Build pipeline signs and packages into MSI
-3. Package staged on secure share
-4. IT pushes or kiosks pull updates
-5. Kiosk restarts app and runs the new version
-
-=== 6.6 Summary
-
-* .NET Core gives us a *wide-open palette* of update strategies
-* Updates are as simple as publishing new artifacts and distributing them with standard IT tools
-* Our admin console can *provision and update* as effectively as any legacy IIS model, but with more flexibility and resilience
-* These updates fit into *any CI/CD toolchain* or *update console* — whether custom-designed or based on off-the-shelf tools like PowerShell and SCCM
-* The result is a *better, cleaner, and more future-proof* system for updating both the CUSS App runtime and the web application workflows
+include::06-deployment-strategy/operational-excellence.adoc[]

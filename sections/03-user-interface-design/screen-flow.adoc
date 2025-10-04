@@ -1,0 +1,44 @@
+=== 3.2 Passenger Screen Flow
+
+A typical passenger user journey includes:
+
+==== 3.2.1 Standard Check-in Flow
+
+1. **Welcome screen** with language selection
+2. **Identification** (passport, confirmation code, or frequent flyer number)
+3. **Flight selection** (if multiple flights)
+4. **Check-in confirmation** with flight details
+5. **Seat selection** (if available)
+6. **Baggage declaration** and tag printing
+7. **Boarding pass printing**
+8. **Receipt and summary**
+
+==== 3.2.2 Alternative Flows
+
+**Express Check-in:**
+- Skip seat selection for pre-assigned seats
+- Automatic baggage handling for frequent flyers
+- Single-step confirmation and printing
+
+**Assisted Check-in:**
+- Special assistance requirements
+- Unaccompanied minor processing
+- Medical equipment declarations
+
+// Add your UI flow diagram here:
+// image::diagrams/user-journey-flow.png[User Journey Flow, 1000, 600]
+
+==== 3.2.3 Error and Exception Handling
+
+**Common Error Scenarios:**
+- Passenger not found
+- Flight already departed
+- Seat selection unavailable
+- Printer offline
+- Network connectivity issues
+
+**Recovery Strategies:**
+- Clear error messages with next steps
+- Alternative identification methods
+- Graceful degradation during outages
+- Agent assistance call options

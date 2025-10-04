@@ -1,0 +1,47 @@
+=== 3.3 Component Design System
+
+==== 3.3.1 Visual Components
+
+**Buttons:**
+- Primary actions: High contrast, large touch targets
+- Secondary actions: Lower contrast, standard sizing  
+- Destructive actions: Red accent, confirmation required
+- Disabled state: Grayed out with clear indication
+
+**Form Controls:**
+- Input fields: Large, clear labels, validation feedback
+- Dropdowns: Touch-friendly with search capability
+- Checkboxes/Radio: Oversized for touch accuracy
+- Progress indicators: Clear steps and completion status
+
+// Add individual screen mockups:
+// image::ui/welcome-screen.png[Welcome Screen, 400, 300]
+// image::ui/check-in-screen.png[Check-in Screen, 400, 300]
+
+==== 3.3.2 Layout Patterns
+
+**Kiosk Layout:**
+- Single-column layout for focus
+- Large header with airline branding
+- Progress indicator at top
+- Primary action at bottom right
+- Secondary actions at bottom left
+
+**Admin Layout:**
+- Multi-column dashboard design
+- Sidebar navigation
+- Tabbed content areas
+- Status panels and widgets
+
+==== 3.3.3 Responsive Design
+
+**Breakpoints:**
+- Kiosk: 1920x1080 (primary target)
+- Tablet: 1366x768 (admin interface)
+- Mobile: 768x1024 (backup/testing)
+
+**Scaling Strategy:**
+- Component-based responsive units
+- Proportional font and spacing scales
+- Touch target minimum sizes maintained
+- Readable text at all scales

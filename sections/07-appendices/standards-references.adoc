@@ -1,0 +1,66 @@
+=== 7.2 Standards and References
+
+==== 7.2.1 IATA Standards
+
+===== CUSS Standards
+* **IATA CUSS Standard 1.3** - Foundation specification for common use self-service systems
+* **IATA CUSS Standard 1.4** - Enhanced features and security requirements
+* **IATA CUSS Standard 1.5** - Latest improvements and modernization updates
+* **IATA CUSS Standard 2.0** - Next-generation specification with cloud-native architecture support
+
+===== Related IATA Standards
+* **IATA PSS Standard** - Passenger Service System specifications
+* **IATA DCS Standard** - Departure Control System requirements
+* **IATA Baggage Reconciliation Standard** - Baggage handling and tracking specifications
+* **IATA New Distribution Capability (NDC)** - Modern airline distribution standard
+
+==== 7.2.2 Accessibility Standards
+
+===== Web Content Accessibility Guidelines
+* **WCAG 2.1 Level AA** - Current standard for web accessibility compliance
+* **WCAG 2.2** - Latest updates with additional success criteria
+* **Section 508** - U.S. federal accessibility requirements
+* **EN 301 549** - European accessibility standard for ICT products and services
+
+===== Accessibility Best Practices
+* **Microsoft Accessibility Guidelines** - Platform-specific accessibility requirements for Windows applications
+* **ARIA Authoring Practices Guide** - Best practices for implementing ARIA in web applications
+* **Inclusive Design Principles** - Microsoft's guidelines for inclusive design
+
+==== 7.2.3 Security Standards
+
+===== Information Security
+* **ISO/IEC 27001:2013** - Information Security Management Systems standard
+* **ISO/IEC 27002:2013** - Code of practice for information security controls
+* **NIST Cybersecurity Framework** - Framework for improving critical infrastructure cybersecurity
+* **OWASP Top 10** - Most critical web application security risks
+
+===== Payment Security
+* **PCI DSS v4.0** - Payment Card Industry Data Security Standard
+* **PA-DSS** - Payment Application Data Security Standard
+* **ISO 20022** - International standard for electronic data interchange between financial institutions
+
+===== Aviation Security
+* **TSA Security Guidelines** - Transportation Security Administration guidelines for airport technology
+* **ICAO Annex 17** - International Civil Aviation Organization security standards
+* **EU Aviation Security Regulation** - European Union aviation security requirements
+
+==== 7.2.4 Technical Standards
+
+===== Web Technologies
+* **HTML5 Specification** - Latest web markup language standard
+* **CSS3 Specifications** - Cascading Style Sheets level 3 modules
+* **ECMAScript 2023** - JavaScript language specification
+* **WebAssembly Specification** - Binary instruction format for web applications
+
+===== API Standards
+* **OpenAPI Specification 3.0** - API documentation and development standard
+* **JSON Schema** - Vocabulary for validating JSON documents
+* **OAuth 2.1** - Authorization framework specification
+* **OpenID Connect** - Simple identity layer on top of OAuth 2.0
+
+===== Microsoft Platform Standards
+* **.NET Standard 2.1** - Specification for .NET APIs available across implementations
+* **C# Language Specification** - Programming language standard
+* **ASP.NET Core Documentation** - Web framework specifications and best practices
+* **Azure Architecture Guidelines** - Cloud platform architecture recommendations
