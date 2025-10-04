@@ -1,15 +1,37 @@
-[[introduction]]
 == 1. Introduction
 
-The CUSS App Design Documentation provides a comprehensive specification for building modern, standards-compliant Common Use Self Service applications.
+[NOTE]
+====
+This section provides an introduction to the CUSS application design, covering the overview, design principles, cloud-native alignment, deployment considerations, and conclusions.
+====
 
-// Include all introduction subsections
+.Introduction Overview
+[cols="1,3"]
+|===
+|Subsection |Description
+
+|1.1 Overview
+|Project background, objectives, and scope definition
+
+|1.2 Design Overview
+|Core design artifacts, legacy vs modern models, component architecture
+
+|1.3 Cloud-Native Alignment
+|Edge computing principles, hybrid architecture, and future-proofing strategies
+
+|1.4 Deployment and Updates
+|Distribution models, update mechanisms, and operational considerations
+
+|1.5 Conclusion
+|Summary of benefits, design decisions, and next steps
+|===
+
 include::01-introduction/overview.adoc[]
 
 include::01-introduction/design-overview.adoc[]
 
-include::01-introduction/deployment-updates.adoc[]
-
 include::01-introduction/cloud-native-alignment.adoc[]
+
+include::01-introduction/deployment-updates.adoc[]
 
 include::01-introduction/conclusion.adoc[]

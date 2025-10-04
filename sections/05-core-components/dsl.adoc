@@ -1,8 +1,8 @@
-=== 5.3 Domain-Specific Language (DSL)
+=== 5.4 Domain-Specific Language (DSL)
 
 The CUSS App employs a Domain-Specific Language to bind business logic to UI components and workflow steps, enabling dynamic behavior without code compilation.
 
-==== 5.3.1 DSL Architecture
+==== 5.4.1 DSL Architecture
 
 The DSL provides a declarative way to:
 - **Bind actions** to UI events (onClick, onSubmit, onLoad)

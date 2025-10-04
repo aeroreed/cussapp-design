@@ -1,8 +1,8 @@
-=== 5.4 Workflow Player
+=== 5.3 Workflow Player
 
 The Workflow Player renders and executes workflows in the browser environment using Vue3 and WebView2.
 
-==== 5.4.1 Architecture Overview
+==== 5.3.1 Architecture Overview
 
 The Workflow Player is a **Vue3-based application** that:
 

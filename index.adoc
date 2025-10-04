@@ -1,5 +1,5 @@
 :toc: left
-:toclevels: 3
+:toclevels: 4
 :sectnums:
 :sectlinks:
 :icons: font
@@ -8,6 +8,7 @@
 :stylesheet: dark-theme.css
 :stylesdir: styles
 :linkcss:
+:toc-title: Navigation
 
 
 = CUSS App Design Documentation
@@ -30,7 +31,7 @@ include::sections/04-security-requirements.adoc[]
 
 include::sections/05-core-components.adoc[]
 
-include::sections/06-deployment-update-strategy.adoc[]
+include::sections/06-deployment-strategy.adoc[]
 
 include::sections/07-appendices.adoc[]
 

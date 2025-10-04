@@ -30,4 +30,3 @@ include::04-security-requirements/authentication.adoc[]
 include::04-security-requirements/application-security.adoc[]
 
 include::04-security-requirements/incident-response.adoc[]
-

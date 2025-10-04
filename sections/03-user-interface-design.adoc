@@ -1,30 +1,28 @@
 == 3. User Interface Design
 
-The CUSS application provides multiple user interfaces designed for different audiences and use cases, from passenger-facing kiosk interactions to administrative management tools.
+[NOTE]
+====
+This section covers comprehensive user interface design for the CUSS application, including design principles, screen flows, component architecture, and administrative interfaces.
+====
 
-.UI Types Overview
-[cols="1,3,6"]
+.User Interface Design Overview
+[cols="1,3"]
 |===
-| Interface Type | Target Users | Purpose
+|Subsection |Description
 
-| **Passenger Interface**
-| Airport passengers
-| Touch-optimized kiosk interface for check-in, baggage, and boarding
+|3.1 Design Principles
+|Accessibility standards, usability principles, and inclusive design guidelines
 
-| **Admin Interface** 
-| IT administrators
-| Web-based management for workflows, monitoring, and configuration
+|3.2 Screen Flow and Navigation
+|Passenger journey workflows, error handling, and navigation patterns
 
-| **Workflow Builder**
-| Business analysts
-| Visual tool for creating and editing passenger workflows
+|3.3 Component Design
+|Visual components, responsive design, and UI framework architecture
 
-| **Monitoring Dashboard**
-| Operations teams
-| Real-time system health, analytics, and troubleshooting
+|3.4 Administrative Interface
+|Workflow builder interface, monitoring dashboards, and management tools
 |===
 
-// Include all UI design subsections
 include::03-user-interface-design/design-principles.adoc[]
 
 include::03-user-interface-design/screen-flow.adoc[]

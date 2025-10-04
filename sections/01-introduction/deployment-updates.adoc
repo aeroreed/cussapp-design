@@ -1,6 +1,6 @@
-=== 1.3 Deployment and Updates
+=== 1.4 Deployment and Updates
 
-==== 1.3.1 Self-Contained Deployments
+==== 1.4.1 Self-Contained Deployments
 
 - Self-contained deployments vs. central IIS push
 - How CI/CD and PowerShell/admin console can handle updates

@@ -1,24 +1,44 @@
-== 2. It's a CUSS App
+== 2. It's a CUSS App== 2. It's a CUSS App
 
-This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.
 
-=== 2.1 CUSS Specification Guidance
+
+[NOTE]This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.
+
+====
+
+This section explains what defines a CUSS application and how our design adheres to IATA CUSS standards.=== 2.1 CUSS Specification Guidance
+
+====
 
 The IATA CUSS specification includes addenda for **BYOB (Bring Your Own Browser)** and **BYOJ (Bring Your Own Java)**.
 
-Both explicitly require local runtime components such as a browser engine or a Java Runtime Environment (JRE) to be installed on the kiosk.
+// TODO: Add content for section 2 - placeholder for now
 
-This proves the spec expects local artifacts, not a "remote-only" model.
+// This section needs to be populated with content about CUSS compliance and standardsBoth explicitly require local runtime components such as a browser engine or a Java Runtime Environment (JRE) to be installed on the kiosk.
 
-=== 2.2 Standard Industry Practice
 
-Airline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.
 
-These files are essential for:
+=== 2.1 CUSS Standards ComplianceThis proves the spec expects local artifacts, not a "remote-only" model.
+
+
+
+Content to be added...=== 2.2 Standard Industry Practice
+
+
+
+=== 2.2 Platform IntegrationAirline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.
+
+
+
+Content to be added...These files are essential for:
+
 * **Talking to devices** - Direct hardware communication
-* **Executing workflows** - Local business logic processing  
+
+=== 2.3 Multi-Airline Support* **Executing workflows** - Local business logic processing  
+
 * **Handling degraded network conditions** - Offline resilience
 
+Content to be added...
 === 2.3 Risks of a Thin-Only Approach
 
 ==== 2.3.1 Specification Non-Compliance

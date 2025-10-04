@@ -4,6 +4,8 @@ This document exists to clarify design choices, provide neutral facts, and resol
 
 We acknowledge that kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.
 
+image::../images/cuss-app-component-diagram.png[width=800,alt="CUSS App Component Diagram"]
+
 ==== 1.2.1 Legacy vs. Modern Models
 
 - Why IIS central model is legacy

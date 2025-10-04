@@ -14,10 +14,10 @@
 <div id="header">
 <h1>CUSS App Design Documentation</h1>
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">Navigation</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">1. Overview</a></li>
-<li><a href="#introduction">2. 1. Introduction</a>
+<li><a href="#_1_introduction">2. 1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#_1_1_overview">2.1. 1.1 Overview</a></li>
 <li><a href="#_1_2_design_overview">2.2. 1.2 Design Overview</a>
@@ -26,27 +26,27 @@
 <li><a href="#_1_2_2_core_design_artifacts">2.2.2. 1.2.2 Core Design Artifacts</a></li>
 </ul>
 </li>
-<li><a href="#_1_3_deployment_and_updates">2.3. 1.3 Deployment and Updates</a>
+<li><a href="#_1_3_cloud_native_alignment_at_the_edge">2.3. 1.3 Cloud-Native Alignment at the Edge</a>
 <ul class="sectlevel3">
-<li><a href="#_1_3_1_self_contained_deployments">2.3.1. 1.3.1 Self-Contained Deployments</a></li>
-<li><a href="#_1_3_2_security_considerations">2.3.2. 1.3.2 Security Considerations</a></li>
+<li><a href="#_1_3_1_12_factor_principles">2.3.1. 1.3.1 12-Factor Principles</a></li>
+<li><a href="#_1_3_2_industry_precedent">2.3.2. 1.3.2 Industry Precedent</a></li>
+<li><a href="#_1_4_3_independent_verification">2.3.3. 1.4.3 Independent Verification</a></li>
 </ul>
 </li>
-<li><a href="#_1_4_cloud_native_alignment_at_the_edge">2.4. 1.4 Cloud-Native Alignment at the Edge</a>
+<li><a href="#_1_4_deployment_and_updates">2.4. 1.4 Deployment and Updates</a>
 <ul class="sectlevel3">
-<li><a href="#_1_4_1_12_factor_principles">2.4.1. 1.4.1 12-Factor Principles</a></li>
-<li><a href="#_1_4_2_industry_precedent">2.4.2. 1.4.2 Industry Precedent</a></li>
-<li><a href="#_1_4_3_independent_verification">2.4.3. 1.4.3 Independent Verification</a></li>
+<li><a href="#_1_4_1_self_contained_deployments">2.4.1. 1.4.1 Self-Contained Deployments</a></li>
+<li><a href="#_1_3_2_security_considerations">2.4.2. 1.3.2 Security Considerations</a></li>
 </ul>
 </li>
 <li><a href="#_1_5_conclusion">2.5. 1.5 Conclusion</a></li>
 </ul>
 </li>
-<li><a href="#_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App</a>
+<li><a href="#_2_its_a_cuss_app_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App== 2. It&#8217;s a CUSS App</a>
 <ul class="sectlevel2">
-<li><a href="#_2_1_cuss_specification_guidance">3.1. 2.1 CUSS Specification Guidance</a></li>
-<li><a href="#_2_2_standard_industry_practice">3.2. 2.2 Standard Industry Practice</a></li>
-<li><a href="#_2_3_risks_of_a_thin_only_approach">3.3. 2.3 Risks of a Thin-Only Approach</a>
+<li><a href="#_2_1_cuss_standards_compliancethis_proves_the_spec_expects_local_artifacts_not_a_remote_only_model">3.1. 2.1 CUSS Standards ComplianceThis proves the spec expects local artifacts, not a "remote-only" model.</a></li>
+<li><a href="#_2_2_platform_integrationairline_apps_routinely_deploy_jars_dlls_corba_stubs_or_device_sdks_into_their_assigned_cuss_home_directory">3.2. 2.2 Platform IntegrationAirline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.</a></li>
+<li><a href="#_2_3_multi_airline_support_executing_workflows_local_business_logic_processing">3.3. 2.3 Multi-Airline Support* <strong>Executing workflows</strong> - Local business logic processing</a>
 <ul class="sectlevel3">
 <li><a href="#_2_3_1_specification_non_compliance">3.3.1. 2.3.1 Specification Non-Compliance</a></li>
 <li><a href="#_2_3_2_resiliency_loss">3.3.2. 2.3.2 Resiliency Loss</a></li>
@@ -147,29 +147,29 @@
 <li><a href="#_5_2_4_workflow_configuration">6.2.4. 5.2.4 Workflow Configuration</a></li>
 </ul>
 </li>
-<li><a href="#_5_3_domain_specific_language_dsl">6.3. 5.3 Domain-Specific Language (DSL)</a>
+<li><a href="#_5_3_workflow_player">6.3. 5.3 Workflow Player</a>
 <ul class="sectlevel3">
-<li><a href="#_5_3_1_dsl_architecture">6.3.1. 5.3.1 DSL Architecture</a></li>
-<li><a href="#_5_3_2_dsl_command_structure">6.3.2. 5.3.2 DSL Command Structure</a></li>
-<li><a href="#_5_3_3_available_dsl_commands">6.3.3. 5.3.3 Available DSL Commands</a></li>
-<li><a href="#_5_3_4_event_binding_examples">6.3.4. 5.3.4 Event Binding Examples</a></li>
-<li><a href="#_5_3_5_conditional_logic">6.3.5. 5.3.5 Conditional Logic</a></li>
-<li><a href="#_5_3_6_parameter_substitution">6.3.6. 5.3.6 Parameter Substitution</a></li>
-<li><a href="#_5_3_7_error_handling">6.3.7. 5.3.7 Error Handling</a></li>
-<li><a href="#_5_3_8_advanced_dsl_features">6.3.8. 5.3.8 Advanced DSL Features</a></li>
+<li><a href="#_5_3_1_architecture_overview">6.3.1. 5.3.1 Architecture Overview</a></li>
+<li><a href="#_5_4_2_component_rendering">6.3.2. 5.4.2 Component Rendering</a></li>
+<li><a href="#_5_4_3_webview2_integration">6.3.3. 5.4.3 WebView2 Integration</a></li>
+<li><a href="#_5_4_4_user_interaction_handling">6.3.4. 5.4.4 User Interaction Handling</a></li>
+<li><a href="#_5_4_5_state_management">6.3.5. 5.4.5 State Management</a></li>
+<li><a href="#_5_4_6_component_library">6.3.6. 5.4.6 Component Library</a></li>
+<li><a href="#_5_4_7_responsive_design">6.3.7. 5.4.7 Responsive Design</a></li>
+<li><a href="#_5_4_8_performance_optimization">6.3.8. 5.4.8 Performance Optimization</a></li>
+<li><a href="#_5_4_9_accessibility_features">6.3.9. 5.4.9 Accessibility Features</a></li>
 </ul>
 </li>
-<li><a href="#_5_4_workflow_player">6.4. 5.4 Workflow Player</a>
+<li><a href="#_5_4_domain_specific_language_dsl">6.4. 5.4 Domain-Specific Language (DSL)</a>
 <ul class="sectlevel3">
-<li><a href="#_5_4_1_architecture_overview">6.4.1. 5.4.1 Architecture Overview</a></li>
-<li><a href="#_5_4_2_component_rendering">6.4.2. 5.4.2 Component Rendering</a></li>
-<li><a href="#_5_4_3_webview2_integration">6.4.3. 5.4.3 WebView2 Integration</a></li>
-<li><a href="#_5_4_4_user_interaction_handling">6.4.4. 5.4.4 User Interaction Handling</a></li>
-<li><a href="#_5_4_5_state_management">6.4.5. 5.4.5 State Management</a></li>
-<li><a href="#_5_4_6_component_library">6.4.6. 5.4.6 Component Library</a></li>
-<li><a href="#_5_4_7_responsive_design">6.4.7. 5.4.7 Responsive Design</a></li>
-<li><a href="#_5_4_8_performance_optimization">6.4.8. 5.4.8 Performance Optimization</a></li>
-<li><a href="#_5_4_9_accessibility_features">6.4.9. 5.4.9 Accessibility Features</a></li>
+<li><a href="#_5_4_1_dsl_architecture">6.4.1. 5.4.1 DSL Architecture</a></li>
+<li><a href="#_5_3_2_dsl_command_structure">6.4.2. 5.3.2 DSL Command Structure</a></li>
+<li><a href="#_5_3_3_available_dsl_commands">6.4.3. 5.3.3 Available DSL Commands</a></li>
+<li><a href="#_5_3_4_event_binding_examples">6.4.4. 5.3.4 Event Binding Examples</a></li>
+<li><a href="#_5_3_5_conditional_logic">6.4.5. 5.3.5 Conditional Logic</a></li>
+<li><a href="#_5_3_6_parameter_substitution">6.4.6. 5.3.6 Parameter Substitution</a></li>
+<li><a href="#_5_3_7_error_handling">6.4.7. 5.3.7 Error Handling</a></li>
+<li><a href="#_5_3_8_advanced_dsl_features">6.4.8. 5.3.8 Advanced DSL Features</a></li>
 </ul>
 </li>
 </ul>
@@ -208,7 +208,7 @@
 </li>
 </ul>
 </li>
-<li><a href="#_7_appendices">8. 7. Appendices</a>
+<li><a href="#_7_appendices_7_appendices">8. 7. Appendices== 7. Appendices</a>
 <ul class="sectlevel2">
 <li><a href="#_7_1_glossary">8.1. 7.1 Glossary</a>
 <ul class="sectlevel3">
@@ -264,11 +264,57 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="introduction"><a class="anchor" href="#introduction"></a><a class="link" href="#introduction">2. 1. Introduction</a></h2>
+<h2 id="_1_introduction"><a class="anchor" href="#_1_introduction"></a><a class="link" href="#_1_introduction">2. 1. Introduction</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The CUSS App Design Documentation provides a comprehensive specification for building modern, standards-compliant Common Use Self Service applications.</p>
+<p>This section provides an introduction to the CUSS application design, covering the overview, design principles, cloud-native alignment, deployment considerations, and conclusions.</p>
 </div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Introduction Overview</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Subsection</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1 Overview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project background, objectives, and scope definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2 Design Overview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core design artifacts, legacy vs modern models, component architecture</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3 Cloud-Native Alignment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edge computing principles, hybrid architecture, and future-proofing strategies</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4 Deployment and Updates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Distribution models, update mechanisms, and operational considerations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5 Conclusion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Summary of benefits, design decisions, and next steps</p></td>
+</tr>
+</tbody>
+</table>
 <div class="sect2">
 <h3 id="_1_1_overview"><a class="anchor" href="#_1_1_overview"></a><a class="link" href="#_1_1_overview">2.1. 1.1 Overview</a></h3>
 <div class="paragraph">
@@ -295,6 +341,11 @@
 </div>
 <div class="paragraph">
 <p>We acknowledge that kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/cuss-app-component-diagram.png" alt="CUSS App Component Diagram" width="800">
+</div>
 </div>
 <div class="sect3">
 <h4 id="_1_2_1_legacy_vs_modern_models"><a class="anchor" href="#_1_2_1_legacy_vs_modern_models"></a><a class="link" href="#_1_2_1_legacy_vs_modern_models">2.2.1. 1.2.1 Legacy vs. Modern Models</a></h4>
@@ -361,9 +412,54 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_3_deployment_and_updates"><a class="anchor" href="#_1_3_deployment_and_updates"></a><a class="link" href="#_1_3_deployment_and_updates">2.3. 1.3 Deployment and Updates</a></h3>
+<h3 id="_1_3_cloud_native_alignment_at_the_edge"><a class="anchor" href="#_1_3_cloud_native_alignment_at_the_edge"></a><a class="link" href="#_1_3_cloud_native_alignment_at_the_edge">2.3. 1.3 Cloud-Native Alignment at the Edge</a></h3>
 <div class="sect3">
-<h4 id="_1_3_1_self_contained_deployments"><a class="anchor" href="#_1_3_1_self_contained_deployments"></a><a class="link" href="#_1_3_1_self_contained_deployments">2.3.1. 1.3.1 Self-Contained Deployments</a></h4>
+<h4 id="_1_3_1_12_factor_principles"><a class="anchor" href="#_1_3_1_12_factor_principles"></a><a class="link" href="#_1_3_1_12_factor_principles">2.3.1. 1.3.1 12-Factor Principles</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Mapping 12-factor attributes to the design</p>
+</li>
+<li>
+<p>How this edge device model applies cloud-native principles</p>
+</li>
+<li>
+<p>Sets foundation for hybrid or future cloud-integrated models</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_3_2_industry_precedent"><a class="anchor" href="#_1_3_2_industry_precedent"></a><a class="link" href="#_1_3_2_industry_precedent">2.3.2. 1.3.2 Industry Precedent</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>How other modern platforms (Spring Boot, Node.js, Go, .NET Core) all follow embedded-server models</p>
+</li>
+<li>
+<p>Airlines and CUSS BYOB/edge install precedents</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_1_4_3_independent_verification"><a class="anchor" href="#_1_4_3_independent_verification"></a><a class="link" href="#_1_4_3_independent_verification">2.3.3. 1.4.3 Independent Verification</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>AI prompts provided to verify these facts independently</p>
+</li>
+<li>
+<p>Note: prompts can be Googled, but AI gives more accurate, concise responses without manual collation</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_1_4_deployment_and_updates"><a class="anchor" href="#_1_4_deployment_and_updates"></a><a class="link" href="#_1_4_deployment_and_updates">2.4. 1.4 Deployment and Updates</a></h3>
+<div class="sect3">
+<h4 id="_1_4_1_self_contained_deployments"><a class="anchor" href="#_1_4_1_self_contained_deployments"></a><a class="link" href="#_1_4_1_self_contained_deployments">2.4.1. 1.4.1 Self-Contained Deployments</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -388,7 +484,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_1_3_2_security_considerations"><a class="anchor" href="#_1_3_2_security_considerations"></a><a class="link" href="#_1_3_2_security_considerations">2.3.2. 1.3.2 Security Considerations</a></h4>
+<h4 id="_1_3_2_security_considerations"><a class="anchor" href="#_1_3_2_security_considerations"></a><a class="link" href="#_1_3_2_security_considerations">2.4.2. 1.3.2 Security Considerations</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -408,51 +504,6 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_4_cloud_native_alignment_at_the_edge"><a class="anchor" href="#_1_4_cloud_native_alignment_at_the_edge"></a><a class="link" href="#_1_4_cloud_native_alignment_at_the_edge">2.4. 1.4 Cloud-Native Alignment at the Edge</a></h3>
-<div class="sect3">
-<h4 id="_1_4_1_12_factor_principles"><a class="anchor" href="#_1_4_1_12_factor_principles"></a><a class="link" href="#_1_4_1_12_factor_principles">2.4.1. 1.4.1 12-Factor Principles</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Mapping 12-factor attributes to the design</p>
-</li>
-<li>
-<p>How this edge device model applies cloud-native principles</p>
-</li>
-<li>
-<p>Sets foundation for hybrid or future cloud-integrated models</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_1_4_2_industry_precedent"><a class="anchor" href="#_1_4_2_industry_precedent"></a><a class="link" href="#_1_4_2_industry_precedent">2.4.2. 1.4.2 Industry Precedent</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>How other modern platforms (Spring Boot, Node.js, Go, .NET Core) all follow embedded-server models</p>
-</li>
-<li>
-<p>Airlines and CUSS BYOB/edge install precedents</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_1_4_3_independent_verification"><a class="anchor" href="#_1_4_3_independent_verification"></a><a class="link" href="#_1_4_3_independent_verification">2.4.3. 1.4.3 Independent Verification</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p>AI prompts provided to verify these facts independently</p>
-</li>
-<li>
-<p>Note: prompts can be Googled, but AI gives more accurate, concise responses without manual collation</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_1_5_conclusion"><a class="anchor" href="#_1_5_conclusion"></a><a class="link" href="#_1_5_conclusion">2.5. 1.5 Conclusion</a></h3>
 <div class="paragraph">
 <p>This design is aligned with modern practice, neutral facts support it, and concerns about delivery are met.</p>
@@ -464,37 +515,53 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_its_a_cuss_app"><a class="anchor" href="#_2_its_a_cuss_app"></a><a class="link" href="#_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App</a></h2>
+<h2 id="_2_its_a_cuss_app_2_its_a_cuss_app"><a class="anchor" href="#_2_its_a_cuss_app_2_its_a_cuss_app"></a><a class="link" href="#_2_its_a_cuss_app_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App== 2. It&#8217;s a CUSS App</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.</p>
+<p>[NOTE]This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.</p>
 </div>
-<div class="sect2">
-<h3 id="_2_1_cuss_specification_guidance"><a class="anchor" href="#_2_1_cuss_specification_guidance"></a><a class="link" href="#_2_1_cuss_specification_guidance">3.1. 2.1 CUSS Specification Guidance</a></h3>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>This section explains what defines a CUSS application and how our design adheres to IATA CUSS standards.=== 2.1 CUSS Specification Guidance</p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>The IATA CUSS specification includes addenda for <strong>BYOB (Bring Your Own Browser)</strong> and <strong>BYOJ (Bring Your Own Java)</strong>.</p>
 </div>
+<div class="sect2">
+<h3 id="_2_1_cuss_standards_compliancethis_proves_the_spec_expects_local_artifacts_not_a_remote_only_model"><a class="anchor" href="#_2_1_cuss_standards_compliancethis_proves_the_spec_expects_local_artifacts_not_a_remote_only_model"></a><a class="link" href="#_2_1_cuss_standards_compliancethis_proves_the_spec_expects_local_artifacts_not_a_remote_only_model">3.1. 2.1 CUSS Standards ComplianceThis proves the spec expects local artifacts, not a "remote-only" model.</a></h3>
 <div class="paragraph">
-<p>Both explicitly require local runtime components such as a browser engine or a Java Runtime Environment (JRE) to be installed on the kiosk.</p>
-</div>
-<div class="paragraph">
-<p>This proves the spec expects local artifacts, not a "remote-only" model.</p>
+<p>Content to be added&#8230;&#8203;=== 2.2 Standard Industry Practice</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_2_standard_industry_practice"><a class="anchor" href="#_2_2_standard_industry_practice"></a><a class="link" href="#_2_2_standard_industry_practice">3.2. 2.2 Standard Industry Practice</a></h3>
+<h3 id="_2_2_platform_integrationairline_apps_routinely_deploy_jars_dlls_corba_stubs_or_device_sdks_into_their_assigned_cuss_home_directory"><a class="anchor" href="#_2_2_platform_integrationairline_apps_routinely_deploy_jars_dlls_corba_stubs_or_device_sdks_into_their_assigned_cuss_home_directory"></a><a class="link" href="#_2_2_platform_integrationairline_apps_routinely_deploy_jars_dlls_corba_stubs_or_device_sdks_into_their_assigned_cuss_home_directory">3.2. 2.2 Platform IntegrationAirline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.</a></h3>
 <div class="paragraph">
-<p>Airline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.</p>
+<p>Content to be added&#8230;&#8203;These files are essential for:</p>
 </div>
-<div class="paragraph">
-<p>These files are essential for:
-* <strong>Talking to devices</strong> - Direct hardware communication
-* <strong>Executing workflows</strong> - Local business logic processing
-* <strong>Handling degraded network conditions</strong> - Offline resilience</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Talking to devices</strong> - Direct hardware communication</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_3_risks_of_a_thin_only_approach"><a class="anchor" href="#_2_3_risks_of_a_thin_only_approach"></a><a class="link" href="#_2_3_risks_of_a_thin_only_approach">3.3. 2.3 Risks of a Thin-Only Approach</a></h3>
+<h3 id="_2_3_multi_airline_support_executing_workflows_local_business_logic_processing"><a class="anchor" href="#_2_3_multi_airline_support_executing_workflows_local_business_logic_processing"></a><a class="link" href="#_2_3_multi_airline_support_executing_workflows_local_business_logic_processing">3.3. 2.3 Multi-Airline Support* <strong>Executing workflows</strong> - Local business logic processing</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Handling degraded network conditions</strong> - Offline resilience</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Content to be added&#8230;&#8203;
+=== 2.3 Risks of a Thin-Only Approach</p>
+</div>
 <div class="sect3">
 <h4 id="_2_3_1_specification_non_compliance"><a class="anchor" href="#_2_3_1_specification_non_compliance"></a><a class="link" href="#_2_3_1_specification_non_compliance">3.3.1. 2.3.1 Specification Non-Compliance</a></h4>
 <div class="paragraph">
@@ -617,43 +684,48 @@
 <div class="sect1">
 <h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">4. 3. User Interface Design</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The CUSS application provides multiple user interfaces designed for different audiences and use cases, from passenger-facing kiosk interactions to administrative management tools.</p>
+<p>This section covers comprehensive user interface design for the CUSS application, including design principles, screen flows, component architecture, and administrative interfaces.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. UI Types Overview</caption>
+<caption class="title">Table 2. User Interface Design Overview</caption>
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 30%;">
-<col style="width: 60%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Interface Type</th>
-<th class="tableblock halign-left valign-top">Target Users</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Subsection</th>
+<th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Passenger Interface</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Airport passengers</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Touch-optimized kiosk interface for check-in, baggage, and boarding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1 Design Principles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accessibility standards, usability principles, and inclusive design guidelines</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Admin Interface</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IT administrators</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web-based management for workflows, monitoring, and configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2 Screen Flow and Navigation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passenger journey workflows, error handling, and navigation patterns</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Builder</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Business analysts</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Visual tool for creating and editing passenger workflows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3 Component Design</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visual components, responsive design, and UI framework architecture</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Monitoring Dashboard</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Operations teams</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Real-time system health, analytics, and troubleshooting</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4 Administrative Interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workflow builder interface, monitoring dashboards, and management tools</p></td>
 </tr>
 </tbody>
 </table>
@@ -925,7 +997,7 @@
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Security Requirements Overview</caption>
+<caption class="title">Table 3. Security Requirements Overview</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1676,43 +1748,48 @@
 <div class="sect1">
 <h2 id="_5_core_components"><a class="anchor" href="#_5_core_components"></a><a class="link" href="#_5_core_components">6. 5. Core Components</a></h2>
 <div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>The CUSS application is built around four core components that work together to provide a flexible, configurable workflow execution environment.</p>
+<p>This section details the core components of the CUSS application architecture, including the workflow engine, workflow builder, workflow player, and domain-specific language.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Component Overview</caption>
+<caption class="title">Table 4. Core Components Overview</caption>
 <colgroup>
-<col style="width: 10%;">
-<col style="width: 30%;">
-<col style="width: 60%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Subsection</th>
 <th class="tableblock halign-left valign-top">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Engine</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Execution &amp; State Management</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Executes workflow definitions, manages state transitions, and coordinates business logic</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.1 Workflow Engine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core workflow processing engine, state management, and execution framework</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Builder</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Visual Design Interface</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Drag-and-drop interface for creating workflows without coding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.2 Workflow Builder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrative interface for workflow creation and management</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain-Specific Language</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Business Logic Binding</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Declarative language for binding business operations to UI components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.3 Workflow Player</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Runtime workflow execution and user interface rendering</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Player</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Browser-Based Rendering</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vue3 application that renders workflows in WebView2 environment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.4 Domain Specific Language (DSL)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workflow definition language and configuration syntax</p></td>
 </tr>
 </tbody>
 </table>
@@ -2034,12 +2111,289 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_5_3_domain_specific_language_dsl"><a class="anchor" href="#_5_3_domain_specific_language_dsl"></a><a class="link" href="#_5_3_domain_specific_language_dsl">6.3. 5.3 Domain-Specific Language (DSL)</a></h3>
+<h3 id="_5_3_workflow_player"><a class="anchor" href="#_5_3_workflow_player"></a><a class="link" href="#_5_3_workflow_player">6.3. 5.3 Workflow Player</a></h3>
+<div class="paragraph">
+<p>The Workflow Player renders and executes workflows in the browser environment using Vue3 and WebView2.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_3_1_architecture_overview"><a class="anchor" href="#_5_3_1_architecture_overview"></a><a class="link" href="#_5_3_1_architecture_overview">6.3.1. 5.3.1 Architecture Overview</a></h4>
+<div class="paragraph">
+<p>The Workflow Player is a <strong>Vue3-based application</strong> that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Renders workflow UI</strong> from JSON definitions</p>
+</li>
+<li>
+<p><strong>Handles user interactions</strong> and form submissions</p>
+</li>
+<li>
+<p><strong>Executes DSL commands</strong> through the Workflow Engine</p>
+</li>
+<li>
+<p><strong>Manages local state</strong> and session data</p>
+</li>
+<li>
+<p><strong>Communicates with backend</strong> services via HTTP/WebSocket</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_2_component_rendering"><a class="anchor" href="#_5_4_2_component_rendering"></a><a class="link" href="#_5_4_2_component_rendering">6.3.2. 5.4.2 Component Rendering</a></h4>
+<div class="paragraph">
+<p><strong>Dynamic Component Loading:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Vue3 component resolution
+const ComponentMap = {
+  'PassengerLookupForm': () =&gt; import('./components/PassengerLookupForm.vue'),
+  'SeatSelection': () =&gt; import('./components/SeatSelection.vue'),
+  'BoardingPassDisplay': () =&gt; import('./components/BoardingPassDisplay.vue')
+}
+
+// Dynamic rendering based on workflow step
+const currentComponent = computed(() =&gt; {
+  return ComponentMap[currentStep.value.component]
+})</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_3_webview2_integration"><a class="anchor" href="#_5_4_3_webview2_integration"></a><a class="link" href="#_5_4_3_webview2_integration">6.3.3. 5.4.3 WebView2 Integration</a></h4>
+<div class="paragraph">
+<p>The Workflow Player runs within <strong>Microsoft WebView2</strong> providing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Modern web standards</strong> (HTML5, CSS3, ES2020+)</p>
+</li>
+<li>
+<p><strong>Native desktop integration</strong> with Windows APIs</p>
+</li>
+<li>
+<p><strong>Hardware acceleration</strong> for smooth UI performance</p>
+</li>
+<li>
+<p><strong>Isolated browser context</strong> for security</p>
+</li>
+<li>
+<p><strong>Offline capability</strong> with cached resources</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_4_user_interaction_handling"><a class="anchor" href="#_5_4_4_user_interaction_handling"></a><a class="link" href="#_5_4_4_user_interaction_handling">6.3.4. 5.4.4 User Interaction Handling</a></h4>
+<div class="paragraph">
+<p><strong>Event Processing Flow:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// User clicks button
+onButtonClick(event) {
+  // 1. Validate form data
+  const isValid = validateForm(this.formData)
+  if (!isValid) return showValidationErrors()
+
+  // 2. Execute DSL command
+  const result = await executeDSL({
+    command: 'PassengerService.lookup',
+    params: this.formData
+  })
+
+  // 3. Handle response
+  if (result.success) {
+    this.navigateToStep(result.nextStep)
+  } else {
+    this.showError(result.error)
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_5_state_management"><a class="anchor" href="#_5_4_5_state_management"></a><a class="link" href="#_5_4_5_state_management">6.3.5. 5.4.5 State Management</a></h4>
+<div class="paragraph">
+<p><strong>Vuex Store Structure:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const store = createStore({
+  state: {
+    currentWorkflow: null,
+    currentStep: null,
+    userData: {},
+    sessionData: {},
+    deviceStatus: {},
+    configuration: {}
+  },
+  mutations: {
+    SET_CURRENT_STEP(state, step) {
+      state.currentStep = step
+    },
+    UPDATE_USER_DATA(state, data) {
+      state.userData = { ...state.userData, ...data }
+    }
+  },
+  actions: {
+    async executeStep({ commit }, stepData) {
+      // Execute workflow step
+      const result = await workflowEngine.executeStep(stepData)
+      commit('SET_CURRENT_STEP', result.nextStep)
+      return result
+    }
+  }
+})</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_6_component_library"><a class="anchor" href="#_5_4_6_component_library"></a><a class="link" href="#_5_4_6_component_library">6.3.6. 5.4.6 Component Library</a></h4>
+<div class="paragraph">
+<p><strong>Built-in Components:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+<th class="tableblock halign-left valign-top">Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-button&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Action buttons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSL binding, validation, loading states</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-input&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text/number inputs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validation, formatting, accessibility</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-select&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dropdown selections</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic options, search, multi-select</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-card&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content containers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsive layout, airline branding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-progress&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step indicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visual progress tracking</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-device-status&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device indicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Real-time status updates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-flight-info&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight displays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formatted flight data presentation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_5_4_7_responsive_design"><a class="anchor" href="#_5_4_7_responsive_design"></a><a class="link" href="#_5_4_7_responsive_design">6.3.7. 5.4.7 Responsive Design</a></h4>
+<div class="paragraph">
+<p><strong>Adaptive Layout:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">/* Kiosk-optimized responsive design */
+@media (min-width: 1920px) {
+  .workflow-container {
+    max-width: 1400px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .workflow-container {
+    max-width: 1200px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Touch-friendly sizing */
+.cuss-button {
+  min-height: 60px;
+  min-width: 120px;
+  touch-action: manipulation;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_8_performance_optimization"><a class="anchor" href="#_5_4_8_performance_optimization"></a><a class="link" href="#_5_4_8_performance_optimization">6.3.8. 5.4.8 Performance Optimization</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Lazy Loading</strong>: Components loaded on-demand</p>
+</li>
+<li>
+<p><strong>Virtual Scrolling</strong>: Efficient handling of large lists</p>
+</li>
+<li>
+<p><strong>Image Optimization</strong>: WebP format with fallbacks</p>
+</li>
+<li>
+<p><strong>Bundle Splitting</strong>: Separate chunks per workflow</p>
+</li>
+<li>
+<p><strong>Caching Strategy</strong>: Service worker for offline support</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_9_accessibility_features"><a class="anchor" href="#_5_4_9_accessibility_features"></a><a class="link" href="#_5_4_9_accessibility_features">6.3.9. 5.4.9 Accessibility Features</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>WCAG 2.1 AA compliance</strong></p>
+</li>
+<li>
+<p><strong>Keyboard navigation</strong> support</p>
+</li>
+<li>
+<p><strong>Screen reader</strong> compatibility</p>
+</li>
+<li>
+<p><strong>High contrast</strong> theme options</p>
+</li>
+<li>
+<p><strong>Text scaling</strong> support</p>
+</li>
+<li>
+<p><strong>Focus management</strong> for workflows</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_4_domain_specific_language_dsl"><a class="anchor" href="#_5_4_domain_specific_language_dsl"></a><a class="link" href="#_5_4_domain_specific_language_dsl">6.4. 5.4 Domain-Specific Language (DSL)</a></h3>
 <div class="paragraph">
 <p>The CUSS App employs a Domain-Specific Language to bind business logic to UI components and workflow steps, enabling dynamic behavior without code compilation.</p>
 </div>
 <div class="sect3">
-<h4 id="_5_3_1_dsl_architecture"><a class="anchor" href="#_5_3_1_dsl_architecture"></a><a class="link" href="#_5_3_1_dsl_architecture">6.3.1. 5.3.1 DSL Architecture</a></h4>
+<h4 id="_5_4_1_dsl_architecture"><a class="anchor" href="#_5_4_1_dsl_architecture"></a><a class="link" href="#_5_4_1_dsl_architecture">6.4.1. 5.4.1 DSL Architecture</a></h4>
 <div class="paragraph">
 <p>The DSL provides a declarative way to:
 - <strong>Bind actions</strong> to UI events (onClick, onSubmit, onLoad)
@@ -2049,7 +2403,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_5_3_2_dsl_command_structure"><a class="anchor" href="#_5_3_2_dsl_command_structure"></a><a class="link" href="#_5_3_2_dsl_command_structure">6.3.2. 5.3.2 DSL Command Structure</a></h4>
+<h4 id="_5_3_2_dsl_command_structure"><a class="anchor" href="#_5_3_2_dsl_command_structure"></a><a class="link" href="#_5_3_2_dsl_command_structure">6.4.2. 5.3.2 DSL Command Structure</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -2066,7 +2420,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_5_3_3_available_dsl_commands"><a class="anchor" href="#_5_3_3_available_dsl_commands"></a><a class="link" href="#_5_3_3_available_dsl_commands">6.3.3. 5.3.3 Available DSL Commands</a></h4>
+<h4 id="_5_3_3_available_dsl_commands"><a class="anchor" href="#_5_3_3_available_dsl_commands"></a><a class="link" href="#_5_3_3_available_dsl_commands">6.4.3. 5.3.3 Available DSL Commands</a></h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2160,7 +2514,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_5_3_4_event_binding_examples"><a class="anchor" href="#_5_3_4_event_binding_examples"></a><a class="link" href="#_5_3_4_event_binding_examples">6.3.4. 5.3.4 Event Binding Examples</a></h4>
+<h4 id="_5_3_4_event_binding_examples"><a class="anchor" href="#_5_3_4_event_binding_examples"></a><a class="link" href="#_5_3_4_event_binding_examples">6.4.4. 5.3.4 Event Binding Examples</a></h4>
 <div class="paragraph">
 <p><strong>Button Click Event:</strong></p>
 </div>
@@ -2218,7 +2572,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_5_3_5_conditional_logic"><a class="anchor" href="#_5_3_5_conditional_logic"></a><a class="link" href="#_5_3_5_conditional_logic">6.3.5. 5.3.5 Conditional Logic</a></h4>
+<h4 id="_5_3_5_conditional_logic"><a class="anchor" href="#_5_3_5_conditional_logic"></a><a class="link" href="#_5_3_5_conditional_logic">6.4.5. 5.3.5 Conditional Logic</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -2237,7 +2591,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_5_3_6_parameter_substitution"><a class="anchor" href="#_5_3_6_parameter_substitution"></a><a class="link" href="#_5_3_6_parameter_substitution">6.3.6. 5.3.6 Parameter Substitution</a></h4>
+<h4 id="_5_3_6_parameter_substitution"><a class="anchor" href="#_5_3_6_parameter_substitution"></a><a class="link" href="#_5_3_6_parameter_substitution">6.4.6. 5.3.6 Parameter Substitution</a></h4>
 <div class="paragraph">
 <p>The DSL supports dynamic parameter substitution using expression syntax:</p>
 </div>
@@ -2284,7 +2638,7 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_5_3_7_error_handling"><a class="anchor" href="#_5_3_7_error_handling"></a><a class="link" href="#_5_3_7_error_handling">6.3.7. 5.3.7 Error Handling</a></h4>
+<h4 id="_5_3_7_error_handling"><a class="anchor" href="#_5_3_7_error_handling"></a><a class="link" href="#_5_3_7_error_handling">6.4.7. 5.3.7 Error Handling</a></h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -2306,7 +2660,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_5_3_8_advanced_dsl_features"><a class="anchor" href="#_5_3_8_advanced_dsl_features"></a><a class="link" href="#_5_3_8_advanced_dsl_features">6.3.8. 5.3.8 Advanced DSL Features</a></h4>
+<h4 id="_5_3_8_advanced_dsl_features"><a class="anchor" href="#_5_3_8_advanced_dsl_features"></a><a class="link" href="#_5_3_8_advanced_dsl_features">6.4.8. 5.3.8 Advanced DSL Features</a></h4>
 <div class="paragraph">
 <p><strong>Chained Operations:</strong></p>
 </div>
@@ -2345,283 +2699,6 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_5_4_workflow_player"><a class="anchor" href="#_5_4_workflow_player"></a><a class="link" href="#_5_4_workflow_player">6.4. 5.4 Workflow Player</a></h3>
-<div class="paragraph">
-<p>The Workflow Player renders and executes workflows in the browser environment using Vue3 and WebView2.</p>
-</div>
-<div class="sect3">
-<h4 id="_5_4_1_architecture_overview"><a class="anchor" href="#_5_4_1_architecture_overview"></a><a class="link" href="#_5_4_1_architecture_overview">6.4.1. 5.4.1 Architecture Overview</a></h4>
-<div class="paragraph">
-<p>The Workflow Player is a <strong>Vue3-based application</strong> that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Renders workflow UI</strong> from JSON definitions</p>
-</li>
-<li>
-<p><strong>Handles user interactions</strong> and form submissions</p>
-</li>
-<li>
-<p><strong>Executes DSL commands</strong> through the Workflow Engine</p>
-</li>
-<li>
-<p><strong>Manages local state</strong> and session data</p>
-</li>
-<li>
-<p><strong>Communicates with backend</strong> services via HTTP/WebSocket</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_2_component_rendering"><a class="anchor" href="#_5_4_2_component_rendering"></a><a class="link" href="#_5_4_2_component_rendering">6.4.2. 5.4.2 Component Rendering</a></h4>
-<div class="paragraph">
-<p><strong>Dynamic Component Loading:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Vue3 component resolution
-const ComponentMap = {
-  'PassengerLookupForm': () =&gt; import('./components/PassengerLookupForm.vue'),
-  'SeatSelection': () =&gt; import('./components/SeatSelection.vue'),
-  'BoardingPassDisplay': () =&gt; import('./components/BoardingPassDisplay.vue')
-}
-
-// Dynamic rendering based on workflow step
-const currentComponent = computed(() =&gt; {
-  return ComponentMap[currentStep.value.component]
-})</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_3_webview2_integration"><a class="anchor" href="#_5_4_3_webview2_integration"></a><a class="link" href="#_5_4_3_webview2_integration">6.4.3. 5.4.3 WebView2 Integration</a></h4>
-<div class="paragraph">
-<p>The Workflow Player runs within <strong>Microsoft WebView2</strong> providing:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Modern web standards</strong> (HTML5, CSS3, ES2020+)</p>
-</li>
-<li>
-<p><strong>Native desktop integration</strong> with Windows APIs</p>
-</li>
-<li>
-<p><strong>Hardware acceleration</strong> for smooth UI performance</p>
-</li>
-<li>
-<p><strong>Isolated browser context</strong> for security</p>
-</li>
-<li>
-<p><strong>Offline capability</strong> with cached resources</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_4_user_interaction_handling"><a class="anchor" href="#_5_4_4_user_interaction_handling"></a><a class="link" href="#_5_4_4_user_interaction_handling">6.4.4. 5.4.4 User Interaction Handling</a></h4>
-<div class="paragraph">
-<p><strong>Event Processing Flow:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// User clicks button
-onButtonClick(event) {
-  // 1. Validate form data
-  const isValid = validateForm(this.formData)
-  if (!isValid) return showValidationErrors()
-
-  // 2. Execute DSL command
-  const result = await executeDSL({
-    command: 'PassengerService.lookup',
-    params: this.formData
-  })
-
-  // 3. Handle response
-  if (result.success) {
-    this.navigateToStep(result.nextStep)
-  } else {
-    this.showError(result.error)
-  }
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_5_state_management"><a class="anchor" href="#_5_4_5_state_management"></a><a class="link" href="#_5_4_5_state_management">6.4.5. 5.4.5 State Management</a></h4>
-<div class="paragraph">
-<p><strong>Vuex Store Structure:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const store = createStore({
-  state: {
-    currentWorkflow: null,
-    currentStep: null,
-    userData: {},
-    sessionData: {},
-    deviceStatus: {},
-    configuration: {}
-  },
-  mutations: {
-    SET_CURRENT_STEP(state, step) {
-      state.currentStep = step
-    },
-    UPDATE_USER_DATA(state, data) {
-      state.userData = { ...state.userData, ...data }
-    }
-  },
-  actions: {
-    async executeStep({ commit }, stepData) {
-      // Execute workflow step
-      const result = await workflowEngine.executeStep(stepData)
-      commit('SET_CURRENT_STEP', result.nextStep)
-      return result
-    }
-  }
-})</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_6_component_library"><a class="anchor" href="#_5_4_6_component_library"></a><a class="link" href="#_5_4_6_component_library">6.4.6. 5.4.6 Component Library</a></h4>
-<div class="paragraph">
-<p><strong>Built-in Components:</strong></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 30%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Component</th>
-<th class="tableblock halign-left valign-top">Usage</th>
-<th class="tableblock halign-left valign-top">Features</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-button&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Action buttons</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DSL binding, validation, loading states</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-input&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Text/number inputs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validation, formatting, accessibility</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-select&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dropdown selections</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic options, search, multi-select</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-card&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Content containers</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Responsive layout, airline branding</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-progress&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Step indicators</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Visual progress tracking</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-device-status&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Device indicators</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Real-time status updates</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-flight-info&gt;</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Flight displays</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Formatted flight data presentation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_5_4_7_responsive_design"><a class="anchor" href="#_5_4_7_responsive_design"></a><a class="link" href="#_5_4_7_responsive_design">6.4.7. 5.4.7 Responsive Design</a></h4>
-<div class="paragraph">
-<p><strong>Adaptive Layout:</strong></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">/* Kiosk-optimized responsive design */
-@media (min-width: 1920px) {
-  .workflow-container {
-    max-width: 1400px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 1366px) {
-  .workflow-container {
-    max-width: 1200px;
-    font-size: 1.1rem;
-  }
-}
-
-/* Touch-friendly sizing */
-.cuss-button {
-  min-height: 60px;
-  min-width: 120px;
-  touch-action: manipulation;
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_8_performance_optimization"><a class="anchor" href="#_5_4_8_performance_optimization"></a><a class="link" href="#_5_4_8_performance_optimization">6.4.8. 5.4.8 Performance Optimization</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Lazy Loading</strong>: Components loaded on-demand</p>
-</li>
-<li>
-<p><strong>Virtual Scrolling</strong>: Efficient handling of large lists</p>
-</li>
-<li>
-<p><strong>Image Optimization</strong>: WebP format with fallbacks</p>
-</li>
-<li>
-<p><strong>Bundle Splitting</strong>: Separate chunks per workflow</p>
-</li>
-<li>
-<p><strong>Caching Strategy</strong>: Service worker for offline support</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_5_4_9_accessibility_features"><a class="anchor" href="#_5_4_9_accessibility_features"></a><a class="link" href="#_5_4_9_accessibility_features">6.4.9. 5.4.9 Accessibility Features</a></h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>WCAG 2.1 AA compliance</strong></p>
-</li>
-<li>
-<p><strong>Keyboard navigation</strong> support</p>
-</li>
-<li>
-<p><strong>Screen reader</strong> compatibility</p>
-</li>
-<li>
-<p><strong>High contrast</strong> theme options</p>
-</li>
-<li>
-<p><strong>Text scaling</strong> support</p>
-</li>
-<li>
-<p><strong>Focus management</strong> for workflows</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -2642,7 +2719,7 @@ onButtonClick(event) {
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Deployment Strategy Overview</caption>
+<caption class="title">Table 5. Deployment Strategy Overview</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3641,53 +3718,49 @@ public class DeploymentService
 </div>
 </div>
 <div class="sect1">
-<h2 id="_7_appendices"><a class="anchor" href="#_7_appendices"></a><a class="link" href="#_7_appendices">8. 7. Appendices</a></h2>
+<h2 id="_7_appendices_7_appendices"><a class="anchor" href="#_7_appendices_7_appendices"></a><a class="link" href="#_7_appendices_7_appendices">8. 7. Appendices== 7. Appendices</a></h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
-<p>This section provides comprehensive reference materials including glossary, standards, technical specifications, and sample configurations to support implementation and maintenance of the CUSS application.</p>
+<p>This section provides comprehensive reference materials including glossary, standards, technical specifications, and sample configurations to support implementation and maintenance of the CUSS application.This section provides comprehensive reference materials including glossary, standards, technical specifications, and sample configurations to support implementation and maintenance of the CUSS application.</p>
 </div>
-</td>
-</tr>
-</table>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Appendices Overview</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Subsection</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.1 Glossary</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definitions of industry terms, technical concepts, and Microsoft technologies</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.2 Standards and References</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IATA standards, accessibility guidelines, security standards, and technical specifications</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.3 Technical Specifications</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System requirements, network specifications, performance benchmarks, and integration details</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">7.4 Sample Configurations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application configuration examples, security settings, deployment configurations, and monitoring setup</p></td>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="paragraph">
+<div class="title">Appendices Overview.Appendices Overview</div>
+<p>|===|===</p>
+</div>
+<div class="paragraph">
+<p>|Subsection |Description|Subsection |Description</p>
+</div>
+<div class="paragraph">
+<p>|7.1 Glossary|7.1 Glossary</p>
+</div>
+<div class="paragraph">
+<p>|Definitions of industry terms, technical concepts, and Microsoft technologies|Definitions of industry terms, technical concepts, and Microsoft technologies</p>
+</div>
+<div class="paragraph">
+<p>|7.2 Standards and References|7.2 Standards and References</p>
+</div>
+<div class="paragraph">
+<p>|IATA standards, accessibility guidelines, security standards, and technical specifications|IATA standards, accessibility guidelines, security standards, and technical specifications</p>
+</div>
+<div class="paragraph">
+<p>|7.3 Technical Specifications|7.3 Technical Specifications</p>
+</div>
+<div class="paragraph">
+<p>|System requirements, network specifications, performance benchmarks, and integration details|System requirements, network specifications, performance benchmarks, and integration details</p>
+</div>
+<div class="paragraph">
+<p>|7.4 Sample Configurations|7.4 Sample Configurations</p>
+</div>
+<div class="paragraph">
+<p>|Application configuration examples, security settings, deployment configurations, and monitoring setup|Application configuration examples, security settings, deployment configurations, and monitoring setup</p>
+</div>
+<div class="paragraph">
+<p>|===|===</p>
+</div>
 <div class="sect2">
 <h3 id="_7_1_glossary"><a class="anchor" href="#_7_1_glossary"></a><a class="link" href="#_7_1_glossary">8.1. 7.1 Glossary</a></h3>
 <div class="sect3">
@@ -4660,7 +4733,7 @@ spec:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-03 22:56:32 -0500
+Last updated 2025-10-03 23:49:42 -0500
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
