@@ -1,0 +1,34 @@
+== 5. Core Components
+
+The CUSS application is built around four core components that work together to provide a flexible, configurable workflow execution environment.
+
+.Component Overview
+[cols="1,3,6"]
+|===
+| Component | Purpose | Description
+
+| **Workflow Engine**
+| Execution & State Management  
+| Executes workflow definitions, manages state transitions, and coordinates business logic
+
+| **Workflow Builder** 
+| Visual Design Interface
+| Drag-and-drop interface for creating workflows without coding
+
+| **Domain-Specific Language**
+| Business Logic Binding
+| Declarative language for binding business operations to UI components
+
+| **Workflow Player**
+| Browser-Based Rendering
+| Vue3 application that renders workflows in WebView2 environment
+|===
+
+// Include all component sub-sections
+include::05-core-components/workflow-engine.adoc[]
+
+include::05-core-components/workflow-builder.adoc[]
+
+include::05-core-components/dsl.adoc[]
+
+include::05-core-components/workflow-player.adoc[]

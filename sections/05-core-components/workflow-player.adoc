@@ -1,0 +1,188 @@
+=== 5.4 Workflow Player
+
+The Workflow Player renders and executes workflows in the browser environment using Vue3 and WebView2.
+
+==== 5.4.1 Architecture Overview
+
+The Workflow Player is a **Vue3-based application** that:
+
+* **Renders workflow UI** from JSON definitions
+* **Handles user interactions** and form submissions
+* **Executes DSL commands** through the Workflow Engine
+* **Manages local state** and session data
+* **Communicates with backend** services via HTTP/WebSocket
+
+==== 5.4.2 Component Rendering
+
+**Dynamic Component Loading:**
+[source,javascript]
+----
+// Vue3 component resolution
+const ComponentMap = {
+  'PassengerLookupForm': () => import('./components/PassengerLookupForm.vue'),
+  'SeatSelection': () => import('./components/SeatSelection.vue'),
+  'BoardingPassDisplay': () => import('./components/BoardingPassDisplay.vue')
+}
+
+// Dynamic rendering based on workflow step
+const currentComponent = computed(() => {
+  return ComponentMap[currentStep.value.component]
+})
+----
+
+==== 5.4.3 WebView2 Integration
+
+The Workflow Player runs within **Microsoft WebView2** providing:
+
+* **Modern web standards** (HTML5, CSS3, ES2020+)
+* **Native desktop integration** with Windows APIs
+* **Hardware acceleration** for smooth UI performance
+* **Isolated browser context** for security
+* **Offline capability** with cached resources
+
+==== 5.4.4 User Interaction Handling
+
+**Event Processing Flow:**
+[source,javascript]
+----
+// User clicks button
+onButtonClick(event) {
+  // 1. Validate form data
+  const isValid = validateForm(this.formData)
+  if (!isValid) return showValidationErrors()
+  
+  // 2. Execute DSL command
+  const result = await executeDSL({
+    command: 'PassengerService.lookup',
+    params: this.formData
+  })
+  
+  // 3. Handle response
+  if (result.success) {
+    this.navigateToStep(result.nextStep)
+  } else {
+    this.showError(result.error)
+  }
+}
+----
+
+==== 5.4.5 State Management
+
+**Vuex Store Structure:**
+[source,javascript]
+----
+const store = createStore({
+  state: {
+    currentWorkflow: null,
+    currentStep: null,
+    userData: {},
+    sessionData: {},
+    deviceStatus: {},
+    configuration: {}
+  },
+  mutations: {
+    SET_CURRENT_STEP(state, step) {
+      state.currentStep = step
+    },
+    UPDATE_USER_DATA(state, data) {
+      state.userData = { ...state.userData, ...data }
+    }
+  },
+  actions: {
+    async executeStep({ commit }, stepData) {
+      // Execute workflow step
+      const result = await workflowEngine.executeStep(stepData)
+      commit('SET_CURRENT_STEP', result.nextStep)
+      return result
+    }
+  }
+})
+----
+
+==== 5.4.6 Component Library
+
+**Built-in Components:**
+
+[cols="2,3,5"]
+|===
+| Component | Usage | Features
+
+| `<cuss-button>`
+| Action buttons
+| DSL binding, validation, loading states
+
+| `<cuss-input>`
+| Text/number inputs
+| Validation, formatting, accessibility
+
+| `<cuss-select>`
+| Dropdown selections
+| Dynamic options, search, multi-select
+
+| `<cuss-card>`
+| Content containers
+| Responsive layout, airline branding
+
+| `<cuss-progress>`
+| Step indicators
+| Visual progress tracking
+
+| `<cuss-device-status>`
+| Device indicators
+| Real-time status updates
+
+| `<cuss-flight-info>`
+| Flight displays
+| Formatted flight data presentation
+|===
+
+==== 5.4.7 Responsive Design
+
+**Adaptive Layout:**
+[source,css]
+----
+/* Kiosk-optimized responsive design */
+@media (min-width: 1920px) {
+  .workflow-container {
+    max-width: 1400px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .workflow-container {
+    max-width: 1200px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Touch-friendly sizing */
+.cuss-button {
+  min-height: 60px;
+  min-width: 120px;
+  touch-action: manipulation;
+}
+----
+
+==== 5.4.8 Performance Optimization
+
+* **Lazy Loading**: Components loaded on-demand
+* **Virtual Scrolling**: Efficient handling of large lists
+* **Image Optimization**: WebP format with fallbacks
+* **Bundle Splitting**: Separate chunks per workflow
+* **Caching Strategy**: Service worker for offline support
+
+==== 5.4.9 Accessibility Features
+
+* **WCAG 2.1 AA compliance**
+* **Keyboard navigation** support
+* **Screen reader** compatibility
+* **High contrast** theme options
+* **Text scaling** support
+* **Focus management** for workflows
+
+// TODO: Add detailed content about:
+// - Error boundary handling
+// - Performance monitoring
+// - Debugging tools
+// - Progressive Web App features

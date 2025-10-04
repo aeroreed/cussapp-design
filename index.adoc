@@ -22,21 +22,17 @@ This document outlines the design and architecture for the CUSS (Common Use Self
 // Include all sections
 include::sections/01-introduction.adoc[]
 
-include::sections/02-system-architecture.adoc[]
+include::sections/02-its-a-cuss-app.adoc[]
 
 include::sections/03-user-interface-design.adoc[]
 
 include::sections/04-security-requirements.adoc[]
 
-include::sections/05-integration-specifications.adoc[]
+include::sections/05-core-components.adoc[]
 
-include::sections/06-implementation-guidelines.adoc[]
+include::sections/06-deployment-update-strategy.adoc[]
 
-include::sections/07-deployment-update-strategy.adoc[]
-
-include::sections/08-compliance-standards.adoc[]
-
-include::sections/09-appendices.adoc[]
+include::sections/07-appendices.adoc[]
 
 ---
 

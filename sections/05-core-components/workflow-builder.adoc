@@ -1,0 +1,108 @@
+=== 5.2 Workflow Builder (Admin Console)
+
+The Workflow Builder provides a user interface for creating and managing workflow definitions.
+
+==== 5.2.1 Design Interface
+
+The Workflow Builder features a **visual, drag-and-drop interface** for creating workflows without coding.
+
+==== 5.2.2 WorkFlow Builder Wireframes
+
+===== View / Page Editor (WYSIWYG)
+
+[cols="3,7"]
+|===
+| Toolbox (UI Components) | Canvas (Workflow View) | Properties Panel
+
+| [Input Field]  
+  [Button]  
+  [Label]  
+  [Image]  
+  [Dropdown]  
+
+| +----------------------------------+  
+| | [Label: Passenger Lookup]        |  
+| | [Input: Last Name]               |  
+| | [Button: Search]                 |  
+| +----------------------------------+  
+
+| Component: Button  
+  Label: "Search"  
+  ID: searchBtn  
+  DSL Binding: LookupPassenger.execute  
+|===
+
+[NOTE]  
+====
+What's happening here:  
+- Left panel = available UI elements to drag.  
+- Middle = WYSIWYG editor of the workflow view.  
+- Right = edit attributes, styles, and DSL bindings for selected component.  
+====
+
+===== DSL Binding Panel
+
+[cols="2,8"]
+|===
+| Component Selected | Binding Options
+
+| Button: "Print Bag Tag"  
+  ID: printBtn  
+
+| DSL Command: BagTag.print  
+  Event: onClick  
+  Params: { "printer":"bagtag01" }  
+|===
+
+[NOTE]  
+====
+What's happening here:  
+- When a component is selected, you can bind DSL commands (see section 5.3).  
+- Events (onClick, onSubmit, onLoad) trigger DSL execution.  
+- Supports parameterized calls with dynamic substitution.  
+====
+
+==== 5.2.3 Key Features
+
+* **Visual Workflow Designer**: Drag-and-drop interface for creating workflow steps
+* **Component Library**: Pre-built UI components optimized for CUSS environments
+* **DSL Binding Interface**: Visual editor for binding business logic to components
+* **Preview Mode**: Real-time preview of workflow appearance and behavior
+* **Validation Tools**: Built-in validation for workflow logic and completeness
+* **Version Management**: Track workflow versions and manage deployments
+* **Multi-Airline Support**: Create airline-specific workflows and branding
+
+==== 5.2.4 Workflow Configuration
+
+[source,json]
+----
+{
+  "workflow": {
+    "metadata": {
+      "name": "Check-In Workflow",
+      "version": "2.1.0",
+      "airline": "American Airlines",
+      "created": "2025-10-01T10:00:00Z"
+    },
+    "branding": {
+      "theme": "aa-corporate",
+      "colors": {
+        "primary": "#C41E3A",
+        "secondary": "#00205B"
+      },
+      "logo": "images/aa-logo.png"
+    },
+    "settings": {
+      "timeout": 300,
+      "language": "en-US",
+      "accessibility": true
+    }
+  }
+}
+----
+
+// TODO: Add detailed content about:
+// - Advanced workflow logic editor
+// - Testing and simulation tools
+// - Integration with airline systems
+// - Deployment and rollback procedures

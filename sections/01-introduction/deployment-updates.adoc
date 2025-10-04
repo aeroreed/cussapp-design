@@ -1,0 +1,17 @@
+=== 1.3 Deployment and Updates
+
+==== 1.3.1 Self-Contained Deployments
+
+- Self-contained deployments vs. central IIS push
+- How CI/CD and PowerShell/admin console can handle updates
+- dotnet publish creates versioned build artifacts
+- Build pipeline signs and packages into MSI
+- Granular kiosk or fleet-wide update options
+- BYOB/Bring Your Own Java precedents in CUSS addendum
+
+==== 1.3.2 Security Considerations
+
+- Risks of IIS (shared DLLs, app pools, patching)
+- Benefits of self-contained deployments with embedded Kestrel
+- PCI DSS alignment and isolation per kiosk
+- Neutral fact: modern shops avoid GAC gymnastics

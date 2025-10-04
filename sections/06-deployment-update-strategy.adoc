@@ -1,6 +1,6 @@
-== 7. Deployment and Update Strategy (.NET Core Model)
+== 6. Deployment and Update Strategy (.NET Core Model)
 
-=== 7.1 Wide-Open Update Palette
+=== 6.1 Wide-Open Update Palette
 
 Unlike the legacy IIS-centric model, .NET Core apps are *not bound to a single central deployment point*.
 
@@ -13,14 +13,14 @@ Unlike the legacy IIS-centric model, .NET Core apps are *not bound to a single c
 
 In short: *any model of updates you want is supported.*
 
-=== 7.2 Supported Update Methods
+=== 6.2 Supported Update Methods
 
-==== 7.2.1 Enterprise Distribution (SCCM, Intune, etc.)
+==== 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)
 * Package the .NET Core app as MSI or EXE
 * Push to all kiosks or target a subset
 * Supports staggered rollout (one terminal, one airline, or one group at a time)
 
-==== 7.2.2 File Share + PowerShell
+==== 6.2.2 File Share + PowerShell
 * Store the latest version in a secured share
 * PowerShell script (or Scheduled Task) copies binaries to kiosks
 
@@ -31,16 +31,16 @@ Copy-Item "\\share\cussapp\1.2.0\*" "C:\Program Files\CussApp\" -Recurse -Force
 Start-Service CussApp
 ----
 
-==== 7.2.3 Auto-Update Agent
+==== 6.2.3 Auto-Update Agent
 * Lightweight background process on each kiosk
 * Compares local `version.json` with central manifest
 * Downloads and applies updates automatically
 
-==== 7.2.4 ClickOnce (Optional)
+==== 6.2.4 ClickOnce (Optional)
 * Provides pull-based, self-updating deployment
 * Kiosks fetch updates at login or restart
 
-=== 7.3 Benefits Over Legacy IIS Model
+=== 6.3 Benefits Over Legacy IIS Model
 
 * *No bottleneck*: Updates aren't limited to what's hosted centrally on IIS
 * *Targeted rollouts*: Update one kiosk, one airline, or one workflow segment at a time
@@ -49,7 +49,7 @@ Start-Service CussApp
 * *Flexibility*: Our admin console can orchestrate updates as efficiently and cleanly as any legacy central IIS model
 * *Modernization*: Fits into today's CI/CD pipelines and leverages proven enterprise tools without reinventing the wheel
 
-=== 7.4 Key Rebuttals to Concerns
+=== 6.4 Key Rebuttals to Concerns
 
 * *Claim:* "You can't update kiosks if you don't use IIS." +
   *Answer:* In .NET Core, kiosks are updated the same as any Windows app: via MSI, EXE, script, or agent. IT already has these tools.
@@ -60,7 +60,7 @@ Start-Service CussApp
 * *Claim:* "Central IIS is required for consistency." +
   *Answer:* Consistency is handled by packaging/versioning. Central IIS is actually a single point of failure — distributed apps are more resilient.
 
-=== 7.5 Deployment Workflow Example
+=== 6.5 Deployment Workflow Example
 
 1. `dotnet publish` creates versioned build artifacts
 2. Build pipeline signs and packages into MSI
@@ -68,7 +68,7 @@ Start-Service CussApp
 4. IT pushes or kiosks pull updates
 5. Kiosk restarts app and runs the new version
 
-=== 7.6 Summary
+=== 6.6 Summary
 
 * .NET Core gives us a *wide-open palette* of update strategies
 * Updates are as simple as publishing new artifacts and distributing them with standard IT tools

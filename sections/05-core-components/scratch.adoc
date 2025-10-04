@@ -1,0 +1,19 @@
+[plantuml, cuss-app, svg]
+----
+@startuml
+component "CUSS App" {
+  component "Kestrel" as K
+  component "Workflow Engine" as E
+  component "WorkFlowBuilder (Vue3)" as B
+  component "Web Apps (Runner)" as R
+  component "Event Bus" as Bus
+  component "Sidecar (CORBA/JSON)" as S
+  component "DI / ServiceProvider" as DI
+}
+K --> R : serves
+R --> E : loads workflow.json
+B --> E : creates workflows
+E --> Bus : pub/sub
+S --> E : device/CUSS 1.x-2.0 bridge
+@enduml
+----

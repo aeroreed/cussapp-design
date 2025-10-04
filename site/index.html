@@ -17,77 +17,131 @@
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">1. Overview</a></li>
-<li><a href="#introduction">2. 1. Introduction</a></li>
-<li><a href="#_introduction">3. Introduction</a></li>
-<li><a href="#_legacy_vs_modern_models">4. Legacy vs. Modern Models</a></li>
-<li><a href="#_core_design_artifacts">5. Core Design Artifacts</a></li>
-<li><a href="#_deployment_and_updates">6. Deployment and Updates</a></li>
-<li><a href="#_security">7. Security</a></li>
-<li><a href="#_cloud_native_alignment_at_the_edge">8. Cloud-Native Alignment at the Edge</a></li>
-<li><a href="#_industry_precedent">9. Industry Precedent</a></li>
-<li><a href="#_independent_verification">10. Independent Verification</a></li>
-<li><a href="#_conclusion">11. Conclusion</a></li>
-<li><a href="#_2_system_architecture">12. 2. System Architecture</a>
+<li><a href="#introduction">2. 1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_2_1_high_level_architecture">12.1. 2.1 High-Level Architecture</a></li>
-<li><a href="#_2_2_component_overview">12.2. 2.2 Component Overview</a>
+<li><a href="#_1_1_overview">2.1. 1.1 Overview</a></li>
+<li><a href="#_1_2_design_overview">2.2. 1.2 Design Overview</a>
 <ul class="sectlevel3">
-<li><a href="#_2_2_1_user_interface_components">12.2.1. 2.2.1 User Interface Components</a></li>
-<li><a href="#_2_2_2_backend_services">12.2.2. 2.2.2 Backend Services</a></li>
+<li><a href="#_1_2_1_legacy_vs_modern_models">2.2.1. 1.2.1 Legacy vs. Modern Models</a></li>
+<li><a href="#_1_2_2_core_design_artifacts">2.2.2. 1.2.2 Core Design Artifacts</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#_3_user_interface_design">13. 3. User Interface Design</a>
-<ul class="sectlevel2">
-<li><a href="#_3_1_design_principles">13.1. 3.1 Design Principles</a></li>
-<li><a href="#_3_2_screen_flow">13.2. 3.2 Screen Flow</a></li>
-</ul>
-</li>
-<li><a href="#_4_security_requirements">14. 4. Security Requirements</a>
-<ul class="sectlevel2">
-<li><a href="#_4_1_data_protection">14.1. 4.1 Data Protection</a></li>
-</ul>
-</li>
-<li><a href="#_5_integration_specifications">15. 5. Integration Specifications</a>
-<ul class="sectlevel2">
-<li><a href="#_5_1_airline_systems">15.1. 5.1 Airline Systems</a></li>
-<li><a href="#_5_2_airport_systems">15.2. 5.2 Airport Systems</a></li>
-</ul>
-</li>
-<li><a href="#_6_implementation_guidelines">16. 6. Implementation Guidelines</a>
-<ul class="sectlevel2">
-<li><a href="#_6_1_deployment_process">16.1. 6.1 Deployment Process</a></li>
-<li><a href="#_6_2_maintenance_and_support">16.2. 6.2 Maintenance and Support</a></li>
-</ul>
-</li>
-<li><a href="#_7_deployment_and_update_strategy_net_core_model">17. 7. Deployment and Update Strategy (.NET Core Model)</a>
-<ul class="sectlevel2">
-<li><a href="#_7_1_wide_open_update_palette">17.1. 7.1 Wide-Open Update Palette</a></li>
-<li><a href="#_7_2_supported_update_methods">17.2. 7.2 Supported Update Methods</a>
+<li><a href="#_1_3_deployment_and_updates">2.3. 1.3 Deployment and Updates</a>
 <ul class="sectlevel3">
-<li><a href="#_7_2_1_enterprise_distribution_sccm_intune_etc">17.2.1. 7.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></li>
-<li><a href="#_7_2_2_file_share_powershell">17.2.2. 7.2.2 File Share + PowerShell</a></li>
-<li><a href="#_7_2_3_auto_update_agent">17.2.3. 7.2.3 Auto-Update Agent</a></li>
-<li><a href="#_7_2_4_clickonce_optional">17.2.4. 7.2.4 ClickOnce (Optional)</a></li>
+<li><a href="#_1_3_1_self_contained_deployments">2.3.1. 1.3.1 Self-Contained Deployments</a></li>
+<li><a href="#_1_3_2_security_considerations">2.3.2. 1.3.2 Security Considerations</a></li>
 </ul>
 </li>
-<li><a href="#_7_3_benefits_over_legacy_iis_model">17.3. 7.3 Benefits Over Legacy IIS Model</a></li>
-<li><a href="#_7_4_key_rebuttals_to_concerns">17.4. 7.4 Key Rebuttals to Concerns</a></li>
-<li><a href="#_7_5_deployment_workflow_example">17.5. 7.5 Deployment Workflow Example</a></li>
-<li><a href="#_7_6_summary">17.6. 7.6 Summary</a></li>
+<li><a href="#_1_4_cloud_native_alignment_at_the_edge">2.4. 1.4 Cloud-Native Alignment at the Edge</a>
+<ul class="sectlevel3">
+<li><a href="#_1_4_1_12_factor_principles">2.4.1. 1.4.1 12-Factor Principles</a></li>
+<li><a href="#_1_4_2_industry_precedent">2.4.2. 1.4.2 Industry Precedent</a></li>
+<li><a href="#_1_4_3_independent_verification">2.4.3. 1.4.3 Independent Verification</a></li>
 </ul>
 </li>
-<li><a href="#_8_compliance_and_standards">18. 8. Compliance and Standards</a>
+<li><a href="#_1_5_conclusion">2.5. 1.5 Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App</a>
 <ul class="sectlevel2">
-<li><a href="#_8_1_industry_standards">18.1. 8.1 Industry Standards</a></li>
-<li><a href="#_8_2_regulatory_requirements">18.2. 8.2 Regulatory Requirements</a></li>
+<li><a href="#_2_1_cuss_specification_guidance">3.1. 2.1 CUSS Specification Guidance</a></li>
+<li><a href="#_2_2_standard_industry_practice">3.2. 2.2 Standard Industry Practice</a></li>
+<li><a href="#_2_3_risks_of_a_thin_only_approach">3.3. 2.3 Risks of a Thin-Only Approach</a>
+<ul class="sectlevel3">
+<li><a href="#_2_3_1_specification_non_compliance">3.3.1. 2.3.1 Specification Non-Compliance</a></li>
+<li><a href="#_2_3_2_resiliency_loss">3.3.2. 2.3.2 Resiliency Loss</a></li>
+<li><a href="#_2_3_3_device_access_gaps">3.3.3. 2.3.3 Device Access Gaps</a></li>
 </ul>
 </li>
-<li><a href="#_9_appendices">19. 9. Appendices</a>
+<li><a href="#_2_4_our_position">3.4. 2.4 Our Position</a></li>
+<li><a href="#_2_5_high_level_architecture">3.5. 2.5 High-Level Architecture</a></li>
+<li><a href="#_2_6_component_overview">3.6. 2.6 Component Overview</a>
+<ul class="sectlevel3">
+<li><a href="#_2_6_1_local_runtime_components">3.6.1. 2.6.1 Local Runtime Components</a></li>
+<li><a href="#_2_6_2_integration_services">3.6.2. 2.6.2 Integration Services</a></li>
+<li><a href="#_2_6_3_resilience_features">3.6.3. 2.6.3 Resilience Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_3_user_interface_design">4. 3. User Interface Design</a>
 <ul class="sectlevel2">
-<li><a href="#_9_1_glossary">19.1. 9.1 Glossary</a></li>
-<li><a href="#_9_2_references">19.2. 9.2 References</a></li>
+<li><a href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></li>
+<li><a href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></li>
+</ul>
+</li>
+<li><a href="#_4_security_requirements">5. 4. Security Requirements</a>
+<ul class="sectlevel2">
+<li><a href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></li>
+</ul>
+</li>
+<li><a href="#_5_core_components">6. 5. Core Components</a>
+<ul class="sectlevel2">
+<li><a href="#_5_1_workflow_engine">6.1. 5.1 Workflow Engine</a>
+<ul class="sectlevel3">
+<li><a href="#_5_1_1_execution_model">6.1.1. 5.1.1 Execution Model</a></li>
+<li><a href="#_5_1_2_core_responsibilities">6.1.2. 5.1.2 Core Responsibilities</a></li>
+<li><a href="#_5_1_3_workflow_definition_structure">6.1.3. 5.1.3 Workflow Definition Structure</a></li>
+<li><a href="#_5_1_4_state_management">6.1.4. 5.1.4 State Management</a></li>
+<li><a href="#_5_1_5_event_handling">6.1.5. 5.1.5 Event Handling</a></li>
+</ul>
+</li>
+<li><a href="#_5_2_workflow_builder_admin_console">6.2. 5.2 Workflow Builder (Admin Console)</a>
+<ul class="sectlevel3">
+<li><a href="#_5_2_1_design_interface">6.2.1. 5.2.1 Design Interface</a></li>
+<li><a href="#_5_2_2_workflow_builder_wireframes">6.2.2. 5.2.2 WorkFlow Builder Wireframes</a></li>
+<li><a href="#_5_2_3_key_features">6.2.3. 5.2.3 Key Features</a></li>
+<li><a href="#_5_2_4_workflow_configuration">6.2.4. 5.2.4 Workflow Configuration</a></li>
+</ul>
+</li>
+<li><a href="#_5_3_domain_specific_language_dsl">6.3. 5.3 Domain-Specific Language (DSL)</a>
+<ul class="sectlevel3">
+<li><a href="#_5_3_1_dsl_architecture">6.3.1. 5.3.1 DSL Architecture</a></li>
+<li><a href="#_5_3_2_dsl_command_structure">6.3.2. 5.3.2 DSL Command Structure</a></li>
+<li><a href="#_5_3_3_available_dsl_commands">6.3.3. 5.3.3 Available DSL Commands</a></li>
+<li><a href="#_5_3_4_event_binding_examples">6.3.4. 5.3.4 Event Binding Examples</a></li>
+<li><a href="#_5_3_5_conditional_logic">6.3.5. 5.3.5 Conditional Logic</a></li>
+<li><a href="#_5_3_6_parameter_substitution">6.3.6. 5.3.6 Parameter Substitution</a></li>
+<li><a href="#_5_3_7_error_handling">6.3.7. 5.3.7 Error Handling</a></li>
+<li><a href="#_5_3_8_advanced_dsl_features">6.3.8. 5.3.8 Advanced DSL Features</a></li>
+</ul>
+</li>
+<li><a href="#_5_4_workflow_player">6.4. 5.4 Workflow Player</a>
+<ul class="sectlevel3">
+<li><a href="#_5_4_1_architecture_overview">6.4.1. 5.4.1 Architecture Overview</a></li>
+<li><a href="#_5_4_2_component_rendering">6.4.2. 5.4.2 Component Rendering</a></li>
+<li><a href="#_5_4_3_webview2_integration">6.4.3. 5.4.3 WebView2 Integration</a></li>
+<li><a href="#_5_4_4_user_interaction_handling">6.4.4. 5.4.4 User Interaction Handling</a></li>
+<li><a href="#_5_4_5_state_management">6.4.5. 5.4.5 State Management</a></li>
+<li><a href="#_5_4_6_component_library">6.4.6. 5.4.6 Component Library</a></li>
+<li><a href="#_5_4_7_responsive_design">6.4.7. 5.4.7 Responsive Design</a></li>
+<li><a href="#_5_4_8_performance_optimization">6.4.8. 5.4.8 Performance Optimization</a></li>
+<li><a href="#_5_4_9_accessibility_features">6.4.9. 5.4.9 Accessibility Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_6_deployment_and_update_strategy_net_core_model">7. 6. Deployment and Update Strategy (.NET Core Model)</a>
+<ul class="sectlevel2">
+<li><a href="#_6_1_wide_open_update_palette">7.1. 6.1 Wide-Open Update Palette</a></li>
+<li><a href="#_6_2_supported_update_methods">7.2. 6.2 Supported Update Methods</a>
+<ul class="sectlevel3">
+<li><a href="#_6_2_1_enterprise_distribution_sccm_intune_etc">7.2.1. 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></li>
+<li><a href="#_6_2_2_file_share_powershell">7.2.2. 6.2.2 File Share + PowerShell</a></li>
+<li><a href="#_6_2_3_auto_update_agent">7.2.3. 6.2.3 Auto-Update Agent</a></li>
+<li><a href="#_6_2_4_clickonce_optional">7.2.4. 6.2.4 ClickOnce (Optional)</a></li>
+</ul>
+</li>
+<li><a href="#_6_3_benefits_over_legacy_iis_model">7.3. 6.3 Benefits Over Legacy IIS Model</a></li>
+<li><a href="#_6_4_key_rebuttals_to_concerns">7.4. 6.4 Key Rebuttals to Concerns</a></li>
+<li><a href="#_6_5_deployment_workflow_example">7.5. 6.5 Deployment Workflow Example</a></li>
+<li><a href="#_6_6_summary">7.6. 6.6 Summary</a></li>
+</ul>
+</li>
+<li><a href="#_7_appendices">8. 7. Appendices</a>
+<ul class="sectlevel2">
+<li><a href="#_7_1_glossary">8.1. 7.1 Glossary</a></li>
+<li><a href="#_7_2_references">8.2. 7.2 References</a></li>
 </ul>
 </li>
 </ul>
@@ -113,10 +167,15 @@
 <h2 id="introduction"><a class="anchor" href="#introduction"></a><a class="link" href="#introduction">2. 1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>The CUSS App Design Documentation provides a comprehensive specification for building modern, standards-compliant Common Use Self Service applications.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_1_overview"><a class="anchor" href="#_1_1_overview"></a><a class="link" href="#_1_1_overview">2.1. 1.1 Overview</a></h3>
+<div class="paragraph">
 <p>The Common Use Self Service (CUSS) application is a standards-compliant, multi-tenant passenger processing solution designed to run on top of any IATA CUSS-compliant platform. It provides airlines and airports with a flexible framework to deliver core workflows(modes) such as passenger check-in, baggage drop,and other service flows that can be created, cached, and customized without requiring a re-compile and release cycle.</p>
 </div>
 <div class="paragraph">
-<p>This CUSS app is intentionally built as a <strong>generic core application</strong> rather than a “white-label” in the narrow sense. It supports multiple airlines through configuration, workflow definition, and UI customization, while still conforming to IATA CUSS specifications for device interaction and platform integration. Each instance of the application runs within a kiosk’s CUSS platform runtime, with one physical kiosk typically hosting one CUSS platform instance and one or more airline applications.</p>
+<p>This CUSS app is intentionally built as a <strong>generic core application</strong> rather than a "white-label" in the narrow sense. It supports multiple airlines through configuration, workflow definition, and UI customization, while still conforming to IATA CUSS specifications for device interaction and platform integration. Each instance of the application runs within a kiosk&#8217;s CUSS platform runtime, with one physical kiosk typically hosting one CUSS platform instance and one or more airline applications.</p>
 </div>
 <div class="paragraph">
 <p>The design emphasizes:
@@ -126,30 +185,19 @@
 - <strong>Multi-airline operation</strong>: a single deployment can support different airline instances, each with their own workflows, branding, and availability states tied to their host systems.</p>
 </div>
 <div class="paragraph">
-<p>By using modern application design and implementation practices, latest LTS .NET frameworks, and cloud-native principles into the CUSS model, this design ensures the app can scale across kiosks, adapt to future standards, and provide a maintainable path forward for passenger-facing services in airports worldwide.
-= CUSS App Design Overview
-:toc:</p>
+<p>By using modern application design and implementation practices, latest LTS .NET frameworks, and cloud-native principles into the CUSS model, this design ensures the app can scale across kiosks, adapt to future standards, and provide a maintainable path forward for passenger-facing services in airports worldwide.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_1_2_design_overview"><a class="anchor" href="#_1_2_design_overview"></a><a class="link" href="#_1_2_design_overview">2.2. 1.2 Design Overview</a></h3>
+<div class="paragraph">
+<p>This document exists to clarify design choices, provide neutral facts, and resolve confusion about IIS vs. Kestrel.</p>
 </div>
-<div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a><a class="link" href="#_introduction">3. Introduction</a></h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Why this document exists: clarify design choices, provide neutral facts, and resolve confusion about IIS vs. Kestrel.</p>
-</li>
-<li>
-<p>Acknowledge: kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>We acknowledge that kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_legacy_vs_modern_models"><a class="anchor" href="#_legacy_vs_modern_models"></a><a class="link" href="#_legacy_vs_modern_models">4. Legacy vs. Modern Models</a></h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_1_2_1_legacy_vs_modern_models"><a class="anchor" href="#_1_2_1_legacy_vs_modern_models"></a><a class="link" href="#_1_2_1_legacy_vs_modern_models">2.2.1. 1.2.1 Legacy vs. Modern Models</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -167,10 +215,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_core_design_artifacts"><a class="anchor" href="#_core_design_artifacts"></a><a class="link" href="#_core_design_artifacts">5. Core Design Artifacts</a></h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_1_2_2_core_design_artifacts"><a class="anchor" href="#_1_2_2_core_design_artifacts"></a><a class="link" href="#_1_2_2_core_design_artifacts">2.2.2. 1.2.2 Core Design Artifacts</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -214,9 +260,10 @@
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_deployment_and_updates"><a class="anchor" href="#_deployment_and_updates"></a><a class="link" href="#_deployment_and_updates">6. Deployment and Updates</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_3_deployment_and_updates"><a class="anchor" href="#_1_3_deployment_and_updates"></a><a class="link" href="#_1_3_deployment_and_updates">2.3. 1.3 Deployment and Updates</a></h3>
+<div class="sect3">
+<h4 id="_1_3_1_self_contained_deployments"><a class="anchor" href="#_1_3_1_self_contained_deployments"></a><a class="link" href="#_1_3_1_self_contained_deployments">2.3.1. 1.3.1 Self-Contained Deployments</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -240,10 +287,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_security"><a class="anchor" href="#_security"></a><a class="link" href="#_security">7. Security</a></h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_1_3_2_security_considerations"><a class="anchor" href="#_1_3_2_security_considerations"></a><a class="link" href="#_1_3_2_security_considerations">2.3.2. 1.3.2 Security Considerations</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -262,9 +307,10 @@
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_cloud_native_alignment_at_the_edge"><a class="anchor" href="#_cloud_native_alignment_at_the_edge"></a><a class="link" href="#_cloud_native_alignment_at_the_edge">8. Cloud-Native Alignment at the Edge</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_1_4_cloud_native_alignment_at_the_edge"><a class="anchor" href="#_1_4_cloud_native_alignment_at_the_edge"></a><a class="link" href="#_1_4_cloud_native_alignment_at_the_edge">2.4. 1.4 Cloud-Native Alignment at the Edge</a></h3>
+<div class="sect3">
+<h4 id="_1_4_1_12_factor_principles"><a class="anchor" href="#_1_4_1_12_factor_principles"></a><a class="link" href="#_1_4_1_12_factor_principles">2.4.1. 1.4.1 12-Factor Principles</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -279,10 +325,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_industry_precedent"><a class="anchor" href="#_industry_precedent"></a><a class="link" href="#_industry_precedent">9. Industry Precedent</a></h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_1_4_2_industry_precedent"><a class="anchor" href="#_1_4_2_industry_precedent"></a><a class="link" href="#_1_4_2_industry_precedent">2.4.2. 1.4.2 Industry Precedent</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -294,10 +338,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_independent_verification"><a class="anchor" href="#_independent_verification"></a><a class="link" href="#_independent_verification">10. Independent Verification</a></h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_1_4_3_independent_verification"><a class="anchor" href="#_1_4_3_independent_verification"></a><a class="link" href="#_1_4_3_independent_verification">2.4.3. 1.4.3 Independent Verification</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -310,82 +352,161 @@
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a><a class="link" href="#_conclusion">11. Conclusion</a></h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Restate: this design is aligned with modern practice, neutral facts support it, and concerns about delivery are met</p>
-</li>
-<li>
-<p>Next step: treat this as common ground for future design reviews</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_system_architecture"><a class="anchor" href="#_2_system_architecture"></a><a class="link" href="#_2_system_architecture">12. 2. System Architecture</a></h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_2_1_high_level_architecture"><a class="anchor" href="#_2_1_high_level_architecture"></a><a class="link" href="#_2_1_high_level_architecture">12.1. 2.1 High-Level Architecture</a></h3>
+<h3 id="_1_5_conclusion"><a class="anchor" href="#_1_5_conclusion"></a><a class="link" href="#_1_5_conclusion">2.5. 1.5 Conclusion</a></h3>
 <div class="paragraph">
-<p>The CUSS application follows a layered architecture pattern:</p>
+<p>This design is aligned with modern practice, neutral facts support it, and concerns about delivery are met.</p>
+</div>
+<div class="paragraph">
+<p><strong>Next step</strong>: treat this as common ground for future design reviews.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_its_a_cuss_app"><a class="anchor" href="#_2_its_a_cuss_app"></a><a class="link" href="#_2_its_a_cuss_app">3. 2. It&#8217;s a CUSS App</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_1_cuss_specification_guidance"><a class="anchor" href="#_2_1_cuss_specification_guidance"></a><a class="link" href="#_2_1_cuss_specification_guidance">3.1. 2.1 CUSS Specification Guidance</a></h3>
+<div class="paragraph">
+<p>The IATA CUSS specification includes addenda for <strong>BYOB (Bring Your Own Browser)</strong> and <strong>BYOJ (Bring Your Own Java)</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Both explicitly require local runtime components such as a browser engine or a Java Runtime Environment (JRE) to be installed on the kiosk.</p>
+</div>
+<div class="paragraph">
+<p>This proves the spec expects local artifacts, not a "remote-only" model.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_2_standard_industry_practice"><a class="anchor" href="#_2_2_standard_industry_practice"></a><a class="link" href="#_2_2_standard_industry_practice">3.2. 2.2 Standard Industry Practice</a></h3>
+<div class="paragraph">
+<p>Airline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.</p>
+</div>
+<div class="paragraph">
+<p>These files are essential for:
+* <strong>Talking to devices</strong> - Direct hardware communication
+* <strong>Executing workflows</strong> - Local business logic processing
+* <strong>Handling degraded network conditions</strong> - Offline resilience</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_risks_of_a_thin_only_approach"><a class="anchor" href="#_2_3_risks_of_a_thin_only_approach"></a><a class="link" href="#_2_3_risks_of_a_thin_only_approach">3.3. 2.3 Risks of a Thin-Only Approach</a></h3>
+<div class="sect3">
+<h4 id="_2_3_1_specification_non_compliance"><a class="anchor" href="#_2_3_1_specification_non_compliance"></a><a class="link" href="#_2_3_1_specification_non_compliance">3.3.1. 2.3.1 Specification Non-Compliance</a></h4>
+<div class="paragraph">
+<p>Ignoring BYOB/BYOJ violates the assumptions of the standard.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_2_resiliency_loss"><a class="anchor" href="#_2_3_2_resiliency_loss"></a><a class="link" href="#_2_3_2_resiliency_loss">3.3.2. 2.3.2 Resiliency Loss</a></h4>
+<div class="paragraph">
+<p>A pure thin client fails completely when the network or central server is down.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_3_3_device_access_gaps"><a class="anchor" href="#_2_3_3_device_access_gaps"></a><a class="link" href="#_2_3_3_device_access_gaps">3.3.3. 2.3.3 Device Access Gaps</a></h4>
+<div class="paragraph">
+<p>Printers, scanners, scales, and payment devices require local libraries and plugins.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_4_our_position"><a class="anchor" href="#_2_4_our_position"></a><a class="link" href="#_2_4_our_position">3.4. 2.4 Our Position</a></h3>
+<div class="paragraph">
+<p>A CUSS application is <strong>not just a remote client</strong>. By design, it runs locally with its own runtime inside the assigned directory.</p>
+</div>
+<div class="paragraph">
+<p>This ensures:
+* ✅ <strong>Compliance</strong> with IATA CUSS specifications
+* ✅ <strong>Resiliency</strong> during network outages
+* ✅ <strong>Proper device integration</strong> with local hardware
+* ✅ <strong>Thin-client spirit</strong> for backend logic maintained</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_5_high_level_architecture"><a class="anchor" href="#_2_5_high_level_architecture"></a><a class="link" href="#_2_5_high_level_architecture">3.5. 2.5 High-Level Architecture</a></h3>
+<div class="paragraph">
+<p>The CUSS application follows a <strong>locally-hosted, edge-computing</strong> architecture pattern:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><strong>Presentation Layer</strong>: Touch-screen kiosk interface</p>
+<p><strong>Presentation Layer</strong>: Touch-screen kiosk interface (WebView2)</p>
 </li>
 <li>
-<p><strong>Business Logic Layer</strong>: Core application logic</p>
+<p><strong>Business Logic Layer</strong>: Core application logic (Embedded Kestrel)</p>
 </li>
 <li>
-<p><strong>Integration Layer</strong>: Airline system interfaces</p>
+<p><strong>Integration Layer</strong>: Airline system interfaces (HTTP/WebSocket)</p>
 </li>
 <li>
-<p><strong>Data Layer</strong>: Local caching and logging</p>
+<p><strong>Data Layer</strong>: Local caching and logging (SQLite/JSON)</p>
+</li>
+<li>
+<p><strong>Device Layer</strong>: Hardware abstraction (CUSS DCI/Sidecar)</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_2_component_overview"><a class="anchor" href="#_2_2_component_overview"></a><a class="link" href="#_2_2_component_overview">12.2. 2.2 Component Overview</a></h3>
+<h3 id="_2_6_component_overview"><a class="anchor" href="#_2_6_component_overview"></a><a class="link" href="#_2_6_component_overview">3.6. 2.6 Component Overview</a></h3>
 <div class="sect3">
-<h4 id="_2_2_1_user_interface_components"><a class="anchor" href="#_2_2_1_user_interface_components"></a><a class="link" href="#_2_2_1_user_interface_components">12.2.1. 2.2.1 User Interface Components</a></h4>
+<h4 id="_2_6_1_local_runtime_components"><a class="anchor" href="#_2_6_1_local_runtime_components"></a><a class="link" href="#_2_6_1_local_runtime_components">3.6.1. 2.6.1 Local Runtime Components</a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Touch screen interface optimized for accessibility</p>
+<p><strong>Embedded Kestrel Server</strong>: Self-hosted web server (.NET Core)</p>
 </li>
 <li>
-<p>Multi-language support</p>
+<p><strong>WebView2 Browser Engine</strong>: Modern HTML5/CSS3/JS execution environment</p>
 </li>
 <li>
-<p>Audio assistance capabilities</p>
+<p><strong>Workflow Engine</strong>: Local workflow execution and state management</p>
 </li>
 <li>
-<p>Visual indicators for status updates</p>
+<p><strong>Device Adapters</strong>: CORBA/JSON bridges for CUSS device communication</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_2_2_2_backend_services"><a class="anchor" href="#_2_2_2_backend_services"></a><a class="link" href="#_2_2_2_backend_services">12.2.2. 2.2.2 Backend Services</a></h4>
+<h4 id="_2_6_2_integration_services"><a class="anchor" href="#_2_6_2_integration_services"></a><a class="link" href="#_2_6_2_integration_services">3.6.2. 2.6.2 Integration Services</a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Authentication service</p>
+<p><strong>Authentication service</strong>: Secure passenger verification</p>
 </li>
 <li>
-<p>Booking retrieval service</p>
+<p><strong>Booking retrieval service</strong>: Real-time flight and passenger data</p>
 </li>
 <li>
-<p>Payment processing service</p>
+<p><strong>Payment processing service</strong>: Secure transaction handling</p>
 </li>
 <li>
-<p>Printing service</p>
+<p><strong>Printing service</strong>: Boarding pass and baggage tag output</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_3_resilience_features"><a class="anchor" href="#_2_6_3_resilience_features"></a><a class="link" href="#_2_6_3_resilience_features">3.6.3. 2.6.3 Resilience Features</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Offline capability</strong>: Continue operation during network outages</p>
+</li>
+<li>
+<p><strong>Local caching</strong>: Store essential data for degraded scenarios</p>
+</li>
+<li>
+<p><strong>Graceful degradation</strong>: Reduced functionality when services unavailable</p>
+</li>
+<li>
+<p><strong>Automatic recovery</strong>: Reconnect and sync when connectivity restored</p>
 </li>
 </ul>
 </div>
@@ -394,10 +515,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">13. 3. User Interface Design</a></h2>
+<h2 id="_3_user_interface_design"><a class="anchor" href="#_3_user_interface_design"></a><a class="link" href="#_3_user_interface_design">4. 3. User Interface Design</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_3_1_design_principles"><a class="anchor" href="#_3_1_design_principles"></a><a class="link" href="#_3_1_design_principles">13.1. 3.1 Design Principles</a></h3>
+<h3 id="_3_1_design_principles"><a class="anchor" href="#_3_1_design_principles"></a><a class="link" href="#_3_1_design_principles">4.1. 3.1 Design Principles</a></h3>
 <div class="paragraph">
 <p>The CUSS app UI has multiple meanings. There are UIs that are pax facing and UIs that are admin facing. Any UI will be designed considering the following principles:</p>
 </div>
@@ -419,7 +540,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_2_screen_flow"><a class="anchor" href="#_3_2_screen_flow"></a><a class="link" href="#_3_2_screen_flow">13.2. 3.2 Screen Flow</a></h3>
+<h3 id="_3_2_screen_flow"><a class="anchor" href="#_3_2_screen_flow"></a><a class="link" href="#_3_2_screen_flow">4.2. 3.2 Screen Flow</a></h3>
 <div class="paragraph">
 <p>A typical user journey might include:</p>
 </div>
@@ -455,10 +576,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_4_security_requirements"><a class="anchor" href="#_4_security_requirements"></a><a class="link" href="#_4_security_requirements">14. 4. Security Requirements</a></h2>
+<h2 id="_4_security_requirements"><a class="anchor" href="#_4_security_requirements"></a><a class="link" href="#_4_security_requirements">5. 4. Security Requirements</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_4_1_data_protection"><a class="anchor" href="#_4_1_data_protection"></a><a class="link" href="#_4_1_data_protection">14.1. 4.1 Data Protection</a></h3>
+<h3 id="_4_1_data_protection"><a class="anchor" href="#_4_1_data_protection"></a><a class="link" href="#_4_1_data_protection">5.1. 4.1 Data Protection</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -479,141 +600,961 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_5_integration_specifications"><a class="anchor" href="#_5_integration_specifications"></a><a class="link" href="#_5_integration_specifications">15. 5. Integration Specifications</a></h2>
+<h2 id="_5_core_components"><a class="anchor" href="#_5_core_components"></a><a class="link" href="#_5_core_components">6. 5. Core Components</a></h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_5_1_airline_systems"><a class="anchor" href="#_5_1_airline_systems"></a><a class="link" href="#_5_1_airline_systems">15.1. 5.1 Airline Systems</a></h3>
 <div class="paragraph">
-<p>The CUSS application integrates with:</p>
+<p>The CUSS application is built around four core components that work together to provide a flexible, configurable workflow execution environment.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Component Overview</caption>
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 30%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Engine</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execution &amp; State Management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Executes workflow definitions, manages state transitions, and coordinates business logic</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Builder</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visual Design Interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drag-and-drop interface for creating workflows without coding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain-Specific Language</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business Logic Binding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Declarative language for binding business operations to UI components</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workflow Player</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Browser-Based Rendering</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vue3 application that renders workflows in WebView2 environment</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_5_1_workflow_engine"><a class="anchor" href="#_5_1_workflow_engine"></a><a class="link" href="#_5_1_workflow_engine">6.1. 5.1 Workflow Engine</a></h3>
+<div class="paragraph">
+<p>The Workflow Engine is the core component that executes workflow definitions and manages state transitions.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_1_1_execution_model"><a class="anchor" href="#_5_1_1_execution_model"></a><a class="link" href="#_5_1_1_execution_model">6.1.1. 5.1.1 Execution Model</a></h4>
+<div class="paragraph">
+<p>The Workflow Engine operates on a <strong>state machine model</strong> where:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>DCS (Departure Control System)</strong>: For flight and passenger data</p>
+<p><strong>Workflows</strong> are defined as a sequence of steps/views</p>
 </li>
 <li>
-<p><strong>PSS (Passenger Service System)</strong>: For booking modifications</p>
+<p><strong>State transitions</strong> are triggered by user actions or system events</p>
 </li>
 <li>
-<p><strong>Payment Gateway</strong>: For processing fees and upgrades</p>
+<p><strong>Business logic</strong> is executed through DSL commands</p>
 </li>
 <li>
-<p><strong>Baggage Handling System</strong>: For baggage tag printing</p>
+<p><strong>Context data</strong> flows between steps</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_1_2_core_responsibilities"><a class="anchor" href="#_5_1_2_core_responsibilities"></a><a class="link" href="#_5_1_2_core_responsibilities">6.1.2. 5.1.2 Core Responsibilities</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Workflow Loading</strong>: Parse and validate workflow definitions from JSON</p>
+</li>
+<li>
+<p><strong>State Management</strong>: Track current step, user progress, and session data</p>
+</li>
+<li>
+<p><strong>Event Processing</strong>: Handle user interactions and system events</p>
+</li>
+<li>
+<p><strong>DSL Execution</strong>: Execute business logic commands and handle responses</p>
+</li>
+<li>
+<p><strong>Error Handling</strong>: Manage exceptions and provide recovery mechanisms</p>
+</li>
+<li>
+<p><strong>Device Integration</strong>: Coordinate with CUSS platform for device operations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_1_3_workflow_definition_structure"><a class="anchor" href="#_5_1_3_workflow_definition_structure"></a><a class="link" href="#_5_1_3_workflow_definition_structure">6.1.3. 5.1.3 Workflow Definition Structure</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "workflowId": "passenger-checkin",
+  "version": "1.0",
+  "metadata": {
+    "title": "Passenger Check-In",
+    "description": "Standard passenger check-in workflow",
+    "airlineCode": "AA"
+  },
+  "steps": [
+    {
+      "stepId": "welcome",
+      "type": "view",
+      "component": "WelcomeScreen",
+      "transitions": {
+        "onStart": "passengerLookup"
+      }
+    },
+    {
+      "stepId": "passengerLookup",
+      "type": "view",
+      "component": "PassengerLookupForm",
+      "validation": ["required:lastName", "required:confirmationCode"],
+      "transitions": {
+        "onSuccess": "flightSelection",
+        "onError": "errorPage"
+      }
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_1_4_state_management"><a class="anchor" href="#_5_1_4_state_management"></a><a class="link" href="#_5_1_4_state_management">6.1.4. 5.1.4 State Management</a></h4>
+<div class="paragraph">
+<p>The engine maintains workflow state including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Current Step</strong>: Active step in the workflow</p>
+</li>
+<li>
+<p><strong>User Context</strong>: Passenger data, selections, form inputs</p>
+</li>
+<li>
+<p><strong>Session Data</strong>: Temporary data valid for current session</p>
+</li>
+<li>
+<p><strong>Configuration</strong>: Airline-specific settings and branding</p>
+</li>
+<li>
+<p><strong>Device Status</strong>: Availability of printers, scanners, etc.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_1_5_event_handling"><a class="anchor" href="#_5_1_5_event_handling"></a><a class="link" href="#_5_1_5_event_handling">6.1.5. 5.1.5 Event Handling</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "eventType": "userAction",
+  "source": "button",
+  "action": "onClick",
+  "context": {
+    "stepId": "passengerLookup",
+    "componentId": "searchButton",
+    "formData": {
+      "lastName": "Smith",
+      "confirmationCode": "ABC123"
+    }
+  }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_5_2_airport_systems"><a class="anchor" href="#_5_2_airport_systems"></a><a class="link" href="#_5_2_airport_systems">15.2. 5.2 Airport Systems</a></h3>
+<h3 id="_5_2_workflow_builder_admin_console"><a class="anchor" href="#_5_2_workflow_builder_admin_console"></a><a class="link" href="#_5_2_workflow_builder_admin_console">6.2. 5.2 Workflow Builder (Admin Console)</a></h3>
+<div class="paragraph">
+<p>The Workflow Builder provides a user interface for creating and managing workflow definitions.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_2_1_design_interface"><a class="anchor" href="#_5_2_1_design_interface"></a><a class="link" href="#_5_2_1_design_interface">6.2.1. 5.2.1 Design Interface</a></h4>
+<div class="paragraph">
+<p>The Workflow Builder features a <strong>visual, drag-and-drop interface</strong> for creating workflows without coding.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_2_workflow_builder_wireframes"><a class="anchor" href="#_5_2_2_workflow_builder_wireframes"></a><a class="link" href="#_5_2_2_workflow_builder_wireframes">6.2.2. 5.2.2 WorkFlow Builder Wireframes</a></h4>
+<div class="sect4">
+<h5 id="_view_page_editor_wysiwyg"><a class="anchor" href="#_view_page_editor_wysiwyg"></a><a class="link" href="#_view_page_editor_wysiwyg">View / Page Editor (WYSIWYG)</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Toolbox (UI Components)</th>
+<th class="tableblock halign-left valign-top">Canvas (Workflow View)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Properties Panel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Input Field]
+  [Button]
+  [Label]
+  [Image]
+  [Dropdown]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">----------------------------------</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Label: Passenger Lookup]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Input: Last Name]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Button: Search]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">----------------------------------</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component: Button
+  Label: "Search"
+  ID: searchBtn
+  DSL Binding: LookupPassenger.execute</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>What&#8217;s happening here:
+- Left panel = available UI elements to drag.
+- Middle = WYSIWYG editor of the workflow view.
+- Right = edit attributes, styles, and DSL bindings for selected component.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_dsl_binding_panel"><a class="anchor" href="#_dsl_binding_panel"></a><a class="link" href="#_dsl_binding_panel">DSL Binding Panel</a></h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component Selected</th>
+<th class="tableblock halign-left valign-top">Binding Options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Button: "Print Bag Tag"
+  ID: printBtn</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSL Command: BagTag.print
+  Event: onClick
+  Params: { "printer":"bagtag01" }</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>What&#8217;s happening here:
+- When a component is selected, you can bind DSL commands (see section 5.3).
+- Events (onClick, onSubmit, onLoad) trigger DSL execution.
+- Supports parameterized calls with dynamic substitution.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_3_key_features"><a class="anchor" href="#_5_2_3_key_features"></a><a class="link" href="#_5_2_3_key_features">6.2.3. 5.2.3 Key Features</a></h4>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>FIDS (Flight Information Display System)</strong>: For real-time flight updates</p>
+<p><strong>Visual Workflow Designer</strong>: Drag-and-drop interface for creating workflow steps</p>
 </li>
 <li>
-<p><strong>Security Systems</strong>: For passenger screening integration</p>
+<p><strong>Component Library</strong>: Pre-built UI components optimized for CUSS environments</p>
 </li>
 <li>
-<p><strong>Ground Handling</strong>: For special service requests</p>
+<p><strong>DSL Binding Interface</strong>: Visual editor for binding business logic to components</p>
+</li>
+<li>
+<p><strong>Preview Mode</strong>: Real-time preview of workflow appearance and behavior</p>
+</li>
+<li>
+<p><strong>Validation Tools</strong>: Built-in validation for workflow logic and completeness</p>
+</li>
+<li>
+<p><strong>Version Management</strong>: Track workflow versions and manage deployments</p>
+</li>
+<li>
+<p><strong>Multi-Airline Support</strong>: Create airline-specific workflows and branding</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_4_workflow_configuration"><a class="anchor" href="#_5_2_4_workflow_configuration"></a><a class="link" href="#_5_2_4_workflow_configuration">6.2.4. 5.2.4 Workflow Configuration</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "workflow": {
+    "metadata": {
+      "name": "Check-In Workflow",
+      "version": "2.1.0",
+      "airline": "American Airlines",
+      "created": "2025-10-01T10:00:00Z"
+    },
+    "branding": {
+      "theme": "aa-corporate",
+      "colors": {
+        "primary": "#C41E3A",
+        "secondary": "#00205B"
+      },
+      "logo": "images/aa-logo.png"
+    },
+    "settings": {
+      "timeout": 300,
+      "language": "en-US",
+      "accessibility": true
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_3_domain_specific_language_dsl"><a class="anchor" href="#_5_3_domain_specific_language_dsl"></a><a class="link" href="#_5_3_domain_specific_language_dsl">6.3. 5.3 Domain-Specific Language (DSL)</a></h3>
+<div class="paragraph">
+<p>The CUSS App employs a Domain-Specific Language to bind business logic to UI components and workflow steps, enabling dynamic behavior without code compilation.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_3_1_dsl_architecture"><a class="anchor" href="#_5_3_1_dsl_architecture"></a><a class="link" href="#_5_3_1_dsl_architecture">6.3.1. 5.3.1 DSL Architecture</a></h4>
+<div class="paragraph">
+<p>The DSL provides a declarative way to:
+- <strong>Bind actions</strong> to UI events (onClick, onSubmit, onLoad)
+- <strong>Execute business operations</strong> (passenger lookup, device operations, API calls)
+- <strong>Control workflow flow</strong> (conditional navigation, validation, state management)
+- <strong>Handle data transformation</strong> (formatting, validation, mapping)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_3_2_dsl_command_structure"><a class="anchor" href="#_5_3_2_dsl_command_structure"></a><a class="link" href="#_5_3_2_dsl_command_structure">6.3.2. 5.3.2 DSL Command Structure</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "event": "onClick",
+  "dsl": "PassengerService.lookup",
+  "params": {
+    "lastName": "${input.lastName}",
+    "confirmationCode": "${input.confirmation}"
+  },
+  "onSuccess": "NavigateToCheckIn",
+  "onError": "ShowErrorMessage"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_3_3_available_dsl_commands"><a class="anchor" href="#_5_3_3_available_dsl_commands"></a><a class="link" href="#_5_3_3_available_dsl_commands">6.3.3. 5.3.3 Available DSL Commands</a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category</th>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Passenger Operations</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PassengerService.lookup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Look up passenger by name/confirmation code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PassengerService.checkIn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execute passenger check-in process</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PassengerService.selectSeat</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Handle seat selection and assignment</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Device Operations</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BagTag.print</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print baggage tags using CUSS DCI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BoardingPass.print</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print boarding pass documents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Receipt.print</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Print transaction receipts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Navigation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Workflow.navigate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigate to specified workflow step</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Workflow.back</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Return to previous step</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Workflow.complete</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mark workflow as completed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Data Operations</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Data.validate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validate form inputs against rules</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Data.transform</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Transform data between formats</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Cache.store</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Store data in local cache</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Integration</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>API.call</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Make HTTP calls to airline systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DCS.query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Query Departure Control System</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PSS.update</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Update Passenger Service System</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_5_3_4_event_binding_examples"><a class="anchor" href="#_5_3_4_event_binding_examples"></a><a class="link" href="#_5_3_4_event_binding_examples">6.3.4. 5.3.4 Event Binding Examples</a></h4>
+<div class="paragraph">
+<p><strong>Button Click Event:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "component": "button",
+  "id": "searchButton",
+  "binding": {
+    "event": "onClick",
+    "dsl": "PassengerService.lookup",
+    "params": {
+      "lastName": "${form.lastName}",
+      "confirmationCode": "${form.confirmationCode}"
+    },
+    "validation": [
+      "required:lastName",
+      "required:confirmationCode"
+    ],
+    "onSuccess": {
+      "action": "Workflow.navigate",
+      "target": "flightSelection"
+    },
+    "onError": {
+      "action": "UI.showMessage",
+      "message": "Passenger not found. Please check your information."
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Form Submission:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "component": "form",
+  "id": "checkInForm",
+  "binding": {
+    "event": "onSubmit",
+    "dsl": "PassengerService.checkIn",
+    "params": {
+      "passengerId": "${passenger.id}",
+      "flightId": "${flight.id}",
+      "seatPreference": "${form.seatPreference}"
+    },
+    "onSuccess": {
+      "action": "Workflow.navigate",
+      "target": "confirmationPage"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_3_5_conditional_logic"><a class="anchor" href="#_5_3_5_conditional_logic"></a><a class="link" href="#_5_3_5_conditional_logic">6.3.5. 5.3.5 Conditional Logic</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "dsl": "ConditionalFlow.evaluate",
+  "condition": "${passenger.hasCheckedBags}",
+  "onTrue": {
+    "action": "Workflow.navigate",
+    "target": "bagTagPrinting"
+  },
+  "onFalse": {
+    "action": "Workflow.navigate",
+    "target": "boardingPassPrinting"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_3_6_parameter_substitution"><a class="anchor" href="#_5_3_6_parameter_substitution"></a><a class="link" href="#_5_3_6_parameter_substitution">6.3.6. 5.3.6 Parameter Substitution</a></h4>
+<div class="paragraph">
+<p>The DSL supports dynamic parameter substitution using expression syntax:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pattern</th>
+<th class="tableblock halign-left valign-top">Source</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${form.fieldName}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Current form input</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${form.lastName}</code> → User&#8217;s input</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${passenger.property}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passenger data object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${passenger.confirmationCode}</code> → "ABC123"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${flight.property}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight information</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${flight.departureTime}</code> → "14:30"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${device.property}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device capabilities</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${device.printerStatus}</code> → "ready"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${config.setting}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration values</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>${config.airlineCode}</code> → "AA"</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_5_3_7_error_handling"><a class="anchor" href="#_5_3_7_error_handling"></a><a class="link" href="#_5_3_7_error_handling">6.3.7. 5.3.7 Error Handling</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "dsl": "PassengerService.lookup",
+  "errorHandling": {
+    "timeout": 5000,
+    "retries": 3,
+    "fallback": {
+      "action": "UI.showMessage",
+      "message": "Service temporarily unavailable. Please try again."
+    },
+    "errorCodes": {
+      "404": "Passenger not found",
+      "500": "System error occurred"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_3_8_advanced_dsl_features"><a class="anchor" href="#_5_3_8_advanced_dsl_features"></a><a class="link" href="#_5_3_8_advanced_dsl_features">6.3.8. 5.3.8 Advanced DSL Features</a></h4>
+<div class="paragraph">
+<p><strong>Chained Operations:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "dsl": "Pipeline.execute",
+  "steps": [
+    "PassengerService.lookup",
+    "FlightService.getDetails",
+    "SeatService.getAvailable"
+  ],
+  "onComplete": "NavigateToSeatSelection"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Custom Validators:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "validation": {
+    "confirmationCode": {
+      "pattern": "^[A-Z0-9]{6}$",
+      "message": "Confirmation code must be 6 alphanumeric characters"
+    },
+    "lastName": {
+      "minLength": 2,
+      "maxLength": 50,
+      "message": "Last name must be between 2 and 50 characters"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_5_4_workflow_player"><a class="anchor" href="#_5_4_workflow_player"></a><a class="link" href="#_5_4_workflow_player">6.4. 5.4 Workflow Player</a></h3>
+<div class="paragraph">
+<p>The Workflow Player renders and executes workflows in the browser environment using Vue3 and WebView2.</p>
+</div>
+<div class="sect3">
+<h4 id="_5_4_1_architecture_overview"><a class="anchor" href="#_5_4_1_architecture_overview"></a><a class="link" href="#_5_4_1_architecture_overview">6.4.1. 5.4.1 Architecture Overview</a></h4>
+<div class="paragraph">
+<p>The Workflow Player is a <strong>Vue3-based application</strong> that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Renders workflow UI</strong> from JSON definitions</p>
+</li>
+<li>
+<p><strong>Handles user interactions</strong> and form submissions</p>
+</li>
+<li>
+<p><strong>Executes DSL commands</strong> through the Workflow Engine</p>
+</li>
+<li>
+<p><strong>Manages local state</strong> and session data</p>
+</li>
+<li>
+<p><strong>Communicates with backend</strong> services via HTTP/WebSocket</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_2_component_rendering"><a class="anchor" href="#_5_4_2_component_rendering"></a><a class="link" href="#_5_4_2_component_rendering">6.4.2. 5.4.2 Component Rendering</a></h4>
+<div class="paragraph">
+<p><strong>Dynamic Component Loading:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Vue3 component resolution
+const ComponentMap = {
+  'PassengerLookupForm': () =&gt; import('./components/PassengerLookupForm.vue'),
+  'SeatSelection': () =&gt; import('./components/SeatSelection.vue'),
+  'BoardingPassDisplay': () =&gt; import('./components/BoardingPassDisplay.vue')
+}
+
+// Dynamic rendering based on workflow step
+const currentComponent = computed(() =&gt; {
+  return ComponentMap[currentStep.value.component]
+})</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_3_webview2_integration"><a class="anchor" href="#_5_4_3_webview2_integration"></a><a class="link" href="#_5_4_3_webview2_integration">6.4.3. 5.4.3 WebView2 Integration</a></h4>
+<div class="paragraph">
+<p>The Workflow Player runs within <strong>Microsoft WebView2</strong> providing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Modern web standards</strong> (HTML5, CSS3, ES2020+)</p>
+</li>
+<li>
+<p><strong>Native desktop integration</strong> with Windows APIs</p>
+</li>
+<li>
+<p><strong>Hardware acceleration</strong> for smooth UI performance</p>
+</li>
+<li>
+<p><strong>Isolated browser context</strong> for security</p>
+</li>
+<li>
+<p><strong>Offline capability</strong> with cached resources</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_4_user_interaction_handling"><a class="anchor" href="#_5_4_4_user_interaction_handling"></a><a class="link" href="#_5_4_4_user_interaction_handling">6.4.4. 5.4.4 User Interaction Handling</a></h4>
+<div class="paragraph">
+<p><strong>Event Processing Flow:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// User clicks button
+onButtonClick(event) {
+  // 1. Validate form data
+  const isValid = validateForm(this.formData)
+  if (!isValid) return showValidationErrors()
+
+  // 2. Execute DSL command
+  const result = await executeDSL({
+    command: 'PassengerService.lookup',
+    params: this.formData
+  })
+
+  // 3. Handle response
+  if (result.success) {
+    this.navigateToStep(result.nextStep)
+  } else {
+    this.showError(result.error)
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_5_state_management"><a class="anchor" href="#_5_4_5_state_management"></a><a class="link" href="#_5_4_5_state_management">6.4.5. 5.4.5 State Management</a></h4>
+<div class="paragraph">
+<p><strong>Vuex Store Structure:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">const store = createStore({
+  state: {
+    currentWorkflow: null,
+    currentStep: null,
+    userData: {},
+    sessionData: {},
+    deviceStatus: {},
+    configuration: {}
+  },
+  mutations: {
+    SET_CURRENT_STEP(state, step) {
+      state.currentStep = step
+    },
+    UPDATE_USER_DATA(state, data) {
+      state.userData = { ...state.userData, ...data }
+    }
+  },
+  actions: {
+    async executeStep({ commit }, stepData) {
+      // Execute workflow step
+      const result = await workflowEngine.executeStep(stepData)
+      commit('SET_CURRENT_STEP', result.nextStep)
+      return result
+    }
+  }
+})</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_6_component_library"><a class="anchor" href="#_5_4_6_component_library"></a><a class="link" href="#_5_4_6_component_library">6.4.6. 5.4.6 Component Library</a></h4>
+<div class="paragraph">
+<p><strong>Built-in Components:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 30%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+<th class="tableblock halign-left valign-top">Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-button&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Action buttons</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DSL binding, validation, loading states</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-input&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text/number inputs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validation, formatting, accessibility</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-select&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dropdown selections</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic options, search, multi-select</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-card&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content containers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsive layout, airline branding</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-progress&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step indicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visual progress tracking</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-device-status&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Device indicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Real-time status updates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;cuss-flight-info&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flight displays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Formatted flight data presentation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_5_4_7_responsive_design"><a class="anchor" href="#_5_4_7_responsive_design"></a><a class="link" href="#_5_4_7_responsive_design">6.4.7. 5.4.7 Responsive Design</a></h4>
+<div class="paragraph">
+<p><strong>Adaptive Layout:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-css hljs" data-lang="css">/* Kiosk-optimized responsive design */
+@media (min-width: 1920px) {
+  .workflow-container {
+    max-width: 1400px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .workflow-container {
+    max-width: 1200px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Touch-friendly sizing */
+.cuss-button {
+  min-height: 60px;
+  min-width: 120px;
+  touch-action: manipulation;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_8_performance_optimization"><a class="anchor" href="#_5_4_8_performance_optimization"></a><a class="link" href="#_5_4_8_performance_optimization">6.4.8. 5.4.8 Performance Optimization</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Lazy Loading</strong>: Components loaded on-demand</p>
+</li>
+<li>
+<p><strong>Virtual Scrolling</strong>: Efficient handling of large lists</p>
+</li>
+<li>
+<p><strong>Image Optimization</strong>: WebP format with fallbacks</p>
+</li>
+<li>
+<p><strong>Bundle Splitting</strong>: Separate chunks per workflow</p>
+</li>
+<li>
+<p><strong>Caching Strategy</strong>: Service worker for offline support</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_4_9_accessibility_features"><a class="anchor" href="#_5_4_9_accessibility_features"></a><a class="link" href="#_5_4_9_accessibility_features">6.4.9. 5.4.9 Accessibility Features</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>WCAG 2.1 AA compliance</strong></p>
+</li>
+<li>
+<p><strong>Keyboard navigation</strong> support</p>
+</li>
+<li>
+<p><strong>Screen reader</strong> compatibility</p>
+</li>
+<li>
+<p><strong>High contrast</strong> theme options</p>
+</li>
+<li>
+<p><strong>Text scaling</strong> support</p>
+</li>
+<li>
+<p><strong>Focus management</strong> for workflows</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_6_implementation_guidelines"><a class="anchor" href="#_6_implementation_guidelines"></a><a class="link" href="#_6_implementation_guidelines">16. 6. Implementation Guidelines</a></h2>
+<h2 id="_6_deployment_and_update_strategy_net_core_model"><a class="anchor" href="#_6_deployment_and_update_strategy_net_core_model"></a><a class="link" href="#_6_deployment_and_update_strategy_net_core_model">7. 6. Deployment and Update Strategy (.NET Core Model)</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_6_1_deployment_process"><a class="anchor" href="#_6_1_deployment_process"></a><a class="link" href="#_6_1_deployment_process">16.1. 6.1 Deployment Process</a></h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Pre-deployment Testing</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Unit testing of all components</p>
-</li>
-<li>
-<p>Integration testing with airline systems</p>
-</li>
-<li>
-<p>User acceptance testing</p>
-</li>
-<li>
-<p>Security penetration testing</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Staging Environment</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Mirror production environment</p>
-</li>
-<li>
-<p>Full end-to-end testing</p>
-</li>
-<li>
-<p>Performance testing under load</p>
-</li>
-<li>
-<p>Disaster recovery testing</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Production Deployment</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Phased rollout approach</p>
-</li>
-<li>
-<p>Real-time monitoring</p>
-</li>
-<li>
-<p>Immediate rollback capability</p>
-</li>
-<li>
-<p>24/7 support availability</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_6_2_maintenance_and_support"><a class="anchor" href="#_6_2_maintenance_and_support"></a><a class="link" href="#_6_2_maintenance_and_support">16.2. 6.2 Maintenance and Support</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Monitoring</strong>: Real-time system health monitoring</p>
-</li>
-<li>
-<p><strong>Updates</strong>: Automated security updates, scheduled feature updates</p>
-</li>
-<li>
-<p><strong>Support</strong>: Tiered support structure (L1, L2, L3)</p>
-</li>
-<li>
-<p><strong>Documentation</strong>: Comprehensive operational guides</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_7_deployment_and_update_strategy_net_core_model"><a class="anchor" href="#_7_deployment_and_update_strategy_net_core_model"></a><a class="link" href="#_7_deployment_and_update_strategy_net_core_model">17. 7. Deployment and Update Strategy (.NET Core Model)</a></h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_7_1_wide_open_update_palette"><a class="anchor" href="#_7_1_wide_open_update_palette"></a><a class="link" href="#_7_1_wide_open_update_palette">17.1. 7.1 Wide-Open Update Palette</a></h3>
+<h3 id="_6_1_wide_open_update_palette"><a class="anchor" href="#_6_1_wide_open_update_palette"></a><a class="link" href="#_6_1_wide_open_update_palette">7.1. 6.1 Wide-Open Update Palette</a></h3>
 <div class="paragraph">
 <p>Unlike the legacy IIS-centric model, .NET Core apps are <strong>not bound to a single central deployment point</strong>.</p>
 </div>
@@ -644,9 +1585,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_2_supported_update_methods"><a class="anchor" href="#_7_2_supported_update_methods"></a><a class="link" href="#_7_2_supported_update_methods">17.2. 7.2 Supported Update Methods</a></h3>
+<h3 id="_6_2_supported_update_methods"><a class="anchor" href="#_6_2_supported_update_methods"></a><a class="link" href="#_6_2_supported_update_methods">7.2. 6.2 Supported Update Methods</a></h3>
 <div class="sect3">
-<h4 id="_7_2_1_enterprise_distribution_sccm_intune_etc"><a class="anchor" href="#_7_2_1_enterprise_distribution_sccm_intune_etc"></a><a class="link" href="#_7_2_1_enterprise_distribution_sccm_intune_etc">17.2.1. 7.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></h4>
+<h4 id="_6_2_1_enterprise_distribution_sccm_intune_etc"><a class="anchor" href="#_6_2_1_enterprise_distribution_sccm_intune_etc"></a><a class="link" href="#_6_2_1_enterprise_distribution_sccm_intune_etc">7.2.1. 6.2.1 Enterprise Distribution (SCCM, Intune, etc.)</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -662,7 +1603,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_7_2_2_file_share_powershell"><a class="anchor" href="#_7_2_2_file_share_powershell"></a><a class="link" href="#_7_2_2_file_share_powershell">17.2.2. 7.2.2 File Share + PowerShell</a></h4>
+<h4 id="_6_2_2_file_share_powershell"><a class="anchor" href="#_6_2_2_file_share_powershell"></a><a class="link" href="#_6_2_2_file_share_powershell">7.2.2. 6.2.2 File Share + PowerShell</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -682,7 +1623,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_7_2_3_auto_update_agent"><a class="anchor" href="#_7_2_3_auto_update_agent"></a><a class="link" href="#_7_2_3_auto_update_agent">17.2.3. 7.2.3 Auto-Update Agent</a></h4>
+<h4 id="_6_2_3_auto_update_agent"><a class="anchor" href="#_6_2_3_auto_update_agent"></a><a class="link" href="#_6_2_3_auto_update_agent">7.2.3. 6.2.3 Auto-Update Agent</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -698,7 +1639,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_7_2_4_clickonce_optional"><a class="anchor" href="#_7_2_4_clickonce_optional"></a><a class="link" href="#_7_2_4_clickonce_optional">17.2.4. 7.2.4 ClickOnce (Optional)</a></h4>
+<h4 id="_6_2_4_clickonce_optional"><a class="anchor" href="#_6_2_4_clickonce_optional"></a><a class="link" href="#_6_2_4_clickonce_optional">7.2.4. 6.2.4 ClickOnce (Optional)</a></h4>
 <div class="ulist">
 <ul>
 <li>
@@ -712,7 +1653,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_3_benefits_over_legacy_iis_model"><a class="anchor" href="#_7_3_benefits_over_legacy_iis_model"></a><a class="link" href="#_7_3_benefits_over_legacy_iis_model">17.3. 7.3 Benefits Over Legacy IIS Model</a></h3>
+<h3 id="_6_3_benefits_over_legacy_iis_model"><a class="anchor" href="#_6_3_benefits_over_legacy_iis_model"></a><a class="link" href="#_6_3_benefits_over_legacy_iis_model">7.3. 6.3 Benefits Over Legacy IIS Model</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -737,7 +1678,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_4_key_rebuttals_to_concerns"><a class="anchor" href="#_7_4_key_rebuttals_to_concerns"></a><a class="link" href="#_7_4_key_rebuttals_to_concerns">17.4. 7.4 Key Rebuttals to Concerns</a></h3>
+<h3 id="_6_4_key_rebuttals_to_concerns"><a class="anchor" href="#_6_4_key_rebuttals_to_concerns"></a><a class="link" href="#_6_4_key_rebuttals_to_concerns">7.4. 6.4 Key Rebuttals to Concerns</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -756,7 +1697,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_5_deployment_workflow_example"><a class="anchor" href="#_7_5_deployment_workflow_example"></a><a class="link" href="#_7_5_deployment_workflow_example">17.5. 7.5 Deployment Workflow Example</a></h3>
+<h3 id="_6_5_deployment_workflow_example"><a class="anchor" href="#_6_5_deployment_workflow_example"></a><a class="link" href="#_6_5_deployment_workflow_example">7.5. 6.5 Deployment Workflow Example</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -778,7 +1719,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_7_6_summary"><a class="anchor" href="#_7_6_summary"></a><a class="link" href="#_7_6_summary">17.6. 7.6 Summary</a></h3>
+<h3 id="_6_6_summary"><a class="anchor" href="#_6_6_summary"></a><a class="link" href="#_6_6_summary">7.6. 6.6 Summary</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -802,50 +1743,10 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_8_compliance_and_standards"><a class="anchor" href="#_8_compliance_and_standards"></a><a class="link" href="#_8_compliance_and_standards">18. 8. Compliance and Standards</a></h2>
+<h2 id="_7_appendices"><a class="anchor" href="#_7_appendices"></a><a class="link" href="#_7_appendices">8. 7. Appendices</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_8_1_industry_standards"><a class="anchor" href="#_8_1_industry_standards"></a><a class="link" href="#_8_1_industry_standards">18.1. 8.1 Industry Standards</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>IATA CUSS Standard</strong>: Full compliance with IATA specifications</p>
-</li>
-<li>
-<p><strong>ADA Compliance</strong>: Accessibility for passengers with disabilities</p>
-</li>
-<li>
-<p><strong>WCAG 2.1</strong>: Web content accessibility guidelines</p>
-</li>
-<li>
-<p><strong>ISO 27001</strong>: Information security management</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_8_2_regulatory_requirements"><a class="anchor" href="#_8_2_regulatory_requirements"></a><a class="link" href="#_8_2_regulatory_requirements">18.2. 8.2 Regulatory Requirements</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>TSA Regulations</strong>: Compliance with security screening requirements</p>
-</li>
-<li>
-<p><strong>International Standards</strong>: ICAO standards for international flights</p>
-</li>
-<li>
-<p><strong>Data Privacy</strong>: Local data protection regulations (GDPR, CCPA, etc.)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_9_appendices"><a class="anchor" href="#_9_appendices"></a><a class="link" href="#_9_appendices">19. 9. Appendices</a></h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_9_1_glossary"><a class="anchor" href="#_9_1_glossary"></a><a class="link" href="#_9_1_glossary">19.1. 9.1 Glossary</a></h3>
+<h3 id="_7_1_glossary"><a class="anchor" href="#_7_1_glossary"></a><a class="link" href="#_7_1_glossary">8.1. 7.1 Glossary</a></h3>
 <div id="glossary-ada" class="dlist">
 <dl>
 <dt class="hdlist1"><strong>ADA</strong></dt>
@@ -914,7 +1815,7 @@ Start-Service CussApp</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_9_2_references"><a class="anchor" href="#_9_2_references"></a><a class="link" href="#_9_2_references">19.2. 9.2 References</a></h3>
+<h3 id="_7_2_references"><a class="anchor" href="#_7_2_references"></a><a class="link" href="#_7_2_references">8.2. 7.2 References</a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -944,7 +1845,7 @@ Start-Service CussApp</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-10-03 18:21:06 -0500
+Last updated 2025-10-03 22:56:32 -0500
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>

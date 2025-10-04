@@ -1,0 +1,13 @@
+=== 1.1 Overview
+
+The Common Use Self Service (CUSS) application is a standards-compliant, multi-tenant passenger processing solution designed to run on top of any IATA CUSS-compliant platform. It provides airlines and airports with a flexible framework to deliver core workflows(modes) such as passenger check-in, baggage drop,and other service flows that can be created, cached, and customized without requiring a re-compile and release cycle.
+
+This CUSS app is intentionally built as a *generic core application* rather than a "white-label" in the narrow sense. It supports multiple airlines through configuration, workflow definition, and UI customization, while still conforming to IATA CUSS specifications for device interaction and platform integration. Each instance of the application runs within a kiosk's CUSS platform runtime, with one physical kiosk typically hosting one CUSS platform instance and one or more airline applications.
+
+The design emphasizes:
+- **Embedded Kestrel hosting**: modern .NET Core architecture where the app self-hosts its web server and serves workflows directly to a thin client browser (<<glossary-webview2,WebView2>>). This eliminates dependence on legacy centralized IIS hosting models.
+- **Workflow flexibility**: workflows are defined as a sequence of views and steps, described in JSON and linked to business logic through a domain-specific language (DSL). This enables airline-specific flows like bag drop or check-in without rewriting the core application.
+- **Extensible device access**: the app communicates with the <<glossary-cuss,CUSS>> platform for device access through standardized Device Component Interfaces (DCIs). CUSS 1.5 CORBA plugin design that considers future CUSS 2.0 plugin for JSON-based CUSS 2.0 specifications.
+- **Multi-airline operation**: a single deployment can support different airline instances, each with their own workflows, branding, and availability states tied to their host systems.
+
+By using modern application design and implementation practices, latest LTS .NET frameworks, and cloud-native principles into the CUSS model, this design ensures the app can scale across kiosks, adapt to future standards, and provide a maintainable path forward for passenger-facing services in airports worldwide.

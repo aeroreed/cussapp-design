@@ -1,0 +1,249 @@
+=== 5.3 Domain-Specific Language (DSL)
+
+The CUSS App employs a Domain-Specific Language to bind business logic to UI components and workflow steps, enabling dynamic behavior without code compilation.
+
+==== 5.3.1 DSL Architecture
+
+The DSL provides a declarative way to:
+- **Bind actions** to UI events (onClick, onSubmit, onLoad)
+- **Execute business operations** (passenger lookup, device operations, API calls)
+- **Control workflow flow** (conditional navigation, validation, state management)
+- **Handle data transformation** (formatting, validation, mapping)
+
+==== 5.3.2 DSL Command Structure
+
+[source,json]
+----
+{
+  "event": "onClick",
+  "dsl": "PassengerService.lookup",
+  "params": {
+    "lastName": "${input.lastName}",
+    "confirmationCode": "${input.confirmation}"
+  },
+  "onSuccess": "NavigateToCheckIn",
+  "onError": "ShowErrorMessage"
+}
+----
+
+==== 5.3.3 Available DSL Commands
+
+[cols="2,3,5"]
+|===
+| Category | Command | Description
+
+| **Passenger Operations**
+| `PassengerService.lookup`
+| Look up passenger by name/confirmation code
+
+| 
+| `PassengerService.checkIn`
+| Execute passenger check-in process
+
+| 
+| `PassengerService.selectSeat`
+| Handle seat selection and assignment
+
+| **Device Operations**
+| `BagTag.print`
+| Print baggage tags using CUSS DCI
+
+| 
+| `BoardingPass.print`
+| Print boarding pass documents
+
+| 
+| `Receipt.print`
+| Print transaction receipts
+
+| **Navigation**
+| `Workflow.navigate`
+| Navigate to specified workflow step
+
+| 
+| `Workflow.back`
+| Return to previous step
+
+| 
+| `Workflow.complete`
+| Mark workflow as completed
+
+| **Data Operations**
+| `Data.validate`
+| Validate form inputs against rules
+
+| 
+| `Data.transform`
+| Transform data between formats
+
+| 
+| `Cache.store`
+| Store data in local cache
+
+| **Integration**
+| `API.call`
+| Make HTTP calls to airline systems
+
+| 
+| `DCS.query`
+| Query Departure Control System
+
+| 
+| `PSS.update`
+| Update Passenger Service System
+|===
+
+==== 5.3.4 Event Binding Examples
+
+**Button Click Event:**
+[source,json]
+----
+{
+  "component": "button",
+  "id": "searchButton",
+  "binding": {
+    "event": "onClick",
+    "dsl": "PassengerService.lookup",
+    "params": {
+      "lastName": "${form.lastName}",
+      "confirmationCode": "${form.confirmationCode}"
+    },
+    "validation": [
+      "required:lastName",
+      "required:confirmationCode"
+    ],
+    "onSuccess": {
+      "action": "Workflow.navigate",
+      "target": "flightSelection"
+    },
+    "onError": {
+      "action": "UI.showMessage",
+      "message": "Passenger not found. Please check your information."
+    }
+  }
+}
+----
+
+**Form Submission:**
+[source,json]
+----
+{
+  "component": "form",
+  "id": "checkInForm",
+  "binding": {
+    "event": "onSubmit",
+    "dsl": "PassengerService.checkIn",
+    "params": {
+      "passengerId": "${passenger.id}",
+      "flightId": "${flight.id}",
+      "seatPreference": "${form.seatPreference}"
+    },
+    "onSuccess": {
+      "action": "Workflow.navigate",
+      "target": "confirmationPage"
+    }
+  }
+}
+----
+
+==== 5.3.5 Conditional Logic
+
+[source,json]
+----
+{
+  "dsl": "ConditionalFlow.evaluate",
+  "condition": "${passenger.hasCheckedBags}",
+  "onTrue": {
+    "action": "Workflow.navigate",
+    "target": "bagTagPrinting"
+  },
+  "onFalse": {
+    "action": "Workflow.navigate", 
+    "target": "boardingPassPrinting"
+  }
+}
+----
+
+==== 5.3.6 Parameter Substitution
+
+The DSL supports dynamic parameter substitution using expression syntax:
+
+[cols="2,3,5"]
+|===
+| Pattern | Source | Example
+
+| `${form.fieldName}`
+| Current form input
+| `${form.lastName}` → User's input
+
+| `${passenger.property}`
+| Passenger data object
+| `${passenger.confirmationCode}` → "ABC123"
+
+| `${flight.property}`
+| Flight information
+| `${flight.departureTime}` → "14:30"
+
+| `${device.property}`
+| Device capabilities
+| `${device.printerStatus}` → "ready"
+
+| `${config.setting}`
+| Configuration values
+| `${config.airlineCode}` → "AA"
+|===
+
+==== 5.3.7 Error Handling
+
+[source,json]
+----
+{
+  "dsl": "PassengerService.lookup",
+  "errorHandling": {
+    "timeout": 5000,
+    "retries": 3,
+    "fallback": {
+      "action": "UI.showMessage",
+      "message": "Service temporarily unavailable. Please try again."
+    },
+    "errorCodes": {
+      "404": "Passenger not found",
+      "500": "System error occurred"
+    }
+  }
+}
+----
+
+==== 5.3.8 Advanced DSL Features
+
+**Chained Operations:**
+[source,json]
+----
+{
+  "dsl": "Pipeline.execute",
+  "steps": [
+    "PassengerService.lookup",
+    "FlightService.getDetails", 
+    "SeatService.getAvailable"
+  ],
+  "onComplete": "NavigateToSeatSelection"
+}
+----
+
+**Custom Validators:**
+[source,json]
+----
+{
+  "validation": {
+    "confirmationCode": {
+      "pattern": "^[A-Z0-9]{6}$",
+      "message": "Confirmation code must be 6 alphanumeric characters"
+    },
+    "lastName": {
+      "minLength": 2,
+      "maxLength": 50,
+      "message": "Last name must be between 2 and 50 characters"
+    }
+  }
+}
+----

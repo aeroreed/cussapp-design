@@ -1,0 +1,91 @@
+=== 5.1 Workflow Engine
+
+The Workflow Engine is the core component that executes workflow definitions and manages state transitions.
+
+==== 5.1.1 Execution Model
+
+The Workflow Engine operates on a **state machine model** where:
+
+* **Workflows** are defined as a sequence of steps/views
+* **State transitions** are triggered by user actions or system events
+* **Business logic** is executed through DSL commands
+* **Context data** flows between steps
+
+==== 5.1.2 Core Responsibilities
+
+* **Workflow Loading**: Parse and validate workflow definitions from JSON
+* **State Management**: Track current step, user progress, and session data
+* **Event Processing**: Handle user interactions and system events
+* **DSL Execution**: Execute business logic commands and handle responses
+* **Error Handling**: Manage exceptions and provide recovery mechanisms
+* **Device Integration**: Coordinate with CUSS platform for device operations
+
+==== 5.1.3 Workflow Definition Structure
+
+[source,json]
+----
+{
+  "workflowId": "passenger-checkin",
+  "version": "1.0",
+  "metadata": {
+    "title": "Passenger Check-In",
+    "description": "Standard passenger check-in workflow",
+    "airlineCode": "AA"
+  },
+  "steps": [
+    {
+      "stepId": "welcome",
+      "type": "view",
+      "component": "WelcomeScreen",
+      "transitions": {
+        "onStart": "passengerLookup"
+      }
+    },
+    {
+      "stepId": "passengerLookup",
+      "type": "view", 
+      "component": "PassengerLookupForm",
+      "validation": ["required:lastName", "required:confirmationCode"],
+      "transitions": {
+        "onSuccess": "flightSelection",
+        "onError": "errorPage"
+      }
+    }
+  ]
+}
+----
+
+==== 5.1.4 State Management
+
+The engine maintains workflow state including:
+
+* **Current Step**: Active step in the workflow
+* **User Context**: Passenger data, selections, form inputs
+* **Session Data**: Temporary data valid for current session
+* **Configuration**: Airline-specific settings and branding
+* **Device Status**: Availability of printers, scanners, etc.
+
+==== 5.1.5 Event Handling
+
+[source,json]
+----
+{
+  "eventType": "userAction",
+  "source": "button",
+  "action": "onClick",
+  "context": {
+    "stepId": "passengerLookup",
+    "componentId": "searchButton",
+    "formData": {
+      "lastName": "Smith",
+      "confirmationCode": "ABC123"
+    }
+  }
+}
+----
+
+// TODO: Add detailed content about:
+// - Performance optimization
+// - Concurrent workflow handling
+// - Workflow versioning and updates
+// - Monitoring and analytics

@@ -1,0 +1,77 @@
+== 2. It's a CUSS App
+
+This section addresses common misconceptions about CUSS applications and clarifies why they are designed to run locally with their own runtime components.
+
+=== 2.1 CUSS Specification Guidance
+
+The IATA CUSS specification includes addenda for **BYOB (Bring Your Own Browser)** and **BYOJ (Bring Your Own Java)**.
+
+Both explicitly require local runtime components such as a browser engine or a Java Runtime Environment (JRE) to be installed on the kiosk.
+
+This proves the spec expects local artifacts, not a "remote-only" model.
+
+=== 2.2 Standard Industry Practice
+
+Airline apps routinely deploy JARs, DLLs, CORBA stubs, or device SDKs into their assigned CUSS home directory.
+
+These files are essential for:
+* **Talking to devices** - Direct hardware communication
+* **Executing workflows** - Local business logic processing  
+* **Handling degraded network conditions** - Offline resilience
+
+=== 2.3 Risks of a Thin-Only Approach
+
+==== 2.3.1 Specification Non-Compliance
+Ignoring BYOB/BYOJ violates the assumptions of the standard.
+
+==== 2.3.2 Resiliency Loss
+A pure thin client fails completely when the network or central server is down.
+
+==== 2.3.3 Device Access Gaps
+Printers, scanners, scales, and payment devices require local libraries and plugins.
+
+=== 2.4 Our Position
+
+A CUSS application is **not just a remote client**. By design, it runs locally with its own runtime inside the assigned directory. 
+
+This ensures:
+* ✅ **Compliance** with IATA CUSS specifications
+* ✅ **Resiliency** during network outages
+* ✅ **Proper device integration** with local hardware
+* ✅ **Thin-client spirit** for backend logic maintained
+
+=== 2.5 High-Level Architecture
+
+The CUSS application follows a **locally-hosted, edge-computing** architecture pattern:
+
+. **Presentation Layer**: Touch-screen kiosk interface (WebView2)
+. **Business Logic Layer**: Core application logic (Embedded Kestrel)
+. **Integration Layer**: Airline system interfaces (HTTP/WebSocket)
+. **Data Layer**: Local caching and logging (SQLite/JSON)
+. **Device Layer**: Hardware abstraction (CUSS DCI/Sidecar)
+
+// Add your system architecture diagram here:
+// image::architecture/cuss-system-overview.png[CUSS System Architecture, 800, 600]
+
+=== 2.6 Component Overview
+
+==== 2.6.1 Local Runtime Components
+
+* **Embedded Kestrel Server**: Self-hosted web server (.NET Core)
+* **WebView2 Browser Engine**: Modern HTML5/CSS3/JS execution environment
+* **Workflow Engine**: Local workflow execution and state management
+* **Device Adapters**: CORBA/JSON bridges for CUSS device communication
+
+==== 2.6.2 Integration Services
+
+* **Authentication service**: Secure passenger verification
+* **Booking retrieval service**: Real-time flight and passenger data
+* **Payment processing service**: Secure transaction handling
+* **Printing service**: Boarding pass and baggage tag output
+
+==== 2.6.3 Resilience Features
+
+* **Offline capability**: Continue operation during network outages
+* **Local caching**: Store essential data for degraded scenarios
+* **Graceful degradation**: Reduced functionality when services unavailable
+* **Automatic recovery**: Reconnect and sync when connectivity restored

@@ -1,0 +1,26 @@
+=== 1.2 Design Overview
+
+This document exists to clarify design choices, provide neutral facts, and resolve confusion about IIS vs. Kestrel.
+
+We acknowledge that kiosks are edge devices, not cloud-native by default, but the design applies cloud-native principles at the edge to set us up for hybrid/future integration.
+
+==== 1.2.1 Legacy vs. Modern Models
+
+- Why IIS central model is legacy
+- Why embedded Kestrel is the default for .NET Core and aligns with other stacks (Spring Boot/Tomcat, Node/Express, Go, etc.)
+- Thin client vs. fat client misconceptions
+- Summary statement: embedded server ≠ fat client
+
+==== 1.2.2 Core Design Artifacts
+
+- Component diagram of the CUSS App (PlantUML/PNG)
+- Internal components:
+  * Embedded Kestrel
+  * Workflow Engine
+  * Workflow Builder (Admin Console)
+  * Web Apps (Vue3, Workflow Runner)
+  * Event Bus
+  * Sidecar (CORBA / JSON adapter)
+  * DI / Service Provider
+  * Ports (HTTP/2, device APIs)
+- File deployment model: workflows and apps installed as JSON + Vue3 web apps

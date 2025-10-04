@@ -1,0 +1,38 @@
+@startuml cuss-app-components
+title CUSS App – Component Overview
+skinparam componentStyle rectangle
+
+package "CUSS App (Edge Device)" {
+  [Embedded Kestrel\n(Web Server)] as Kestrel
+  [Web Apps\n(Vue3 Runner)] as Runner
+  [Workflow Engine] as Engine
+  [WorkFlowBuilder\n(Admin SPA)] as Builder
+  [Event Bus\n(Pub/Sub)] as Bus
+  [Sidecar\n(CORBA ↔ JSON Adapter)] as Sidecar
+  [DI / Service Provider] as DI
+}
+
+interface "HTTP/2" as IHTTP2
+interface "Device APIs" as IDevice
+
+IHTTP2 -[#gray]-> Kestrel
+IDevice -[#gray]-> Sidecar
+
+database "Workflows\n(JSON)" as WF
+
+Kestrel --> Runner : serves SPA assets
+Runner --> Engine : loads workflow.json
+Builder --> Engine : creates/updates workflows
+Engine --> WF : read/write
+Engine --> Bus : publish/subscribe
+Engine --> DI : resolve services
+Sidecar --> Engine : device ops / CUSS 1.x–2.0
+Kestrel ..> DI : hosted services\n(IHostedService, etc.)
+
+note right of Builder
+WYSIWYG editor:
+• Views / Steps / Pages
+• DSL bindings
+• Styles / Attributes
+end note
+@enduml

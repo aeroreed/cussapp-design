@@ -1,0 +1,5 @@
+=== 1.5 Conclusion
+
+This design is aligned with modern practice, neutral facts support it, and concerns about delivery are met.
+
+**Next step**: treat this as common ground for future design reviews.

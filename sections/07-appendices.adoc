@@ -1,6 +1,6 @@
-== 9. Appendices
+== 7. Appendices
 
-=== 9.1 Glossary
+=== 7.1 Glossary
 
 [[glossary-ada]]
 **ADA**:: Americans with Disabilities Act
@@ -27,7 +27,7 @@
 **WebView2**:: Microsoft's embedded web browser control based on (Chromium). Provides a modern web rendering engine for desktop applications, allowing .NET applications to host web content with full HTML5, CSS3, and JavaScript support. No hassles controlling browser chrome, menus, menu bars, address bars footer or managing separate processes.
 <<introduction,↩ Return to Introduction>>
 
-=== 9.2 References
+=== 7.2 References
 
 * IATA CUSS Standard 1.3 - 1.5, 2.0
 * W3C Web Content Accessibility Guidelines

@@ -1,0 +1,17 @@
+=== 1.4 Cloud-Native Alignment at the Edge
+
+==== 1.4.1 12-Factor Principles
+
+- Mapping 12-factor attributes to the design
+- How this edge device model applies cloud-native principles
+- Sets foundation for hybrid or future cloud-integrated models
+
+==== 1.4.2 Industry Precedent
+
+- How other modern platforms (Spring Boot, Node.js, Go, .NET Core) all follow embedded-server models
+- Airlines and CUSS BYOB/edge install precedents
+
+==== 1.4.3 Independent Verification
+
+- AI prompts provided to verify these facts independently
+- Note: prompts can be Googled, but AI gives more accurate, concise responses without manual collation
